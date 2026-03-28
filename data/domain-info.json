@@ -1,0 +1,30 @@
+{
+  "domain": "vinyl-x.com",
+  "registrar": {
+    "name": "후이즈 (whois.co.kr)",
+    "login_url": "https://whois.co.kr",
+    "id": "vinylx",
+    "note": "도메인 등록/관리, DNS 설정 변경"
+  },
+  "wordpress": {
+    "login_url": "https://vinyl-x.com/wp-login.php",
+    "admin_url": "https://vinyl-x.com/wp-admin/",
+    "id": "vinylx"
+  },
+  "dns_records": {
+    "retrieved_at": "2026-03-20",
+    "A": "146.56.181.8",
+    "NS": ["ns11.whois.co.kr", "ns11.whoisweb.net"],
+    "MX": "vinylx-com01c.mail.protection.outlook.com (priority 10)",
+    "TXT": [
+      "v=spf1 include:spf.protection.outlook.com -all",
+      "MS=ms93304978"
+    ]
+  },
+  "services": {
+    "web_hosting_ip": "146.56.181.8",
+    "mail": "Microsoft 365 (Outlook)",
+    "ms_domain_verification": "ms93304978"
+  },
+  "notes": "새 사이트 연결 시 후이즈 관리 패널에서 A레코드 IP 변경 또는 네임서버 변경 필요. MX/TXT 레코드는 메일 서비스용이므로 유지할 것."
+}

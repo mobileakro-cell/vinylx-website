@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VINYL X | Service Experience Design</title>
+  <meta name="description" content="서비스 디자인 기반의 고객 경험 설계와 디지털 서비스 개발 전문 에이전시 VINYL X">
+  <meta property="og:title" content="VINYL X | Service Experience Design">
+  <meta property="og:description" content="서비스 디자인 기반의 고객 경험 설계와 디지털 서비스 개발 전문 에이전시">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vinyl-x.com">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/interaction.css?v=100">
+  <link rel="stylesheet" href="css/pages.css?v=100">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+
+  <!-- Navigation -->
+  <header class="header">
+    <a href="#" class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;"><img src="images/vinylx-logo-white.png" alt="VINYL X." class="logo-img"></a>
+    <button class="menu-toggle" aria-label="Toggle menu">MENU</button>
+  </header>
+
+  <!-- Full-screen Menu Overlay -->
+  <div class="menu-overlay">
+    <nav class="menu-nav">
+      <a href="about.html" class="menu-link" data-num="01">About</a>
+      <a href="portfolio.html" class="menu-link" data-num="02">Portfolio</a>
+      <a href="log.html" class="menu-link" data-num="03">Log</a>
+      <a href="contact.html" class="menu-link" data-num="04">Contact</a>
+    </nav>
+    <div class="menu-footer">
+      <a href="mailto:INFO@VINYL-X.COM">INFO@VINYL-X.COM</a>
+      <div class="menu-social">
+        <a href="https://blog.naver.com/vinylx" target="_blank" rel="noopener">Blog</a>
+        <a href="https://www.instagram.com/vinyl_x_official" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/vinylxdesign" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <button class="lang-toggle" aria-label="Switch language">
+        <span class="lang-option is-active" data-lang="ko">KO</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero + Gallery Scroll Container -->
+  <div class="hero-gallery-wrapper">
+
+    <!-- Section 1: Hero (Dark) - Sticky -->
+    <section class="section hero-section" data-theme="dark">
+      <div class="hero-text">
+        <h1 class="hero-line line-1">Service</h1>
+        <h1 class="hero-line line-2">Experience</h1>
+        <h1 class="hero-line line-3">Design<span class="spinning-star">*</span></h1>
+      </div>
+    </section>
+
+    <!-- Section 2: Image Gallery (Light) - Scrolls over hero -->
+    <section class="section gallery-section" data-theme="light">
+      <div class="gallery-grid">
+        <!-- Zone 1: 상단 — anchor images -->
+        <div class="gallery-item item-1" data-speed="0.15">
+          <img src="images/wp-uploads/main_bn02_250528.jpg" alt="UIUX Consulting" loading="lazy">
+        </div>
+        <div class="gallery-item item-2" data-speed="0.4">
+          <img src="images/wp-uploads/main_bn01_250528.jpg" alt="Startup Accelerating" loading="lazy">
+        </div>
+        <!-- Zone 2: 중상단 — key visuals -->
+        <div class="gallery-item item-3" data-speed="0.12">
+          <img src="images/wp-uploads/021.jpg" alt="STYLETECH" loading="lazy">
+        </div>
+        <div class="gallery-item item-4" data-speed="0.5">
+          <img src="images/wp-uploads/main_bn03_250528.jpg" alt="Brand & Commerce" loading="lazy">
+        </div>
+        <!-- Zone 3: 중단 — mixed depths -->
+        <div class="gallery-item item-5" data-speed="0.55">
+          <img src="images/wp-uploads/lightstick_00.jpg" alt="Idol Official Lightstick" loading="lazy">
+        </div>
+        <div class="gallery-item item-6" data-speed="0.2">
+          <img src="images/wp-uploads/LLOYD_01.jpg" alt="LLOYD" loading="lazy" style="object-fit: contain;">
+        </div>
+        <div class="gallery-item item-7" data-speed="0.45">
+          <img src="images/wp-uploads/turnback_banner.jpg" alt="TURN BAG" loading="lazy">
+        </div>
+        <!-- Zone 4: 중하단 -->
+        <div class="gallery-item item-8" data-speed="0.18">
+          <img src="images/wp-uploads/DEVELON-Online-Store1-2-scaled.jpg" alt="HD HYUNDAI DEVELON" loading="lazy" style="object-fit: contain;">
+        </div>
+        <div class="gallery-item item-9" data-speed="0.5">
+          <img src="images/wp-uploads/101packers_thumbnail.png" alt="101PACKERS" loading="lazy" style="object-position: top;">
+        </div>
+        <!-- Zone 5: 하단 -->
+        <div class="gallery-item item-10" data-speed="0.35">
+          <img src="images/wp-uploads/KakaoTalk_20250929_162921481.jpg" alt="DREAMPLUS UIUX MEMBERSHIP" loading="lazy">
+        </div>
+        <div class="gallery-item item-11" data-speed="0.15">
+          <img src="images/wp-uploads/KakaoTalk_20211215_154318401.jpg" alt="LG Display Campaign" loading="lazy">
+        </div>
+        <div class="gallery-item item-12" data-speed="0.42">
+          <img src="images/wp-uploads/27_IoT-Smart.jpg" alt="IoT Smart Resort Service" loading="lazy">
+        </div>
+        <a href="project-livinglab.html" class="gallery-item item-13" data-speed="0.3">
+          <img src="images/livinglab/frame_5s.jpg" alt="산업단지 디자인리빙랩" loading="lazy">
+          <span class="gallery-item-label">DESIGN LIVING LAB</span>
+        </a>
+      </div>
+      <!-- Hero text continues over gallery (dark text on light bg) -->
+      <div class="hero-text-overlay">
+        <h1 class="hero-line line-1">Service</h1>
+        <h1 class="hero-line line-2">Experience</h1>
+        <h1 class="hero-line line-3">Design<span class="spinning-star">*</span></h1>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Fixed scroll indicator (outside all sections to prevent transform breaking fixed) -->
+  <div class="scroll-indicator light-scroll" id="lightScrollIndicator">
+    <span class="scroll-indicator-text">Produce. Accelerate.<br>Build the next brand.</span>
+    <div class="scroll-arrow">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Section 3: Mission (Dark) -->
+  <section id="mission" class="section mission-section" data-theme="dark">
+    <div class="mission-content">
+      <p class="mission-subtitle" data-i18n="interaction.mission-subtitle">프로덕션과 엑셀러레이팅 전문성으로, 가치 있는 브랜드를 연속적으로 만들고 운영합니다.</p>
+      <div class="mission-list">
+        <!-- Row 1: Company Building -->
+        <div class="mission-row" data-service="company-building">
+          <div class="mission-text-group">
+            <h2 class="mission-line">Company</h2>
+            <h2 class="mission-line accent">Building.</h2>
+          </div>
+          <div class="mission-cta-link">
+            <span class="mission-cta-text">OVERVIEW</span>
+            <div class="mission-cta-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Row 2: Service Accelerating -->
+        <div class="mission-row" data-service="service-accelerating">
+          <div class="mission-text-group">
+            <h2 class="mission-line">Service</h2>
+            <h2 class="mission-line accent">Accelerating.</h2>
+          </div>
+          <div class="mission-cta-link">
+            <span class="mission-cta-text">OVERVIEW</span>
+            <div class="mission-cta-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <!-- Row 3: Digital & AI Production -->
+        <div class="mission-row" data-service="digital-production">
+          <div class="mission-text-group">
+            <h2 class="mission-line">Digital & AI</h2>
+            <h2 class="mission-line accent">Production.</h2>
+          </div>
+          <div class="mission-cta-link">
+            <span class="mission-cta-text">OVERVIEW</span>
+            <div class="mission-cta-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Detail Panel -->
+  <div class="service-panel-backdrop" id="servicePanelBackdrop"></div>
+  <div class="service-panel" id="servicePanel">
+    <button class="service-panel-close" aria-label="Close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M18 6L6 18M6 6l12 12"/>
+      </svg>
+    </button>
+    <div class="service-panel-inner">
+
+      <!-- Company Building -->
+      <div class="service-detail" data-detail="company-building">
+        <span class="service-label">01</span>
+        <h2 class="service-detail-title">Company<br>Building.</h2>
+        <p class="service-detail-desc" data-i18n="interaction.service-desc-cb">지속가능한 서비스와 비즈니스를 창출합니다. 브랜드 전략부터 제품 개발, 시장 진입까지 — 아이디어를 하나의 회사로 만듭니다.</p>
+        <div class="service-detail-tags">
+          <span>Brand Strategy</span>
+          <span>Product Design</span>
+          <span>Market Launch</span>
+          <span>Growth</span>
+        </div>
+        <div class="service-detail-projects">
+          <h3 class="service-projects-label">Featured Projects</h3>
+          <div class="service-project-cards">
+            <a href="#" class="service-project-card" data-project-title="101PACKERS">
+              <div class="service-project-img">
+                <img src="images/wp-uploads/101packers_thumbnail.png" alt="101PACKERS" loading="lazy" style="object-position: top;">
+              </div>
+              <span class="service-project-name">101PACKERS</span>
+            </a>
+            <a href="#" class="service-project-card" data-project-title="101EXPERIENCE">
+              <div class="service-project-img">
+                <img src="images/wp-uploads/101X_thumbnail-1-1920x1920.jpg" alt="101EXPERIENCE" loading="lazy" style="object-position: top;">
+              </div>
+              <span class="service-project-name">101EXPERIENCE</span>
+            </a>
+          </div>
+        </div>
+        <a href="service.html" class="service-detail-cta">
+          <span data-i18n="interaction.cta-about-detail">ABOUT에서 자세히 보기</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Digital & AI Production -->
+      <div class="service-detail" data-detail="digital-production">
+        <span class="service-label">02</span>
+        <h2 class="service-detail-title">Digital & AI<br>Production.</h2>
+        <p class="service-detail-desc" data-i18n="interaction.service-desc-dp">디지털 기반의 UI/UX 설계, 서비스 기획, 플랫폼 구축까지. 고객 경험 중심의 디지털 프로덕션을 통해 비즈니스의 전환을 실현합니다.</p>
+        <div class="service-detail-tags">
+          <span>UI/UX Design</span>
+          <span>Service Planning</span>
+          <span>Platform Development</span>
+          <span>Digital Transformation</span>
+        </div>
+        <div class="service-detail-projects">
+          <h3 class="service-projects-label">Featured Projects</h3>
+          <div class="service-project-cards">
+            <a href="#" class="service-project-card" data-project-title="HD HYUNDAI INFRACORE DEVELON Online Store">
+              <div class="service-project-img">
+                <img src="images/wp-uploads/develon-banner.jpg" alt="HD HYUNDAI DEVELON" loading="lazy" style="object-fit: contain; background: #f5f5f5;">
+              </div>
+              <span class="service-project-name">HD HYUNDAI DEVELON</span>
+            </a>
+            <a href="#" class="service-project-card" data-project-title="LLOYD">
+              <div class="service-project-img">
+                <img src="images/wp-uploads/lloyd-banner.jpg" alt="LLOYD" loading="lazy" style="object-fit: contain; background: #f5f5f5;">
+              </div>
+              <span class="service-project-name">LLOYD</span>
+            </a>
+          </div>
+        </div>
+        <a href="service.html" class="service-detail-cta">
+          <span data-i18n="interaction.cta-about-detail">ABOUT에서 자세히 보기</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Service Accelerating -->
+      <div class="service-detail" data-detail="service-accelerating">
+        <span class="service-label">03</span>
+        <h2 class="service-detail-title">Service<br>Accelerating.</h2>
+        <p class="service-detail-desc" data-i18n="interaction.service-desc-sa">스타트업과 예비 디자이너를 위한 성장 육성 프로그램을 운영합니다. 멘토링, 워크숍, 액셀러레이팅을 통해 다음 세대의 도약을 함께합니다.</p>
+        <div class="service-detail-tags">
+          <span>Mentoring</span>
+          <span>Workshop</span>
+          <span>Accelerating</span>
+          <span>Education</span>
+        </div>
+        <div class="service-detail-projects">
+          <h3 class="service-projects-label">Featured Projects</h3>
+          <div class="service-project-cards">
+            <a href="project-livinglab.html" class="service-project-card" data-livinglab="true">
+              <div class="service-project-img">
+                <img src="images/livinglab/frame_5s.jpg" alt="DESIGN LIVING LAB" loading="lazy">
+              </div>
+              <span class="service-project-name">DESIGN LIVING LAB</span>
+            </a>
+            <a href="#" class="service-project-card" data-project-title="STYLETECH">
+              <div class="service-project-img">
+                <img src="images/wp-uploads/main_bn03_250528.jpg" alt="STYLETECH" loading="lazy">
+              </div>
+              <span class="service-project-name">STYLETECH</span>
+            </a>
+          </div>
+        </div>
+        <a href="service.html" class="service-detail-cta">
+          <span data-i18n="interaction.cta-about-detail">ABOUT에서 자세히 보기</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Section: Portfolio – Selected Works -->
+  <section id="projects" class="section projects-section" data-theme="light">
+    <div class="projects-header">
+      <div>
+        <h2 class="projects-heading-1">Selected</h2>
+        <h2 class="projects-heading-2">Works.</h2>
+      </div>
+      <p class="projects-desc" data-i18n="interaction.projects-subtitle">서비스 디자인 기반의 디지털 프로덕션과 비즈니스 인큐베이팅 프로젝트</p>
+    </div>
+    <div class="projects-list">
+      <a href="https://vinyl-x.com/portfolio/styletech-2/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">STYLETECH</span>
+          <span class="project-cat">Open Innovation</span>
+        </div>
+        <div class="project-year">2019</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/021.jpg" alt="STYLETECH" loading="lazy">
+        </div>
+      </a>
+      <a href="project-livinglab.html" class="project-row" data-livinglab="true">
+        <div class="project-info">
+          <span class="project-name">DESIGN LIVING LAB</span>
+          <span class="project-cat">Service Design</span>
+        </div>
+        <div class="project-year">2025</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/livinglab/frame_5s.jpg" alt="DESIGN LIVING LAB" loading="lazy">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/dreamplus-uiux-membership/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">DREAMPLUS UIUX MEMBERSHIP</span>
+          <span class="project-cat">Open Innovation</span>
+        </div>
+        <div class="project-year">2025</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/KakaoTalk_20250929_162921481.jpg" alt="DREAMPLUS" loading="lazy">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/101packers/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">101PACKERS</span>
+          <span class="project-cat">Company Building</span>
+        </div>
+        <div class="project-year">2025</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/101packers_thumbnail.png" alt="101PACKERS" loading="lazy" style="object-position: top;">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/founded-by-creators-for-creators/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">101EXPERIENCE</span>
+          <span class="project-cat">Company Building</span>
+        </div>
+        <div class="project-year">2025</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/101X_thumbnail-1.jpg" alt="101EXPERIENCE" loading="lazy" style="object-position: top;">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/hd-hyundai-infracore-develon-online-store/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">HD HYUNDAI DEVELON</span>
+          <span class="project-cat">Digital Transformation</span>
+        </div>
+        <div class="project-year">2023</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/develon-banner.jpg" alt="HD HYUNDAI DEVELON" loading="lazy" style="object-fit: contain; background: #f5f5f5;">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/digital-donation-service/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">Digital Donation Service</span>
+          <span class="project-cat">Digital Transformation</span>
+        </div>
+        <div class="project-year">2021</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/KakaoTalk_20211208_162835995_01.jpg" alt="Digital Donation" loading="lazy">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/lloyd-2/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">LLOYD</span>
+          <span class="project-cat">Digital Transformation</span>
+        </div>
+        <div class="project-year">2021</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/lloyd-banner.jpg" alt="LLOYD" loading="lazy" style="object-fit: contain; background: #f5f5f5;">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/turn-bag/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">TURN BAG</span>
+          <span class="project-cat">Digital Transformation</span>
+        </div>
+        <div class="project-year">2020</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/turnback_banner.jpg" alt="TURN BAG" loading="lazy">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/idol-official-lightstick/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">Idol Official Lightstick</span>
+          <span class="project-cat">Entertainment Design</span>
+        </div>
+        <div class="project-year">2020</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/lightstick_00.jpg" alt="Idol Lightstick" loading="lazy">
+        </div>
+      </a>
+      <a href="https://vinyl-x.com/portfolio/loona-official-fanclub-mobile-app/" target="_blank" rel="noopener" class="project-row">
+        <div class="project-info">
+          <span class="project-name">LOONA Official Fanclub App</span>
+          <span class="project-cat">Entertainment Design</span>
+        </div>
+        <div class="project-year">2021</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/wp-uploads/KakaoTalk_20211216_153234958_02.jpg" alt="LOONA" loading="lazy">
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section: Log – Horizontal Scroll -->
+  <section id="log" class="section log-section" data-theme="light" style="display:none;">
+    <div class="log-header">
+      <h2 class="log-title">Field Log</h2>
+      <a href="#log" class="cta-link">
+        <span>SEE ALL</span>
+        <div class="cta-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="log-track-wrapper">
+      <div class="log-track">
+        <a href="https://vinyl-x.com/portfolio/101packers/" target="_blank" rel="noopener" class="log-card">
+          <div class="log-card-img log-vertical">
+            <img src="images/wp-uploads/101packers_thumbnail.png" alt="101PACKERS 런칭행사 스케치" loading="lazy">
+            <span class="log-badge">VIDEO</span>
+          </div>
+          <div class="log-card-info">
+            <span class="log-card-title" data-i18n="interaction.log-title-1">101PACKERS 런칭행사 스케치</span>
+            <span class="log-card-date">2025.09</span>
+          </div>
+        </a>
+        <a href="https://vinyl-x.com/portfolio/dreamplus-uiux-membership/" target="_blank" rel="noopener" class="log-card">
+          <div class="log-card-img log-landscape">
+            <img src="images/wp-uploads/KakaoTalk_20250929_162921481.jpg" alt="DREAMPLUS UIUX 멤버십 워크숍" loading="lazy">
+          </div>
+          <div class="log-card-info">
+            <span class="log-card-title" data-i18n="interaction.log-title-2">DREAMPLUS UIUX 멤버십 워크숍</span>
+            <span class="log-card-date">2025.03</span>
+          </div>
+        </a>
+        <a href="https://vinyl-x.com/portfolio/hd-hyundai-infracore-develon-online-store/" target="_blank" rel="noopener" class="log-card">
+          <div class="log-card-img log-square">
+            <img src="images/wp-uploads/develon-banner.jpg" alt="HD현대 DEVELON 웹어워드 수상식" loading="lazy">
+            <span class="log-badge">AWARD</span>
+          </div>
+          <div class="log-card-info">
+            <span class="log-card-title" data-i18n="interaction.log-title-3">HD현대 DEVELON 웹어워드 수상식</span>
+            <span class="log-card-date">2024.08</span>
+          </div>
+        </a>
+        <a href="https://vinyl-x.com/portfolio/founded-by-creators-for-creators/" target="_blank" rel="noopener" class="log-card">
+          <div class="log-card-img log-landscape-wide">
+            <img src="images/wp-uploads/101X_thumbnail-1.jpg" alt="101EXPERIENCE 브랜드 필름" loading="lazy">
+            <span class="log-badge">VIDEO</span>
+          </div>
+          <div class="log-card-info">
+            <span class="log-card-title" data-i18n="interaction.log-title-4">101EXPERIENCE 브랜드 필름</span>
+            <span class="log-card-date">2024.06</span>
+          </div>
+        </a>
+        <a href="https://vinyl-x.com/portfolio/digital-donation-service/" target="_blank" rel="noopener" class="log-card">
+          <div class="log-card-img log-vertical">
+            <img src="images/wp-uploads/KB_01.jpg" alt="KB 디지털 기부서비스 시연회" loading="lazy">
+          </div>
+          <div class="log-card-info">
+            <span class="log-card-title" data-i18n="interaction.log-title-5">KB 디지털 기부서비스 시연회</span>
+            <span class="log-card-date">2024.04</span>
+          </div>
+        </a>
+        <a href="https://vinyl-x.com/portfolio/styletech-2/" target="_blank" rel="noopener" class="log-card">
+          <div class="log-card-img log-square">
+            <img src="images/wp-uploads/STYLE_TECH_01.jpg" alt="STYLETECH 액셀러레이터 데모데이" loading="lazy">
+          </div>
+          <div class="log-card-info">
+            <span class="log-card-title" data-i18n="interaction.log-title-6">STYLETECH 액셀러레이터 데모데이</span>
+            <span class="log-card-date">2023.11</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="log-scrollbar">
+      <div class="log-scrollbar-thumb"></div>
+    </div>
+  </section>
+
+  <!-- Section: Contact -->
+  <section id="contact" class="section contact-section" data-theme="dark">
+    <div class="contact-content">
+      <div class="contact-header">
+        <p class="contact-label">Get in Touch</p>
+        <h2 class="contact-heading">Have an idea?<br>Let's talk.</h2>
+      </div>
+      <div class="contact-body">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <span class="contact-info-label">Email</span>
+            <a href="mailto:INFO@VINYL-X.COM" class="contact-info-value">INFO@VINYL-X.COM</a>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label">Phone</span>
+            <a href="tel:02-6200-6559" class="contact-info-value">02.6200.6559</a>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label">Address</span>
+            <span class="contact-info-value" data-i18n="common.address-short">서울숲 M타워, 서울, 대한민국</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Detail Modal -->
+  <div class="project-modal-backdrop" id="projectBackdrop"></div>
+  <div class="project-modal" id="projectModal">
+    <div class="project-modal-close">
+      <button id="projectModalClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="project-modal-content" id="projectModalContent"></div>
+  </div>
+
+
+  <script src="js/i18n.js"></script>
+  <script src="js/interaction.js?v=100"></script>
+  <script>
+    // Project row modal
+    (function() {
+      const modal = document.getElementById('projectModal');
+      const backdrop = document.getElementById('projectBackdrop');
+      const content = document.getElementById('projectModalContent');
+      const closeBtn = document.getElementById('projectModalClose');
+      if (!modal) return;
+
+      let portfolioData = null;
+      let savedScrollY = 0;
+
+      fetch('data/portfolio-db.json')
+        .then(r => r.json())
+        .then(d => { portfolioData = d.portfolio; })
+        .catch(() => {});
+
+      // DESIGN LIVING LAB 카드 (Featured Projects 섹션)
+      document.querySelectorAll('.service-project-card[data-livinglab]').forEach(card => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          content.innerHTML = '<iframe src="project-livinglab.html" style="width:100%;height:80vh;border:none;border-radius:12px;"></iframe>';
+          savedScrollY = window.scrollY;
+          document.body.style.overflow = 'hidden';
+          modal.classList.add('is-open');
+          backdrop.classList.add('is-open');
+          modal.scrollTop = 0;
+        });
+      });
+
+      // Featured Projects 카드 → 스크롤 팝업 (data-project-title)
+      document.querySelectorAll('.service-project-card[data-project-title]').forEach(card => {
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (!portfolioData) return;
+          const title = card.dataset.projectTitle;
+          const project = portfolioData.find(p => p.title === title || p.client === title);
+          if (project) openModal(project);
+        });
+      });
+
+      document.querySelectorAll('.project-row').forEach(row => {
+        row.addEventListener('click', (e) => {
+          e.preventDefault();
+          // DESIGN LIVING LAB – iframe 팝업
+          if (row.dataset.livinglab) {
+            content.innerHTML = '<iframe src="project-livinglab.html" style="width:100%;height:80vh;border:none;border-radius:12px;"></iframe>';
+            savedScrollY = window.scrollY;
+            document.body.style.overflow = 'hidden';
+            modal.classList.add('is-open');
+            backdrop.classList.add('is-open');
+            modal.scrollTop = 0;
+            return;
+          }
+          if (!portfolioData) return;
+          const name = row.querySelector('.project-name')?.textContent?.trim();
+          const project = portfolioData.find(p => p.title === name || p.client === name);
+          if (project) openModal(project);
+        });
+      });
+
+      function openModal(project) {
+        const catMap = { 'Open Innovation': 'Service Accelerating', 'Digital Transformation': 'Digital & AI Production', 'Company Building': 'Company Building', 'Entertainment Design': 'Entertainment Design' };
+        const cat = catMap[project.category] || project.category || '';
+        const tags = project.tags?.length ? `<div class="project-modal-tags">${project.tags.map(t => `<span>${t}</span>`).join('')}</div>` : '';
+        const awards = project.awards?.length ? `<div class="project-modal-awards">${project.awards.map(a => `<span>${a}</span>`).join('')}</div>` : '';
+        const detailImgs = project.detail_images || [];
+        const images = detailImgs.length ? detailImgs : [project.featured_image_url].filter(Boolean);
+        const imgsHTML = images.map(s => `<img src="${s}" alt="${project.title}" onerror="this.style.display='none'">`).join('');
+        const link = project.link ? `<a href="${project.link}" target="_blank" rel="noopener" class="project-modal-link">VIEW LIVE SITE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>` : '';
+
+        content.innerHTML = `
+          <h2 class="project-modal-title">${project.title}</h2>
+          <div class="project-modal-meta"><span>${cat}</span><span>${project.year || ''}</span>${project.client ? `<span>${project.client}</span>` : ''}</div>
+          <p class="project-modal-desc">${project.description || project.excerpt || ''}</p>
+          ${tags}${awards}
+          <div class="project-modal-images">${imgsHTML}</div>
+          ${link}
+        `;
+
+        content.querySelectorAll('.project-modal-images img').forEach(img => {
+          if (img.complete && img.naturalWidth > 0) img.classList.add('is-loaded');
+          else {
+            img.addEventListener('load', () => img.classList.add('is-loaded'), { once: true });
+            img.addEventListener('error', () => img.classList.add('is-loaded'), { once: true });
+          }
+        });
+
+        savedScrollY = window.scrollY;
+        document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
+        document.body.style.top = `-${savedScrollY}px`;
+        document.body.style.touchAction = 'none';
+        modal.classList.add('is-open');
+        backdrop.classList.add('is-open');
+        modal.scrollTop = 0;
+      }
+
+      function closeModal() {
+        modal.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        document.body.style.touchAction = '';
+        window.scrollTo(0, savedScrollY);
+      }
+
+      closeBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+      });
+
+      // Touch swipe to close – PC만 (모바일은 풀스크린이므로 좌우 스와이프 비활성)
+      if (window.innerWidth > 768) {
+        let touchStartX = 0, touchDeltaX = 0;
+        modal.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; touchDeltaX = 0; }, { passive: true });
+        modal.addEventListener('touchmove', (e) => {
+          touchDeltaX = e.touches[0].clientX - touchStartX;
+          if (touchDeltaX > 0) { modal.style.transition = 'none'; modal.style.transform = `translateX(${touchDeltaX}px)`; }
+        }, { passive: true });
+        modal.addEventListener('touchend', () => {
+          modal.style.transition = '';
+          if (touchDeltaX > 80) closeModal();
+          else if (modal.classList.contains('is-open')) modal.style.transform = 'translateX(0)';
+        }, { passive: true });
+      }
+    })();
+  </script>
+
+</body>
+</html>

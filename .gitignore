@@ -1,0 +1,8 @@
+livinglab/
+.DS_Store
+*.psd
+*.ai
+*.sketch
+*.zip
+node_modules/
+.claude/

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 32" fill="none">
+  <text x="0" y="24" font-family="'Helvetica Neue', 'Arial', sans-serif" font-size="22" font-weight="700" letter-spacing="4" fill="#ffffff">VINYL</text>
+  <text x="108" y="24" font-family="'Helvetica Neue', 'Arial', sans-serif" font-size="22" font-weight="700" fill="#751485">X</text>
+  <circle cx="170" cy="22" r="2.5" fill="#751485"/>
+</svg>

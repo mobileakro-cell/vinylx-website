@@ -1,0 +1,451 @@
+{
+  "plan_version": "1.0",
+  "created_date": "2026-03-20",
+  "project": "VINYL X Website Admin & DB Architecture",
+
+  "database_schema": {
+
+    "1_site_settings": {
+      "purpose": "사이트 전역 설정 (1개 레코드)",
+      "fields": {
+        "id": "INT PRIMARY KEY",
+        "site_name": "VARCHAR(100) — 사이트명 (VINYL X)",
+        "site_tagline": "VARCHAR(255) — 태그라인",
+        "logo_white_url": "VARCHAR(500) — 흰색 로고 이미지",
+        "logo_dark_url": "VARCHAR(500) — 어두운 로고 이미지",
+        "contact_email": "VARCHAR(255) — 대표 이메일",
+        "contact_phone": "VARCHAR(50) — 대표 전화번호",
+        "contact_address": "TEXT — 주소",
+        "copyright_text": "VARCHAR(255) — 푸터 저작권 문구",
+        "hero_title_line1": "VARCHAR(50) — 히어로 타이틀 1줄 (Service)",
+        "hero_title_line2": "VARCHAR(50) — 히어로 타이틀 2줄 (Experience)",
+        "hero_title_line3": "VARCHAR(50) — 히어로 타이틀 3줄 (Design)",
+        "mission_subtitle": "TEXT — 미션 섹션 서브타이틀",
+        "footer_cta_heading": "VARCHAR(100) — 푸터 CTA 제목",
+        "footer_cta_link_text": "VARCHAR(50) — 푸터 CTA 버튼 텍스트",
+        "updated_at": "DATETIME"
+      }
+    },
+
+    "2_social_links": {
+      "purpose": "SNS 링크 관리",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "platform": "VARCHAR(50) — 플랫폼명 (LinkedIn, Instagram, etc.)",
+        "url": "VARCHAR(500) — 링크 URL",
+        "icon_class": "VARCHAR(50) — 아이콘 클래스명",
+        "sort_order": "INT — 정렬 순서",
+        "is_active": "BOOLEAN DEFAULT true"
+      }
+    },
+
+    "3_navigation_menus": {
+      "purpose": "메뉴 구조 관리",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "menu_location": "ENUM('header', 'fullscreen', 'footer') — 메뉴 위치",
+        "label": "VARCHAR(50) — 메뉴 라벨",
+        "url": "VARCHAR(255) — 링크 URL",
+        "sort_order": "INT — 정렬 순서",
+        "data_num": "VARCHAR(10) — 풀스크린 메뉴 번호 (01, 02...)",
+        "is_active": "BOOLEAN DEFAULT true"
+      }
+    },
+
+    "4_categories": {
+      "purpose": "포트폴리오/서비스 카테고리",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "name": "VARCHAR(100) — 카테고리명 (Company Building, Digital Transformation...)",
+        "slug": "VARCHAR(100) UNIQUE — URL 슬러그",
+        "description": "TEXT — 카테고리 설명",
+        "sort_order": "INT — 정렬 순서",
+        "is_active": "BOOLEAN DEFAULT true"
+      },
+      "initial_data": [
+        { "name": "Company Building", "slug": "company-building" },
+        { "name": "Digital Transformation", "slug": "digital-transformation" },
+        { "name": "Open Innovation", "slug": "open-innovation" },
+        { "name": "Entertainment Design", "slug": "entertainment-design" }
+      ]
+    },
+
+    "5_tags": {
+      "purpose": "포트폴리오 태그 (UX, Web, IoT, Mobile App 등)",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "name": "VARCHAR(50) — 태그명",
+        "slug": "VARCHAR(50) UNIQUE"
+      }
+    },
+
+    "6_portfolios": {
+      "purpose": "포트폴리오 프로젝트 (핵심 테이블)",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "title": "VARCHAR(200) — 프로젝트명",
+        "slug": "VARCHAR(200) UNIQUE — URL 슬러그",
+        "category_id": "INT FK → categories.id",
+        "client": "VARCHAR(100) — 클라이언트명",
+        "year": "VARCHAR(20) — 수행 연도 (2020, 2019~2021 등)",
+        "description": "TEXT — 프로젝트 상세 설명",
+        "excerpt": "VARCHAR(500) — 요약 설명 (목록용)",
+        "thumbnail_url": "VARCHAR(500) — 썸네일 이미지",
+        "featured_image_url": "VARCHAR(500) — 대표 이미지",
+        "external_link": "VARCHAR(500) — 외부 링크",
+        "credit": "VARCHAR(100) DEFAULT 'by VINYLX 바이널엑스'",
+        "is_featured": "BOOLEAN DEFAULT false — 메인페이지 노출 여부",
+        "is_published": "BOOLEAN DEFAULT true",
+        "sort_order": "INT — 정렬 순서",
+        "created_at": "DATETIME",
+        "updated_at": "DATETIME"
+      }
+    },
+
+    "7_portfolio_images": {
+      "purpose": "포트폴리오 상세 이미지 (1:N)",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "portfolio_id": "INT FK → portfolios.id ON DELETE CASCADE",
+        "image_url": "VARCHAR(500) — 이미지 URL",
+        "alt_text": "VARCHAR(200) — 대체 텍스트",
+        "sort_order": "INT — 정렬 순서"
+      }
+    },
+
+    "8_portfolio_tags": {
+      "purpose": "포트폴리오-태그 다대다 연결",
+      "fields": {
+        "portfolio_id": "INT FK → portfolios.id",
+        "tag_id": "INT FK → tags.id",
+        "PRIMARY KEY": "(portfolio_id, tag_id)"
+      }
+    },
+
+    "9_awards": {
+      "purpose": "수상 이력",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "portfolio_id": "INT FK → portfolios.id ON DELETE CASCADE",
+        "award_name": "VARCHAR(200) — 수상명",
+        "award_year": "VARCHAR(10) — 수상 연도",
+        "award_icon_url": "VARCHAR(500) — 수상 아이콘/뱃지 이미지"
+      }
+    },
+
+    "10_services": {
+      "purpose": "서비스 영역 (미션 섹션 + 서비스 상세 패널)",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "service_key": "VARCHAR(50) UNIQUE — data-service 값 (company-building 등)",
+        "label": "VARCHAR(10) — 번호 라벨 (01, 02, 03)",
+        "title_line1": "VARCHAR(50) — 미션 텍스트 1줄 (Company)",
+        "title_line2": "VARCHAR(50) — 미션 텍스트 2줄 (Building.)",
+        "panel_title": "VARCHAR(100) — 패널 제목 (Company Building.)",
+        "panel_description": "TEXT — 패널 상세 설명",
+        "sort_order": "INT — 정렬 순서",
+        "is_active": "BOOLEAN DEFAULT true"
+      }
+    },
+
+    "11_service_tags": {
+      "purpose": "서비스별 태그 (Brand Strategy, UI/UX Design 등)",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "service_id": "INT FK → services.id ON DELETE CASCADE",
+        "tag_name": "VARCHAR(100) — 태그명",
+        "sort_order": "INT"
+      }
+    },
+
+    "12_service_portfolios": {
+      "purpose": "서비스-포트폴리오 연결 (패널 내 Featured Projects)",
+      "fields": {
+        "service_id": "INT FK → services.id",
+        "portfolio_id": "INT FK → portfolios.id",
+        "sort_order": "INT",
+        "PRIMARY KEY": "(service_id, portfolio_id)"
+      }
+    },
+
+    "13_gallery_items": {
+      "purpose": "히어로 갤러리 이미지 (패럴랙스 섹션)",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "image_url": "VARCHAR(500) — 이미지 URL",
+        "alt_text": "VARCHAR(200)",
+        "css_class": "VARCHAR(50) — 아이템 클래스 (item-1 ~ item-12)",
+        "parallax_speed": "DECIMAL(3,2) — 패럴랙스 속도 (0.15~0.60)",
+        "sort_order": "INT",
+        "is_active": "BOOLEAN DEFAULT true"
+      }
+    },
+
+    "14_log_entries": {
+      "purpose": "Field Log 카드 (가로 스크롤 섹션)",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "title": "VARCHAR(200) — 로그 제목",
+        "date": "VARCHAR(20) — 표시 날짜 (2025.09 형식)",
+        "image_url": "VARCHAR(500) — 이미지 URL",
+        "image_layout": "ENUM('vertical','landscape','square','landscape-wide') — 이미지 비율",
+        "badge_type": "ENUM('none','video','award') DEFAULT 'none' — 뱃지 타입",
+        "portfolio_id": "INT FK → portfolios.id NULL — 연결된 포트폴리오",
+        "external_link": "VARCHAR(500) — 외부 링크",
+        "sort_order": "INT",
+        "is_published": "BOOLEAN DEFAULT true",
+        "created_at": "DATETIME"
+      }
+    },
+
+    "15_media_library": {
+      "purpose": "미디어 파일 통합 관리",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "filename": "VARCHAR(255) — 파일명",
+        "filepath": "VARCHAR(500) — 저장 경로",
+        "url": "VARCHAR(500) — 접근 URL",
+        "mime_type": "VARCHAR(50) — 파일 타입 (image/jpeg, video/mp4)",
+        "file_size": "INT — 파일 크기 (bytes)",
+        "width": "INT — 이미지 너비",
+        "height": "INT — 이미지 높이",
+        "alt_text": "VARCHAR(200)",
+        "uploaded_at": "DATETIME",
+        "uploaded_by": "INT FK → admin_users.id"
+      }
+    },
+
+    "16_admin_users": {
+      "purpose": "관리자 계정",
+      "fields": {
+        "id": "INT PRIMARY KEY AUTO_INCREMENT",
+        "username": "VARCHAR(50) UNIQUE",
+        "email": "VARCHAR(255) UNIQUE",
+        "password_hash": "VARCHAR(255)",
+        "display_name": "VARCHAR(100)",
+        "role": "ENUM('super_admin','editor','viewer') DEFAULT 'editor'",
+        "last_login_at": "DATETIME",
+        "created_at": "DATETIME"
+      }
+    }
+  },
+
+  "admin_panel_pages": {
+
+    "dashboard": {
+      "path": "/admin",
+      "description": "대시보드 — 전체 현황 요약",
+      "widgets": [
+        "포트폴리오 총 개수 / 공개 / 비공개",
+        "최근 등록된 포트폴리오 5개",
+        "로그 엔트리 수",
+        "최근 수정 이력"
+      ]
+    },
+
+    "portfolios": {
+      "path": "/admin/portfolios",
+      "description": "포트폴리오 관리 (CRUD)",
+      "list_view": {
+        "columns": ["썸네일", "프로젝트명", "클라이언트", "카테고리", "연도", "공개여부", "수정일"],
+        "actions": ["편집", "복제", "삭제", "공개/비공개 토글"],
+        "filters": ["카테고리별", "연도별", "공개상태"],
+        "search": "프로젝트명, 클라이언트명 검색",
+        "drag_sort": "드래그로 순서 변경"
+      },
+      "edit_view": {
+        "sections": [
+          {
+            "name": "기본 정보",
+            "fields": ["프로젝트명", "슬러그(자동생성)", "클라이언트", "연도", "카테고리(셀렉트)", "태그(멀티셀렉트)"]
+          },
+          {
+            "name": "이미지",
+            "fields": ["썸네일(드래그 업로드)", "대표 이미지", "상세 이미지(다중 업로드, 드래그 정렬)"]
+          },
+          {
+            "name": "설명",
+            "fields": ["요약 설명(excerpt)", "상세 설명(리치 에디터)"]
+          },
+          {
+            "name": "부가 정보",
+            "fields": ["수상 이력(동적 추가/삭제)", "외부 링크", "크레딧"]
+          },
+          {
+            "name": "게시 설정",
+            "fields": ["공개 여부", "메인 노출 여부", "정렬 순서"]
+          }
+        ]
+      }
+    },
+
+    "services": {
+      "path": "/admin/services",
+      "description": "서비스 영역 관리",
+      "list_view": {
+        "columns": ["번호", "서비스명", "태그 수", "연결 프로젝트 수", "활성 상태"],
+        "note": "최대 3~5개, 드래그 정렬"
+      },
+      "edit_view": {
+        "fields": [
+          "서비스 키 (service_key)",
+          "번호 라벨 (01, 02, 03)",
+          "미션 타이틀 1줄 / 2줄",
+          "패널 제목",
+          "패널 설명 (리치 에디터)",
+          "서비스 태그 (동적 추가/삭제)",
+          "연결 포트폴리오 선택 (최대 2~3개)"
+        ]
+      }
+    },
+
+    "gallery": {
+      "path": "/admin/gallery",
+      "description": "히어로 갤러리 이미지 관리",
+      "view": {
+        "layout": "12개 슬롯 그리드 프리뷰 (실제 배치 미리보기)",
+        "per_item": ["이미지 업로드/변경", "패럴랙스 속도 슬라이더", "활성/비활성"],
+        "note": "item-1 ~ item-12 위치에 맞게 시각적으로 배치"
+      }
+    },
+
+    "logs": {
+      "path": "/admin/logs",
+      "description": "Field Log 관리",
+      "list_view": {
+        "columns": ["이미지", "제목", "날짜", "뱃지", "레이아웃", "공개여부"],
+        "drag_sort": true
+      },
+      "edit_view": {
+        "fields": [
+          "제목",
+          "날짜 (YYYY.MM)",
+          "이미지 업로드",
+          "이미지 레이아웃 (vertical/landscape/square/landscape-wide)",
+          "뱃지 타입 (없음/VIDEO/AWARD)",
+          "연결 포트폴리오 (선택)",
+          "외부 링크"
+        ]
+      }
+    },
+
+    "categories_tags": {
+      "path": "/admin/categories",
+      "description": "카테고리 & 태그 관리",
+      "tabs": [
+        {
+          "name": "카테고리",
+          "fields": ["카테고리명", "슬러그", "설명", "정렬 순서"]
+        },
+        {
+          "name": "태그",
+          "fields": ["태그명", "슬러그"]
+        }
+      ]
+    },
+
+    "media": {
+      "path": "/admin/media",
+      "description": "미디어 라이브러리",
+      "features": [
+        "그리드/리스트 뷰 전환",
+        "드래그 앤 드롭 다중 업로드",
+        "이미지 미리보기 + 크기 정보",
+        "사용 위치 추적 (어떤 포트폴리오에서 사용 중인지)",
+        "미사용 이미지 필터"
+      ]
+    },
+
+    "settings": {
+      "path": "/admin/settings",
+      "description": "사이트 설정",
+      "tabs": [
+        {
+          "name": "일반",
+          "fields": ["사이트명", "태그라인", "로고(흰/검)", "저작권 문구"]
+        },
+        {
+          "name": "히어로",
+          "fields": ["히어로 타이틀 3줄", "미션 서브타이틀"]
+        },
+        {
+          "name": "연락처",
+          "fields": ["이메일", "전화번호", "주소"]
+        },
+        {
+          "name": "SNS",
+          "fields": ["플랫폼별 URL 관리 (동적 추가/삭제)"]
+        },
+        {
+          "name": "메뉴",
+          "fields": ["헤더/풀스크린/푸터 메뉴 각각 편집"]
+        },
+        {
+          "name": "CTA",
+          "fields": ["푸터 CTA 제목", "CTA 버튼 텍스트"]
+        }
+      ]
+    }
+  },
+
+  "er_relationships": [
+    "categories 1:N portfolios",
+    "portfolios 1:N portfolio_images",
+    "portfolios N:M tags (via portfolio_tags)",
+    "portfolios 1:N awards",
+    "services N:M portfolios (via service_portfolios)",
+    "services 1:N service_tags",
+    "log_entries N:1 portfolios (optional)",
+    "media_library N:1 admin_users"
+  ],
+
+  "api_endpoints": {
+    "portfolios": {
+      "GET /api/portfolios": "목록 (필터: category, tag, featured, limit)",
+      "GET /api/portfolios/:slug": "상세 (이미지, 태그, 수상 포함)",
+      "POST /api/portfolios": "생성 (admin)",
+      "PUT /api/portfolios/:id": "수정 (admin)",
+      "DELETE /api/portfolios/:id": "삭제 (admin)",
+      "PATCH /api/portfolios/sort": "순서 변경 (admin)"
+    },
+    "services": {
+      "GET /api/services": "목록 (연결 포트폴리오 포함)",
+      "PUT /api/services/:id": "수정 (admin)"
+    },
+    "gallery": {
+      "GET /api/gallery": "갤러리 이미지 목록",
+      "PUT /api/gallery/:id": "이미지/속도 변경 (admin)"
+    },
+    "logs": {
+      "GET /api/logs": "로그 목록",
+      "POST /api/logs": "생성 (admin)",
+      "PUT /api/logs/:id": "수정 (admin)",
+      "DELETE /api/logs/:id": "삭제 (admin)"
+    },
+    "settings": {
+      "GET /api/settings": "사이트 설정 조회",
+      "PUT /api/settings": "설정 저장 (admin)"
+    },
+    "media": {
+      "POST /api/media/upload": "파일 업로드",
+      "GET /api/media": "미디어 목록",
+      "DELETE /api/media/:id": "삭제 (admin)"
+    },
+    "auth": {
+      "POST /api/auth/login": "로그인",
+      "POST /api/auth/logout": "로그아웃",
+      "GET /api/auth/me": "현재 사용자"
+    }
+  },
+
+  "tech_stack_recommendation": {
+    "frontend_admin": "React + Tailwind CSS (or Next.js App Router)",
+    "backend": "Node.js + Express (or Next.js API Routes)",
+    "database": "PostgreSQL (or MySQL)",
+    "orm": "Prisma",
+    "file_storage": "AWS S3 or Cloudflare R2",
+    "auth": "JWT + bcrypt",
+    "hosting": "Vercel (frontend) + Railway/Supabase (DB)",
+    "alternative_lightweight": "SQLite + Better-SQLite3 (소규모 사이트)"
+  }
+}

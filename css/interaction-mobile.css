@@ -1,0 +1,633 @@
+/* ============================================
+   VINYL X – Interaction Page (Mobile Only)
+   ============================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  cursor: auto;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  touch-action: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ============================================
+   CUSTOM CURSOR – 모바일 비활성화
+   ============================================ */
+.cursor-dot {
+  display: none;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+  z-index: 100;
+  mix-blend-mode: difference;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo .logo-img {
+  height: 18px;
+  width: auto;
+}
+
+/* GNB – 모바일에서는 숨김 */
+.gnb-nav {
+  display: none;
+}
+
+.menu-toggle {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background: none;
+  border: none;
+  padding: 10px 0;
+}
+
+/* ============================================
+   MENU OVERLAY
+   ============================================ */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 25px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.menu-link {
+  font-size: 42px;
+  font-weight: 300;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+
+.menu-link::before {
+  content: attr(data-num) '. ';
+  font-size: 12px;
+  font-weight: 400;
+  vertical-align: super;
+  margin-right: 8px;
+  opacity: 0.5;
+}
+
+.menu-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-footer a {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0;
+  margin-top: 0;
+}
+
+.lang-option {
+  color: rgba(255, 255, 255, 0.35);
+  transition: color 0.3s ease;
+}
+
+.lang-option.is-active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.lang-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+}
+
+.menu-social {
+  display: flex;
+  gap: 20px;
+}
+
+/* ============================================
+   SECTIONS – THEME SWITCHING
+   ============================================ */
+.section {
+  position: relative;
+  min-height: 100vh;
+}
+
+.section[data-theme="dark"] {
+  background: #000;
+  color: #fff;
+}
+
+.section[data-theme="light"] {
+  background: #f0ebe4;
+  color: #1a1a1a;
+}
+
+/* ============================================
+   HERO + GALLERY WRAPPER
+   ============================================ */
+.hero-gallery-wrapper {
+  position: relative;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100vh;
+  padding: 0 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  clip-path: inset(0);
+}
+
+.hero-text {
+  position: fixed;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.hero-text-overlay {
+  position: fixed;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 20px;
+  z-index: 5;
+  pointer-events: none;
+  width: 100%;
+  mix-blend-mode: difference;
+}
+
+.hero-line {
+  font-size: clamp(44px, 14vw, 64px);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+}
+
+/* 모바일 텍스트 정렬 – 심플 */
+.line-1 {
+  padding-left: 0;
+}
+
+.line-2 {
+  padding-left: 15%;
+}
+
+.line-3 {
+  padding-left: 5%;
+}
+
+/* Asterisk – n자 옆, 동일 높이, 360도 무한 회전 */
+.spinning-star {
+  display: inline-block;
+  font-size: 0.72em;
+  font-weight: 800;
+  line-height: 1;
+  position: relative;
+  vertical-align: 0.28em;
+  margin-left: 0.25em;
+  animation: spinStar 6s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes spinStar {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Light theme text */
+.gallery-section .hero-line {
+  color: #fff;
+}
+
+.scroll-indicator {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  z-index: 3;
+}
+
+.scroll-indicator-text {
+  text-align: right;
+  line-height: 1.5;
+}
+
+.scroll-arrow {
+  width: 36px;
+  height: 36px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: bounceDown 2s ease infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+.light-scroll {
+  color: #1a1a1a;
+}
+
+/* ============================================
+   GALLERY SECTION – 모바일 레이아웃
+   ============================================ */
+.gallery-section {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: inset(0);
+}
+
+.gallery-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.gallery-item {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 8px;
+  will-change: transform;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 모바일: 6개 이미지 표시 */
+.item-3,
+.item-7,
+.item-8,
+.item-9,
+.item-10,
+.item-11,
+.item-12,
+.item-13 {
+  display: none;
+}
+
+/* #1 – 좌상단 */
+.item-1 {
+  width: 44%;
+  top: 2%;
+  left: 2%;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+}
+
+/* #2 – 우상단 */
+.item-2 {
+  display: block;
+  width: 48%;
+  top: 5%;
+  right: 2%;
+  left: auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+}
+
+/* #4 – 좌측 중단 */
+.item-4 {
+  width: 46%;
+  top: 40%;
+  left: 2%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+}
+
+/* #5 – 우측 중단 세로형 */
+.item-5 {
+  width: 38%;
+  top: 32%;
+  right: 2%;
+  left: auto;
+  aspect-ratio: 3 / 4;
+  border-radius: 8px;
+}
+
+/* #6 – 좌하단 소형 */
+.item-6 {
+  width: 36%;
+  top: 72%;
+  left: 8%;
+  right: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+}
+
+/* ============================================
+   MISSION SECTION
+   ============================================ */
+.mission-section {
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  min-height: auto;
+}
+
+.mission-content {
+  width: 100%;
+}
+
+.mission-subtitle {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+.mission-line {
+  font-size: clamp(40px, 12vw, 56px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.mission-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mission-line.accent {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.mission-line:nth-child(2) { transition-delay: 0.1s; }
+.mission-line:nth-child(3) { transition-delay: 0.2s; }
+.mission-line:nth-child(4) { transition-delay: 0.3s; }
+.mission-line:nth-child(5) { transition-delay: 0.4s; }
+.mission-line:nth-child(6) { transition-delay: 0.5s; }
+
+/* CTA Link */
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.dark-cta {
+  color: #1a1a1a;
+}
+
+.cta-arrow {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-arrow {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
+.projects-section {
+  padding: 50px 20px;
+}
+
+.projects-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.projects-heading-1 {
+  font-size: clamp(40px, 12vw, 60px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.projects-heading-2 {
+  font-size: clamp(40px, 12vw, 60px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-align: left;
+}
+
+.projects-desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Projects List */
+.projects-list {
+  width: 100%;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.project-row:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.project-name {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.project-cat {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: #999;
+}
+
+.project-arrow {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 모바일에서 이미지 프리뷰 숨김 */
+.project-img-preview {
+  display: none;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer-section {
+  min-height: auto;
+  padding: 50px 20px 30px;
+}
+
+.footer-main {
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-cta {
+  margin: 0;
+}
+
+.footer-heading {
+  font-size: clamp(36px, 10vw, 50px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 15px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
