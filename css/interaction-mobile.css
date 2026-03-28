@@ -76,6 +76,12 @@ button {
   display: none;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .menu-toggle {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
