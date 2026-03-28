@@ -6,13 +6,13 @@
   'use strict';
 
   var translations = null;
-  var currentLang = localStorage.getItem('vinylx-lang') || 'ko';
+  var currentLang = localStorage.getItem('vinylx-lang') || 'en';
   var originalTexts = new Map();
 
   // Fetch translations JSON (cached by browser)
   function loadTranslations() {
     if (translations) return Promise.resolve(translations);
-    return fetch('/data/translations.json')
+    return fetch('data/translations.json')
       .then(function (r) { return r.json(); })
       .then(function (data) { translations = data; return data; });
   }
