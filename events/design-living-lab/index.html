@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>산업단지 디자인리빙랩 2025 | VINYL X</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --mint: #A8E6CF;
+    --blue: #C5D5FF;
+    --yellow: #FFF176;
+    --warm: #FFD9B0;
+    --black: #111;
+    --white: #FAFAFA;
+    --gray: #666;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+  }
+
+  /* ── SITE NAV ── */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 50px;
+    border-bottom: 2px solid #333;
+  }
+  .site-nav-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .site-nav-back:hover { color: var(--mint); }
+  .site-nav-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .site-nav-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 3px solid var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+  }
+  .hero-left {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 3px solid var(--black);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../../images/livinglab/bin000b.jpg') center/cover;
+    opacity: 0.06;
+    filter: grayscale(100%);
+  }
+  .hero-left > * { position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-block;
+    background: var(--mint);
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+    align-self: flex-start;
+  }
+  .hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3rem, 5.5vw, 5rem);
+    font-weight: 700;
+    line-height: 0.95;
+    margin: 30px 0;
+    letter-spacing: -2px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--gray);
+    margin-bottom: 40px;
+  }
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 15px;
+    padding-top: 30px;
+    border-top: 2px solid var(--black);
+  }
+  .hero-meta-item { display: flex; align-items: center; gap: 10px; }
+  .meta-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    min-width: 60px;
+    color: var(--gray);
+  }
+  .hero-right { display: grid; grid-template-rows: 1fr 1fr; }
+  .hero-img-top { overflow: hidden; border-bottom: 3px solid var(--black); }
+  .hero-img-bottom { overflow: hidden; }
+  .hero-img-top img, .hero-img-bottom img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(30%);
+    transition: filter 0.4s;
+  }
+  .hero-img-top:hover img, .hero-img-bottom:hover img { filter: grayscale(0%); }
+
+  /* ── MARQUEE ── */
+  .marquee-bar {
+    background: var(--black);
+    color: var(--mint);
+    padding: 14px 0;
+    overflow: hidden;
+    border-bottom: 3px solid var(--black);
+  }
+  .marquee-track {
+    display: flex;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+  }
+  .marquee-track span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 0 60px;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── SECTION TAG ── */
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border: 2px solid var(--black);
+    margin-bottom: 24px;
+  }
+  .section-tag.mint { background: var(--mint); }
+  .section-tag.blue { background: var(--blue); }
+  .section-tag.yellow { background: var(--yellow); }
+  .section-tag.warm { background: var(--warm); }
+
+  /* ── ABOUT ── */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 3px solid var(--black);
+  }
+  .about-text {
+    padding: 60px 50px;
+    border-right: 3px solid var(--black);
+  }
+  .about-text h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+  .about-text p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+  .about-photo { overflow: hidden; }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ── STATS ROW ── */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 3px solid var(--black);
+  }
+  .stat-cell {
+    padding: 50px 36px;
+    border-right: 3px solid var(--black);
+    text-align: center;
+  }
+  .stat-cell:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .stat-label { font-size: 14px; color: var(--gray); font-weight: 500; }
+
+  /* ── EDITORIAL GRID ── */
+  .photo-section { border-bottom: 3px solid var(--black); }
+  .photo-section-header {
+    padding: 50px 50px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--black);
+  }
+  .photo-section-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  .editorial-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .editorial-cell {
+    border-right: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+  .editorial-cell:nth-child(3n) { border-right: none; }
+  .editorial-cell:nth-last-child(-n+3) { border-bottom: none; }
+  .editorial-cell.span-2 { grid-column: span 2; }
+  .editorial-cell img {
+    width: 100%; height: 100%; object-fit: cover;
+    aspect-ratio: 4/3; display: block;
+    transition: transform 0.5s, filter 0.5s;
+    filter: grayscale(20%);
+  }
+  .editorial-cell.span-2 img { aspect-ratio: 8/3; }
+  .editorial-cell:hover img { transform: scale(1.04); filter: grayscale(0%); }
+  .editorial-cell .cell-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 12px 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .editorial-cell:hover .cell-label { opacity: 1; }
+
+  /* ── VIDEO ── */
+  .video-section {
+    border-bottom: 3px solid var(--black);
+    display: grid;
+    grid-template-columns: 340px 1fr;
+  }
+  .video-info {
+    padding: 50px 40px;
+    border-right: 3px solid var(--black);
+    background: var(--mint);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .video-info h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .video-info p { font-size: 14px; color: #444; line-height: 1.8; }
+  .video-viewport {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    background: #111;
+    cursor: pointer;
+  }
+  .video-viewport video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .play-btn {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.3s, opacity 0.3s;
+    pointer-events: none;
+  }
+  .video-viewport.playing .play-btn { opacity: 0; }
+
+  /* ── PROCESS ── */
+  .process-section { border-bottom: 3px solid var(--black); }
+  .process-header {
+    padding: 50px 50px 30px;
+    border-bottom: 3px solid var(--black);
+  }
+  .process-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .process-card {
+    padding: 40px 36px;
+    border-right: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+  }
+  .process-card:nth-child(3n) { border-right: none; }
+  .process-card:nth-last-child(-n+3) { border-bottom: none; }
+  .process-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 2px; color: var(--gray);
+    margin-bottom: 16px;
+  }
+  .process-card h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem; font-weight: 700;
+    margin-bottom: 10px; letter-spacing: -0.5px;
+  }
+  .process-card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+  /* ── INSIGHTS ── */
+  .insights-section { border-bottom: 3px solid var(--black); }
+  .insights-header {
+    padding: 50px 50px 30px;
+    border-bottom: 3px solid var(--black);
+  }
+  .insights-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem; font-weight: 700; letter-spacing: -1px;
+  }
+  .insights-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+  .insight-card {
+    padding: 40px 36px;
+    border-right: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+    transition: background 0.2s;
+  }
+  .insight-card:nth-child(2n) { border-right: none; }
+  .insight-card:nth-last-child(-n+2) { border-bottom: none; }
+  .insight-card:nth-child(1) { background: var(--mint); }
+  .insight-card:nth-child(2) { background: var(--blue); }
+  .insight-card:nth-child(3) { background: var(--yellow); }
+  .insight-card:nth-child(4) { background: var(--warm); }
+  .insight-letter {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 14px; color: #555; display: block;
+  }
+  .insight-card h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem; font-weight: 700;
+    margin-bottom: 10px; letter-spacing: -0.5px;
+  }
+  .insight-card p { font-size: 14px; color: #333; line-height: 1.7; }
+
+  /* ── KEY IDEAS ── */
+  .ideas-section { border-bottom: 3px solid var(--black); }
+  .ideas-header {
+    padding: 50px 50px 30px;
+    border-bottom: 3px solid var(--black);
+  }
+  .ideas-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem; font-weight: 700; letter-spacing: -1px;
+  }
+  .ideas-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .idea-card {
+    padding: 50px 46px;
+    border-right: 3px solid var(--black);
+  }
+  .idea-card:last-child { border-right: none; }
+  .idea-card:nth-child(1) { background: var(--mint); }
+  .idea-card:nth-child(2) { background: #111; color: var(--white); }
+  .idea-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    margin-bottom: 20px; opacity: 0.5;
+  }
+  .idea-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700; letter-spacing: -1px;
+    line-height: 1; margin-bottom: 20px;
+  }
+  .idea-ko { font-size: 16px; font-weight: 700; margin-bottom: 16px; opacity: 0.7; }
+  .idea-desc { font-size: 15px; line-height: 1.9; opacity: 0.75; }
+
+  /* ── PRESS ── */
+  .press-section { border-bottom: 3px solid var(--black); }
+  .press-header {
+    padding: 50px 50px 30px;
+    border-bottom: 3px solid var(--black);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .press-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem; font-weight: 700; letter-spacing: -1px;
+  }
+  .press-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .press-card {
+    padding: 46px 46px;
+    border-right: 3px solid var(--black);
+    display: flex; flex-direction: column; justify-content: space-between;
+    gap: 24px;
+  }
+  .press-card:last-child { border-right: none; }
+  .press-source {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 4px;
+  }
+  .press-outlet {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+  .press-date { font-size: 12px; color: var(--gray); }
+  .press-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700; letter-spacing: -0.5px;
+    line-height: 1.3; margin-bottom: 16px;
+  }
+  .press-excerpt {
+    font-size: 14px; color: #444; line-height: 1.85;
+    flex-grow: 1;
+  }
+  .press-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; text-decoration: none;
+    color: var(--black);
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 2px;
+    align-self: flex-start;
+    transition: opacity 0.2s;
+  }
+  .press-link:hover { opacity: 0.5; }
+  .press-newspaper {
+    background: var(--yellow);
+    border: 2px solid var(--black);
+    padding: 28px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .press-newspaper-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 12px; margin-bottom: 16px;
+  }
+  .press-newspaper-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px; font-weight: 700;
+  }
+  .press-newspaper-meta { font-size: 12px; color: #555; text-align: right; line-height: 1.6; }
+  .press-newspaper-headline {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 900; letter-spacing: -0.5px;
+    line-height: 1.3; margin-bottom: 14px;
+  }
+  .press-newspaper-body { font-size: 13px; color: #333; line-height: 1.85; }
+
+  @media (max-width: 900px) {
+    .ideas-grid { grid-template-columns: 1fr; }
+    .idea-card { border-right: none; border-bottom: 3px solid var(--black); }
+    .idea-card:last-child { border-bottom: none; }
+    .ideas-header { padding: 30px 24px 20px; }
+    .press-grid { grid-template-columns: 1fr; }
+    .press-card { border-right: none; border-bottom: 3px solid var(--black); padding: 30px 24px; }
+    .press-card:last-child { border-bottom: none; }
+    .press-header { padding: 30px 24px 20px; }
+  }
+
+  /* ── ORGANIZERS ── */
+  .org-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 3px solid var(--black);
+  }
+  .org-card {
+    padding: 50px 36px;
+    border-right: 3px solid var(--black);
+    text-align: center;
+  }
+  .org-card:last-child { border-right: none; }
+  .org-card h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px; font-weight: 700; margin-bottom: 6px;
+  }
+  .org-card p { font-size: 13px; color: var(--gray); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px; font-weight: 700;
+  }
+  .footer-info { font-size: 13px; color: #888; }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  .lightbox.show { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 24px;
+    width: 44px; height: 44px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: transparent; color: white;
+    font-size: 28px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .site-nav { padding: 14px 20px; }
+    .site-nav-tag { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { border-right: none; padding: 40px 24px; }
+    .about { grid-template-columns: 1fr; }
+    .about-text { border-right: none; padding: 40px 24px; }
+    .stats-row { grid-template-columns: 1fr 1fr; }
+    .stat-cell:nth-child(2) { border-right: none; }
+    .stat-cell:nth-child(3) { border-right: 3px solid var(--black); border-top: 3px solid var(--black); }
+    .stat-cell:nth-child(4) { border-right: none; border-top: 3px solid var(--black); }
+    .editorial-grid { grid-template-columns: 1fr 1fr; }
+    .video-section { grid-template-columns: 1fr; }
+    .video-info { border-right: none; border-bottom: 3px solid var(--black); padding: 30px 24px; }
+    .process-grid { grid-template-columns: 1fr; }
+    .process-card { border-right: none; }
+    .insights-grid { grid-template-columns: 1fr; }
+    .insight-card { border-right: none; }
+    .insight-card:nth-last-child(-n+2) { border-bottom: 3px solid var(--black); }
+    .insight-card:last-child { border-bottom: none; }
+    .org-section { grid-template-columns: 1fr; }
+    .org-card { border-right: none; border-bottom: 3px solid var(--black); }
+    .org-card:last-child { border-bottom: none; }
+    .photo-section-header { padding: 30px 24px; }
+    .process-header, .insights-header { padding: 30px 24px 20px; }
+    .footer { padding: 30px 24px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════ SITE NAV ══════ -->
+<nav class="site-nav">
+  <a href="../../interaction.html" class="site-nav-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back
+  </a>
+  <a href="../../interaction.html" class="site-nav-logo">VINYL X</a>
+  <span class="site-nav-tag">Field Log</span>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div>
+      <div class="hero-badge">VINYL X × 한국디자인진흥원 × 완주군</div>
+      <h1 class="hero-title">Design<br>Living<br>Lab<br>2025</h1>
+      <p class="hero-subtitle">산업단지 디자인리빙랩</p>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="meta-label">Year</span>
+        <span>2025</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="meta-label">Client</span>
+        <span>한국디자인진흥원 / 완주군</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="meta-label">Location</span>
+        <span>완주일반산업단지</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="meta-label">Scope</span>
+        <span>서비스디자인 리빙랩</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-top">
+      <img src="../../images/livinglab/bin000b.jpg" alt="리빙랩 워크숍 현장">
+    </div>
+    <div class="hero-img-bottom">
+      <img src="../../images/livinglab/bin0009.jpg" alt="워크숍 참여자">
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MARQUEE ══════ -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>Design Living Lab 2025 &mdash; 완주일반산업단지 &mdash; 한국디자인진흥원 &mdash; VINYL X &mdash; 서비스디자인 &mdash; 청년 리빙랩 &mdash;</span>
+    <span>Design Living Lab 2025 &mdash; 완주일반산업단지 &mdash; 한국디자인진흥원 &mdash; VINYL X &mdash; 서비스디자인 &mdash; 청년 리빙랩 &mdash;</span>
+    <span>Design Living Lab 2025 &mdash; 완주일반산업단지 &mdash; 한국디자인진흥원 &mdash; VINYL X &mdash; 서비스디자인 &mdash; 청년 리빙랩 &mdash;</span>
+  </div>
+</div>
+
+<!-- ══════ ABOUT ══════ -->
+<section class="about">
+  <div class="about-text">
+    <div class="section-tag mint">About</div>
+    <h2>청년이 성장하고<br>문화가 자라는 산업단지</h2>
+    <p>완주산단 내 근로자와 청년층의 생활, 문화, 근무환경 개선을 위한 리빙랩 기반 문제 발굴 및 해결 아이디어를 도출하는 프로젝트입니다.</p>
+    <p>산단 구성원이 직접 참여하는 서비스디자인 프로세스를 적용하여 사용자 중심의 개선 프레임을 구축했습니다. 설문, 인터뷰, 6회의 워크숍을 통해 132명의 참여자로부터 12개의 실행 아이디어를 도출했습니다.</p>
+    <p>전북에서 유일하게 인구가 증가하는 완주군, 그 안의 산업단지를 사람이 머물고 싶은 공간으로 변화시키기 위한 서비스디자인 실험입니다.</p>
+  </div>
+  <div class="about-photo">
+    <img src="../../images/livinglab/frame_30s.jpg" alt="리빙랩 현장" loading="lazy">
+  </div>
+</section>
+
+<!-- ══════ STATS ══════ -->
+<div class="stats-row">
+  <div class="stat-cell">
+    <div class="stat-num">6</div>
+    <div class="stat-label">리빙랩 워크숍</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">132</div>
+    <div class="stat-label">설문 참여자</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">12</div>
+    <div class="stat-label">도출 아이디어</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">5</div>
+    <div class="stat-label">현황 분석 유형</div>
+  </div>
+</div>
+
+<!-- ══════ PHOTO HIGHLIGHTS ══════ -->
+<section class="photo-section">
+  <div class="photo-section-header">
+    <h2>Highlights</h2>
+    <div class="section-tag blue">워크숍 현장 스케치</div>
+  </div>
+  <div class="editorial-grid">
+    <div class="editorial-cell span-2" onclick="openLightbox(this)">
+      <img src="../../images/livinglab/bin000a.jpg" alt="워크숍 프레젠테이션" loading="lazy">
+      <div class="cell-label">Workshop Session</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="../../images/livinglab/bin0005.jpg" alt="아이디에이션" loading="lazy">
+      <div class="cell-label">Ideation</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="../../images/livinglab/bin0007.jpg" alt="어피니티 다이어그램" loading="lazy">
+      <div class="cell-label">Affinity Diagram</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="../../images/livinglab/bin0010.jpg" alt="참여자 아이디에이션" loading="lazy">
+      <div class="cell-label">Participants</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="../../images/livinglab/bin0011.jpg" alt="고객여정지도 워크숍" loading="lazy">
+      <div class="cell-label">Journey Map</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="../../images/livinglab/bin0015.jpg" alt="문제 정의 워크시트" loading="lazy">
+      <div class="cell-label">Problem Definition</div>
+    </div>
+    <div class="editorial-cell span-2" onclick="openLightbox(this)">
+      <img src="../../images/livinglab/bin0029.jpg" alt="고객여정지도 분석" loading="lazy">
+      <div class="cell-label">Customer Journey Analysis</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="../../images/livinglab/bin000c.jpg" alt="페르소나 카드" loading="lazy">
+      <div class="cell-label">Persona</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ VIDEO ══════ -->
+<section class="video-section">
+  <div class="video-info">
+    <div>
+      <div class="section-tag mint">Film</div>
+      <h2>프로젝트<br>다큐멘터리</h2>
+      <p>6개월간의 리빙랩 여정 — 완주산단 근로자들의 목소리와 워크숍 현장, 그리고 도출된 아이디어까지 담은 프로젝트 필름입니다.</p>
+    </div>
+  </div>
+  <div class="video-viewport" id="videoWrap" onclick="toggleVideo()">
+    <video id="projectVideo" preload="metadata" poster="../../images/livinglab/frame_5s.jpg">
+      <source src="../../livinglab/(완주산단)청년리빙랩 최종.mp4" type="video/mp4">
+    </video>
+    <div class="play-btn" id="playBtn">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="#1a1a1a"><polygon points="6,3 21,12 6,21"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ KEY IDEAS ══════ -->
+<section class="ideas-section">
+  <div class="ideas-header">
+    <div class="section-tag mint">Key Ideas</div>
+    <h2>핵심 아이디어 2</h2>
+  </div>
+  <div class="ideas-grid">
+    <div class="idea-card">
+      <div class="idea-num">Idea 01 — 교통</div>
+      <div class="idea-name">완주루프</div>
+      <div class="idea-ko">수소 순환 셔틀버스</div>
+      <p class="idea-desc">현대자동차 전주공장의 수소 모빌리티 기술을 주민 생활 서비스로 연결합니다. 수소 순환 셔틀로 생활권 단위 이동 루트를 구성하고, 테마형 노선과 확장현실(XR) 체험 콘텐츠를 결합해 이동 자체를 문화 경험으로 전환합니다. AI 기반 탄력 배차 시스템을 도입해 수요 데이터를 축적하고, 완주산단을 수소·AI 모빌리티 실증 거점으로 활용합니다.</p>
+    </div>
+    <div class="idea-card">
+      <div class="idea-num">Idea 02 — 숙박</div>
+      <div class="idea-name">인더스테이</div>
+      <div class="idea-ko">복합 숙박 & 라운지</div>
+      <p class="idea-desc">산단 내 빈집과 유휴 공장을 리모델링해 주민이 직접 운영하는 게스트하우스·라운지 복합시설로 전환합니다. 1인실·다인실·패밀리룸 등 다양한 수요에 대응하며, 회의실·공유오피스·공용키친과 로컬 콘텐츠를 결합한 인증형 복합 숙박 모델로 설계됩니다. 완주산단에 현재 노후 모텔 5곳이 전부인 숙박 인프라를 근본적으로 개선합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PROCESS ══════ -->
+<section class="process-section">
+  <div class="process-header">
+    <div class="section-tag yellow">Process</div>
+    <h2>서비스디자인 프로세스</h2>
+  </div>
+  <div class="process-grid">
+    <div class="process-card">
+      <div class="process-num">STEP 01</div>
+      <h4>공감하기</h4>
+      <p>산단 현황 공유<br>사용자 니즈 도출</p>
+    </div>
+    <div class="process-card">
+      <div class="process-num">STEP 02</div>
+      <h4>핵심이슈</h4>
+      <p>페르소나 정의<br>고객여정지도 작성</p>
+    </div>
+    <div class="process-card">
+      <div class="process-num">STEP 03</div>
+      <h4>아이디어</h4>
+      <p>도출 아이디어 공유<br>의견 수렴 및 보완</p>
+    </div>
+    <div class="process-card">
+      <div class="process-num">STEP 04</div>
+      <h4>부트캠프</h4>
+      <p>실행가능성 확보<br>이해관계자 참여</p>
+    </div>
+    <div class="process-card">
+      <div class="process-num">STEP 05</div>
+      <h4>구체화</h4>
+      <p>우선순위 아이디어<br>카노모델 검증</p>
+    </div>
+    <div class="process-card">
+      <div class="process-num">STEP 06</div>
+      <h4>종합</h4>
+      <p>최종 아이디어 종합<br>보완점 논의</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ INSIGHTS ══════ -->
+<section class="insights-section">
+  <div class="insights-header">
+    <div class="section-tag warm">Research</div>
+    <h2>5가지 현황 분석 & 인사이트</h2>
+  </div>
+  <div class="insights-grid">
+    <div class="insight-card">
+      <span class="insight-letter">A. 정주생활문화</span>
+      <h4>주거와 산단이 초근접배치한<br>정주생활복합형 산업단지</h4>
+      <p>전북에서 유일하게 인구가 증가하는 도시. 주거와 산단지역 초근접배치 특성으로 인한 악취 문제, 노후 시설, 교통인프라 부족으로 세대 이탈 우려</p>
+    </div>
+    <div class="insight-card">
+      <span class="insight-letter">B. 복지체계</span>
+      <h4>기업 규모 격차로 인한<br>근로 복지 불균형 해소</h4>
+      <p>756개 기업 중 91.2%가 100인 미만 소규모 기업. 구내식당을 갖추지 못한 기업이 절반 이상, 외국인 근로자 기숙사 환경 열악</p>
+    </div>
+    <div class="insight-card">
+      <span class="insight-letter">C. 정보접근</span>
+      <h4>청년유입이 늘어나는 산단,<br>생활정보 접근체계 미비</h4>
+      <p>산단 입주 초기 근로자 및 가족들의 지역 정보 습득 어려움. 여가활용 공간 및 프로그램 접근성 부족, 문화복지시설 미사용률 79.9%</p>
+    </div>
+    <div class="insight-card">
+      <span class="insight-letter">D. 산업브랜드</span>
+      <h4>수소 모빌리티 산단 브랜딩과<br>지역 교통 활성화 연계</h4>
+      <p>세계 최대 규모의 수소 모빌리티 산업단지. 산업적 브랜드 기반 서비스를 지역 생활문화권에 우선 적용하고, AI 교통문화 선도 기회</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PRESS ══════ -->
+<section class="press-section">
+  <div class="press-header">
+    <h2>Press</h2>
+    <div class="section-tag blue">언론 보도</div>
+  </div>
+  <div class="press-grid">
+    <div class="press-card">
+      <div>
+        <div class="press-source">
+          <span class="press-outlet">전자신문</span>
+          <span class="press-date">2026. 3. 20</span>
+        </div>
+        <div class="press-newspaper">
+          <div class="press-newspaper-header">
+            <div class="press-newspaper-name">전자신문</div>
+            <div class="press-newspaper-meta">2026년 3월 20일 금요일<br>012면 전자</div>
+          </div>
+          <div class="press-newspaper-headline">노후 산단 탈바꿈…청년 디자인 입혔다</div>
+          <div class="press-newspaper-body">한국디자인진흥원은 '문화선도산단 청년디자인리빙랩' 결과모음집을 발간, 각 산단 현장 근로자와 청년이 발굴한 38개 과제를 공개했다. 구미 산단에서는 14개, 완주 산단은 12개, 창원 산단에서는 12개 주요 과제가 발굴됐다.<br><br>완주산단은 1989년 조성된 노후 산업단지다. 현대자동차 전주공장을 핵심으로 수소 모빌리티 산업 거점으로 성장 중이며, 전북에서 유일하게 인구가 증가하는 도시로 2024년 기준 약 9만5000명이 거주한다.<br><br>디자인진흥원은 올해 도출된 과제 가운데 산단별로 2개를 2차 연도 시범 과제로 선정해 사업을 추진할 예정이다.</div>
+        </div>
+        <p class="press-excerpt" style="margin-top:0;">기자: 류근일 · ryuryu@etnews.com</p>
+      </div>
+    </div>
+    <div class="press-card">
+      <div>
+        <div class="press-source">
+          <span class="press-outlet">디자인DB 기고</span>
+          <span class="press-date">2026. 2. 19</span>
+        </div>
+        <h3 class="press-title">같은 산단, 다른 조건.<br>완주에서 찾은 청년디자인리빙랩의 가능성</h3>
+        <p class="press-excerpt">완주 산단을 제대로 이해하려면 먼저 이곳이 평범한 산단이라는 생각을 버려야 합니다. 삼봉지구를 포함하면 14,000세대 규모의 초대형 단지이며, 현대자동차 전주공장을 중심으로 세계 최대 규모의 수소 모빌리티 산업단지로 성장하고 있습니다.<br><br>청년디자인리빙랩은 계획을 먼저 세우고 주민을 설득하는 대신 청년과 주민, 공무원, 디자이너가 함께 문제를 탐색하고 현장에서 가설을 검증합니다. 완성된 결과물보다 지역이 스스로 문제를 찾고 실천하는 방법을 남기는 것이 궁극적인 목적입니다.<br><br>"시설 개선 중심의 기존 산업단지 정책에서 벗어나, 산업단지에서 실제로 일하고 생활하는 청년과 노동자의 경험을 기반으로 문제를 정의하고 해결책을 도출하는 참여형 정책 실험"</p>
+      </div>
+      <a href="https://www.designdb.com/?menuno=1278&bbsno=3050&siteno=15&act=view" class="press-link" target="_blank" rel="noopener">
+        전문 읽기
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ ORGANIZERS ══════ -->
+<section class="org-section">
+  <div class="org-card">
+    <div class="section-tag mint" style="margin-bottom:16px;">주관</div>
+    <h4>바이널엑스</h4>
+    <p>VINYL X</p>
+  </div>
+  <div class="org-card">
+    <div class="section-tag blue" style="margin-bottom:16px;">발주</div>
+    <h4>한국디자인진흥원</h4>
+    <p>Korea Institute of Design Promotion</p>
+  </div>
+  <div class="org-card">
+    <div class="section-tag yellow" style="margin-bottom:16px;">지자체</div>
+    <h4>완주군</h4>
+    <p>Wanju County, Jeollabuk-do</p>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="footer">
+  <div class="footer-brand">Design Living Lab 2025</div>
+  <div class="footer-info">완주일반산업단지 · 서비스디자인 리빙랩</div>
+</footer>
+
+<!-- ══════ LIGHTBOX ══════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+  function openLightbox(cell) {
+    const img = cell.querySelector('img');
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightbox').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  const video = document.getElementById('projectVideo');
+  const videoWrap = document.getElementById('videoWrap');
+  const playBtn = document.getElementById('playBtn');
+
+  function toggleVideo() {
+    if (video.paused) {
+      video.play();
+      videoWrap.classList.add('playing');
+    } else {
+      video.pause();
+      videoWrap.classList.remove('playing');
+    }
+  }
+  video.addEventListener('ended', () => {
+    videoWrap.classList.remove('playing');
+  });
+</script>
+
+</body>
+</html>
