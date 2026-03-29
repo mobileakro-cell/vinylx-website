@@ -61,6 +61,14 @@
     "log-title-6": {
       "ko": "STYLETECH 액셀러레이터 데모데이",
       "en": "STYLETECH Accelerator Demo Day"
+    },
+    "log-title-kbeauty": {
+      "ko": "K-Beauty Global Bridge 2026",
+      "en": "K-Beauty Global Bridge 2026"
+    },
+    "log-title-livinglab": {
+      "ko": "산업단지 디자인리빙랩",
+      "en": "Industrial Complex Design Living Lab"
     }
   },
   "about": {
