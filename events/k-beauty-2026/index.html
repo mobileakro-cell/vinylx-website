@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K-Beauty Global Bridge 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --green: #C8FF00;
+    --blue: #C5D5FF;
+    --yellow: #FFF176;
+    --pink: #FFB8D4;
+    --black: #111;
+    --white: #FAFAFA;
+    --gray: #666;
+  }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    border-bottom: 3px solid var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+  }
+
+  .hero-left {
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 3px solid var(--black);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('images/img_1471.jpg') center/cover;
+    opacity: 0.07;
+    filter: grayscale(100%);
+  }
+
+  .hero-left > * { position: relative; z-index: 1; }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--green);
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+    align-self: flex-start;
+  }
+
+  .hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 700;
+    line-height: 0.95;
+    margin: 30px 0;
+    letter-spacing: -2px;
+  }
+
+  .hero-subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--gray);
+    margin-bottom: 40px;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 15px;
+    padding-top: 30px;
+    border-top: 2px solid var(--black);
+  }
+
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .meta-label {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    min-width: 60px;
+    color: var(--gray);
+  }
+
+  .hero-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .hero-img-top { overflow: hidden; border-bottom: 3px solid var(--black); }
+  .hero-img-bottom { overflow: hidden; }
+
+  .hero-img-top img, .hero-img-bottom img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(30%);
+    transition: filter 0.4s;
+  }
+
+  .hero-img-top:hover img, .hero-img-bottom:hover img { filter: grayscale(0%); }
+
+  /* ── MARQUEE ── */
+  .marquee-bar {
+    background: var(--black);
+    color: var(--green);
+    padding: 14px 0;
+    overflow: hidden;
+    border-bottom: 3px solid var(--black);
+  }
+
+  .marquee-track {
+    display: flex;
+    animation: marquee 25s linear infinite;
+    white-space: nowrap;
+  }
+
+  .marquee-track span {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 0 60px;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── SECTION TAG ── */
+  .section-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border: 2px solid var(--black);
+    margin-bottom: 24px;
+  }
+
+  .section-tag.green { background: var(--green); }
+  .section-tag.blue { background: var(--blue); }
+  .section-tag.yellow { background: var(--yellow); }
+  .section-tag.pink { background: var(--pink); }
+
+  /* ── ABOUT ── */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 3px solid var(--black);
+  }
+
+  .about-text {
+    padding: 60px 50px;
+    border-right: 3px solid var(--black);
+  }
+
+  .about-text h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 16px;
+  }
+
+  .about-photo { overflow: hidden; }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ── EDITORIAL GRID ── */
+  .photo-section { border-bottom: 3px solid var(--black); }
+
+  .photo-section-header {
+    padding: 50px 50px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--black);
+  }
+
+  .photo-section-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .editorial-cell {
+    border-right: 3px solid var(--black);
+    border-bottom: 3px solid var(--black);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .editorial-cell:nth-child(3n) { border-right: none; }
+  .editorial-cell:nth-last-child(-n+3) { border-bottom: none; }
+  .editorial-cell.span-2 { grid-column: span 2; }
+
+  .editorial-cell img {
+    width: 100%; height: 100%; object-fit: cover;
+    aspect-ratio: 4/3; display: block;
+    transition: transform 0.5s, filter 0.5s;
+    filter: grayscale(20%);
+  }
+
+  .editorial-cell.span-2 img { aspect-ratio: 8/3; }
+  .editorial-cell:hover img { transform: scale(1.04); filter: grayscale(0%); }
+
+  .editorial-cell .cell-label {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 12px 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.5));
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .editorial-cell:hover .cell-label { opacity: 1; }
+
+  /* ── SLIDESHOW ── */
+  .slideshow-section {
+    border-bottom: 3px solid var(--black);
+    display: grid;
+    grid-template-columns: 340px 1fr;
+  }
+
+  .slideshow-info {
+    padding: 50px 40px;
+    border-right: 3px solid var(--black);
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .slideshow-info h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .slideshow-info p { font-size: 14px; color: #444; line-height: 1.8; }
+
+  .slide-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .slide-btn {
+    width: 48px; height: 48px;
+    border: 2px solid var(--black);
+    background: var(--white);
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    transition: background 0.2s;
+  }
+
+  .slide-btn:hover { background: var(--green); }
+
+  .slide-counter {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .slideshow-viewport {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    background: #eee;
+  }
+
+  .slide {
+    position: absolute; inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+
+  .slide.active { opacity: 1; }
+  .slide img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ── PROGRAM ── */
+  .program-section { border-bottom: 3px solid var(--black); }
+
+  .program-header {
+    padding: 50px 50px 30px;
+    border-bottom: 3px solid var(--black);
+  }
+
+  .program-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .program-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    border-bottom: 2px solid #ddd;
+    transition: background 0.2s;
+  }
+
+  .program-item:last-child { border-bottom: none; }
+  .program-item:hover { background: #f5f5f0; }
+
+  .program-time-col {
+    padding: 28px 30px;
+    border-right: 2px solid #ddd;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .program-content-col { padding: 28px 30px; }
+
+  .program-content-col h4 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .program-content-col .desc { font-size: 13px; color: var(--gray); margin-bottom: 10px; }
+
+  .speaker-tag {
+    display: inline-block;
+    background: var(--green);
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1.5px solid var(--black);
+  }
+
+  /* ── SPEAKERS ── */
+  .speakers-section { border-bottom: 3px solid var(--black); }
+
+  .speakers-header {
+    padding: 50px 50px 30px;
+    border-bottom: 3px solid var(--black);
+  }
+
+  .speakers-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .speaker-card {
+    padding: 36px 28px;
+    border-right: 3px solid var(--black);
+    transition: background 0.2s;
+  }
+
+  .speaker-card:last-child { border-right: none; }
+  .speaker-card:nth-child(1) { background: var(--green); }
+  .speaker-card:nth-child(2) { background: var(--blue); }
+  .speaker-card:nth-child(3) { background: var(--yellow); }
+  .speaker-card:nth-child(4) { background: var(--pink); }
+  .speaker-card:nth-child(5) { background: #E0E0E0; }
+
+  .speaker-role {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    margin-bottom: 14px; color: #555;
+  }
+
+  .speaker-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem; font-weight: 700; margin-bottom: 4px;
+  }
+
+  .speaker-org { font-size: 13px; color: var(--gray); margin-bottom: 20px; }
+
+  .speaker-topic {
+    font-size: 13px; color: #333; line-height: 1.6;
+    padding-top: 16px;
+    border-top: 2px solid rgba(0,0,0,0.15);
+  }
+
+  /* ── POSTER ── */
+  .poster-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 3px solid var(--black);
+  }
+
+  .poster-info {
+    padding: 60px 50px;
+    border-right: 3px solid var(--black);
+    background: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .poster-info h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.4rem; font-weight: 700;
+    letter-spacing: -1px; margin-bottom: 16px;
+  }
+
+  .poster-info p { font-size: 14px; color: #444; line-height: 1.8; }
+
+  .poster-img {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0ea;
+  }
+
+  .poster-img img {
+    max-height: 500px; width: auto;
+    border: 2px solid var(--black);
+    box-shadow: 8px 8px 0 var(--black);
+  }
+
+  /* ── ORGANIZERS ── */
+  .org-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 3px solid var(--black);
+  }
+
+  .org-card {
+    padding: 50px 36px;
+    border-right: 3px solid var(--black);
+    text-align: center;
+  }
+
+  .org-card:last-child { border-right: none; }
+
+  .org-card h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px; font-weight: 700; margin-bottom: 6px;
+  }
+
+  .org-card p { font-size: 13px; color: var(--gray); }
+
+  /* ── SITE NAV ── */
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 50px;
+    border-bottom: 2px solid #333;
+  }
+
+  .site-nav-back {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .site-nav-back:hover { color: var(--green); }
+
+  .site-nav-back svg { flex-shrink: 0; }
+
+  .site-nav-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+
+  .site-nav-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  @media (max-width: 900px) {
+    .site-nav { padding: 14px 20px; }
+    .site-nav-tag { display: none; }
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px; font-weight: 700;
+  }
+
+  .footer-info { font-size: 13px; color: #888; }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.92);
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+
+  .lightbox.show { display: flex; }
+
+  .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+
+  .lightbox-close {
+    position: absolute; top: 20px; right: 24px;
+    width: 44px; height: 44px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: transparent; color: white;
+    font-size: 28px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { border-right: none; }
+    .about { grid-template-columns: 1fr; }
+    .about-text { border-right: none; }
+    .editorial-grid { grid-template-columns: 1fr 1fr; }
+    .slideshow-section { grid-template-columns: 1fr; }
+    .slideshow-info { border-right: none; border-bottom: 3px solid var(--black); }
+    .speakers-grid { grid-template-columns: 1fr 1fr; }
+    .speaker-card { border-bottom: 3px solid var(--black); }
+    .poster-section { grid-template-columns: 1fr; }
+    .poster-info { border-right: none; border-bottom: 3px solid var(--black); }
+    .org-section { grid-template-columns: 1fr; }
+    .org-card { border-right: none; border-bottom: 3px solid var(--black); }
+    .program-item { grid-template-columns: 1fr; }
+    .program-time-col { border-right: none; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════ SITE NAV ══════ -->
+<nav class="site-nav">
+  <a href="../../interaction.html" class="site-nav-back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back
+  </a>
+  <a href="../../interaction.html" class="site-nav-logo">VINYL X</a>
+  <span class="site-nav-tag">Field Log</span>
+</nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div>
+      <div class="hero-badge">IBS &times; Stanford SCIDR &times; VINYL X</div>
+      <h1 class="hero-title">K-Beauty<br>Global<br>Bridge<br>2026</h1>
+      <p class="hero-subtitle">2026 글로벌 K-뷰티 브릿지</p>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="meta-label">Date</span>
+        <span>2026. 3. 27 (금) 13:30 – 16:00</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="meta-label">Venue</span>
+        <span>COEX 마곡 세미나홀 (1F)</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="meta-label">Scale</span>
+        <span>뷰티 브랜드·OEM·유통 실무자 200명 참석</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-top">
+      <img src="images/img_1462.jpg" alt="세미나 전경">
+    </div>
+    <div class="hero-img-bottom">
+      <img src="images/img_1471.jpg" alt="청중">
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MARQUEE ══════ -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>K-Beauty Global Bridge 2026 &mdash; Seoul Indie Beauty Show &mdash; Stanford SCIDR &mdash; VINYL X &mdash; COEX Magok &mdash;</span>
+    <span>K-Beauty Global Bridge 2026 &mdash; Seoul Indie Beauty Show &mdash; Stanford SCIDR &mdash; VINYL X &mdash; COEX Magok &mdash;</span>
+    <span>K-Beauty Global Bridge 2026 &mdash; Seoul Indie Beauty Show &mdash; Stanford SCIDR &mdash; VINYL X &mdash; COEX Magok &mdash;</span>
+  </div>
+</div>
+
+<!-- ══════ ABOUT ══════ -->
+<section class="about">
+  <div class="about-text">
+    <div class="section-tag green">About</div>
+    <h2>K-뷰티의 글로벌 확장,<br>그 해법을 제시하다</h2>
+    <p>K-뷰티의 미국 수출이 역대 최고치를 기록하는 가운데, '2026 글로벌 K-뷰티 브릿지' 세미나가 코엑스 마곡에서 성황리에 개최되었습니다.</p>
+    <p>까다로워진 미국 화장품 규제(MoCRA)와 빠르게 변하는 현지 소비자 트렌드에 대응하기 위해 마련된 이번 행사에서는, 북미 시장 진입 전략부터 FDA 인허가 실무, AI 기반 데이터 분석까지 실질적인 가이드가 제공되었습니다.</p>
+    <p>서울인디뷰티쇼(IBS), 스탠퍼드대학교 혁신 디자인연구센터(SCIDR), 바이널엑스(VINYL X)가 공동 주최한 이번 세미나에는 국내 뷰티 브랜드, OEM 제조사, 유통회사 실무자 등 약 200명이 참석하며 뜨거운 관심을 보여주었습니다.</p>
+  </div>
+  <div class="about-photo">
+    <img src="images/img_1440.jpg" alt="세미나 전경" loading="lazy">
+  </div>
+</section>
+
+<!-- ══════ PHOTO HIGHLIGHTS ══════ -->
+<section class="photo-section">
+  <div class="photo-section-header">
+    <h2>Highlights</h2>
+    <div class="section-tag blue">행사 현장 스케치</div>
+  </div>
+  <div class="editorial-grid">
+    <div class="editorial-cell span-2" onclick="openLightbox(this)">
+      <img src="images/img_1448.jpg" alt="세미나 청중석" loading="lazy">
+      <div class="cell-label">Seminar Hall</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="images/img_1439.jpg" alt="IBS BeautyCON 입구" loading="lazy">
+      <div class="cell-label">Entrance</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="images/img_1445.jpg" alt="기조 강연" loading="lazy">
+      <div class="cell-label">Keynote</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="images/img_1442.jpg" alt="참석자 전경" loading="lazy">
+      <div class="cell-label">Audience</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="images/img_1468.jpg" alt="등록 데스크" loading="lazy">
+      <div class="cell-label">Registration</div>
+    </div>
+    <div class="editorial-cell span-2" onclick="openLightbox(this)">
+      <img src="images/img_1485.jpg" alt="발표 현장" loading="lazy">
+      <div class="cell-label">Presentation</div>
+    </div>
+    <div class="editorial-cell" onclick="openLightbox(this)">
+      <img src="images/img_1492.jpg" alt="포스터" loading="lazy">
+      <div class="cell-label">Poster</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ SLIDESHOW ══════ -->
+<section class="slideshow-section">
+  <div class="slideshow-info">
+    <div>
+      <div class="section-tag blue">Gallery</div>
+      <h2>세미나 현장<br>갤러리</h2>
+      <p>기조 강연부터 각 세션 발표, 청중 반응까지 — 행사 현장의 생생한 모습을 슬라이드로 만나보세요.</p>
+    </div>
+    <div class="slide-controls">
+      <button class="slide-btn" onclick="prevSlide()">&#8249;</button>
+      <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">0</span></span>
+      <button class="slide-btn" onclick="nextSlide()">&#8250;</button>
+    </div>
+  </div>
+  <div class="slideshow-viewport" id="slideshow"></div>
+</section>
+
+<!-- ══════ PROGRAM ══════ -->
+<section class="program-section">
+  <div class="program-header">
+    <div class="section-tag yellow">Program</div>
+    <h2>세미나 프로그램</h2>
+  </div>
+  <div class="program-item">
+    <div class="program-time-col">13:30 – 13:40</div>
+    <div class="program-content-col">
+      <h4>Opening</h4>
+      <div class="desc">행사 및 공동주관/후원사 소개</div>
+    </div>
+  </div>
+  <div class="program-item">
+    <div class="program-time-col">13:40 – 14:10</div>
+    <div class="program-content-col">
+      <h4>Keynote — 글로벌 시장에서 K-뷰티의 성장 전략</h4>
+      <div class="desc">US Market Entry & Consumer Insights</div>
+      <span class="speaker-tag">김소형 · 스탠퍼드 SCIDR 센터장</span>
+    </div>
+  </div>
+  <div class="program-item">
+    <div class="program-time-col">14:10 – 14:40</div>
+    <div class="program-content-col">
+      <h4>인디 뷰티의 초가속 성장</h4>
+      <div class="desc">Hyper-Growth for Indie Beauty: Accelerating Success with AI Intelligence</div>
+      <span class="speaker-tag">신지선 · 트렌디어 AI 데이터 비즈니스 총괄</span>
+    </div>
+  </div>
+  <div class="program-item">
+    <div class="program-time-col">14:40 – 14:50</div>
+    <div class="program-content-col">
+      <h4>Break</h4>
+      <div class="desc">휴식 및 네트워킹</div>
+    </div>
+  </div>
+  <div class="program-item">
+    <div class="program-time-col">14:50 – 15:20</div>
+    <div class="program-content-col">
+      <h4>STYLETECH — 글로벌 뷰티·패션 액셀러레이팅 프로그램</h4>
+      <div class="desc">From Brazil to New York: Global Expansion of Collabo Salon & the K-Brand Ecosystem</div>
+      <span class="speaker-tag">이상민 · 한국디자인진흥원 실장 / 김치영 · 콜라보살롱 대표</span>
+    </div>
+  </div>
+  <div class="program-item">
+    <div class="program-time-col">15:20 – 15:50</div>
+    <div class="program-content-col">
+      <h4>FDA 화장품·OTC 인허가 및 실사 대응 전략</h4>
+      <div class="desc">2026 FDA Compliance for Cosmetics & OTC Products</div>
+      <span class="speaker-tag">양정배 · 한국SGS 팀장</span>
+    </div>
+  </div>
+  <div class="program-item">
+    <div class="program-time-col">15:50 – 16:00</div>
+    <div class="program-content-col">
+      <h4>Closing</h4>
+      <div class="desc">폐회 및 마무리</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ SPEAKERS ══════ -->
+<section class="speakers-section">
+  <div class="speakers-header">
+    <div class="section-tag pink">Speakers</div>
+    <h2>연사 소개</h2>
+  </div>
+  <div class="speakers-grid">
+    <div class="speaker-card">
+      <div class="speaker-role">Keynote</div>
+      <div class="speaker-name">김소형</div>
+      <div class="speaker-org">스탠퍼드 SCIDR 센터장</div>
+      <div class="speaker-topic">글로벌 시장에서 K-뷰티의 성장 전략: 미국 소비자와 시장 진입의 실제</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-role">Session</div>
+      <div class="speaker-name">신지선</div>
+      <div class="speaker-org">트렌디어 AI 총괄</div>
+      <div class="speaker-topic">인디 뷰티의 초가속 성장: AI로 앞당기는 성공의 변곡점</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-role">Session</div>
+      <div class="speaker-name">이상민</div>
+      <div class="speaker-org">한국디자인진흥원 실장</div>
+      <div class="speaker-topic">STYLETECH: 글로벌 뷰티·패션 액셀러레이팅 프로그램</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-role">Session</div>
+      <div class="speaker-name">김치영</div>
+      <div class="speaker-org">콜라보살롱 대표</div>
+      <div class="speaker-topic">브라질에서 뉴욕까지: 콜라보살롱 글로벌 진출 & K-브랜드 생태계</div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-role">Session</div>
+      <div class="speaker-name">양정배</div>
+      <div class="speaker-org">한국SGS 팀장</div>
+      <div class="speaker-topic">2026 FDA 화장품·OTC 인허가 및 실사 대응 전략</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ POSTER ══════ -->
+<section class="poster-section">
+  <div class="poster-info">
+    <div class="section-tag">Official Poster</div>
+    <h2>공식 포스터</h2>
+    <p>K-Beauty Global Bridge 2026 세미나의 공식 포스터입니다. 프로그램 일정과 연사 정보를 한눈에 확인하실 수 있습니다.</p>
+  </div>
+  <div class="poster-img" onclick="openLightbox(this)">
+    <img src="images/poster.jpg" alt="공식 포스터">
+  </div>
+</section>
+
+<!-- ══════ ORGANIZERS ══════ -->
+<section class="org-section">
+  <div class="org-card">
+    <div class="section-tag green" style="margin-bottom:16px;">Co-host</div>
+    <h4>바이널엑스</h4>
+    <p>VINYL X</p>
+  </div>
+  <div class="org-card">
+    <div class="section-tag blue" style="margin-bottom:16px;">Co-host</div>
+    <h4>스탠퍼드 SCIDR</h4>
+    <p>Stanford Center for Innovation & Design Research</p>
+  </div>
+  <div class="org-card">
+    <div class="section-tag yellow" style="margin-bottom:16px;">Co-host</div>
+    <h4>서울인디뷰티쇼 (IBS)</h4>
+    <p>Seoul Indie Beauty Show</p>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="footer">
+  <div class="footer-brand">K-Beauty Global Bridge 2026</div>
+  <div class="footer-info">COEX 마곡 세미나홀 · 2026. 3. 27</div>
+</footer>
+
+<!-- ══════ LIGHTBOX ══════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+const slideshowImages = [
+  'images/img_1441.jpg','images/img_1443.jpg','images/img_1444.jpg',
+  'images/img_1446.jpg','images/img_1447.jpg','images/img_1449.jpg',
+  'images/img_1450.jpg','images/img_1451.jpg','images/img_1452.jpg',
+  'images/img_1453.jpg','images/img_1454.jpg','images/img_1457.jpg',
+  'images/img_1458.jpg','images/img_1459.jpg','images/img_1460.jpg',
+  'images/img_1461.jpg','images/img_1463.jpg','images/img_1464.jpg',
+  'images/img_1465.jpg','images/img_1466.jpg','images/img_1467.jpg',
+  'images/img_1469.jpg','images/img_1470.jpg','images/img_1472.jpg',
+  'images/img_1473.jpg','images/img_1474.jpg','images/img_1475.jpg',
+  'images/img_1476.jpg','images/img_1477.jpg','images/img_1478.jpg',
+  'images/img_1479.jpg','images/img_1480.jpg','images/img_1481.jpg',
+  'images/img_1483.jpg','images/img_1484.jpg','images/img_1486.jpg',
+  'images/img_1487.jpg','images/img_1488.jpg','images/img_1489.jpg',
+  'images/img_1490.jpg'
+];
+
+let currentIdx = 0, autoplayTimer;
+
+function initSlideshow() {
+  const c = document.getElementById('slideshow');
+  slideshowImages.forEach((src, i) => {
+    const d = document.createElement('div');
+    d.className = 'slide' + (i === 0 ? ' active' : '');
+    d.innerHTML = `<img src="${src}" alt="현장 ${i+1}" loading="lazy">`;
+    c.appendChild(d);
+  });
+  document.getElementById('totalSlides').textContent = slideshowImages.length;
+  startAutoplay();
+}
+
+function goToSlide(idx) {
+  document.querySelectorAll('.slide')[currentIdx].classList.remove('active');
+  currentIdx = idx;
+  document.querySelectorAll('.slide')[currentIdx].classList.add('active');
+  document.getElementById('currentSlide').textContent = currentIdx + 1;
+  resetAutoplay();
+}
+
+function nextSlide() { goToSlide((currentIdx + 1) % slideshowImages.length); }
+function prevSlide() { goToSlide((currentIdx - 1 + slideshowImages.length) % slideshowImages.length); }
+function startAutoplay() { autoplayTimer = setInterval(nextSlide, 3500); }
+function resetAutoplay() { clearInterval(autoplayTimer); startAutoplay(); }
+
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  if (!img) return;
+  document.getElementById('lightboxImg').src = img.src;
+  document.getElementById('lightbox').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+initSlideshow();
+</script>
+</body>
+</html>
