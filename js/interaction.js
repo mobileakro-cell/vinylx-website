@@ -195,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Hero Text Scroll Animation ----
   const heroLines_dark = document.querySelectorAll('.hero-text .hero-line');
   const heroLines_light = document.querySelectorAll('.hero-text-overlay .hero-line');
-
   // ---- Mobile: measure text widths for dynamic layout ----
   // START: Service=left, Experience=right, Design=center
   // END (scroll): S-E-D vertically aligned, block centered on screen
@@ -490,3 +489,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
