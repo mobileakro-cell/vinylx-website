@@ -567,7 +567,7 @@ DREAMPLUS UIUX 멤버십 — 스타트업 대상 UI/UX 워크숍·멘토링 (202
 
 RELATED INSIGHT
 
-AI가 잘 쓰는 UI의 다섯 가지 조건 ↗
+AI 친화적인 UI의 다섯 가지 조건 ↗
 고객의 AI가 우리 서비스를 쓸 수 있을까요? ↗
 서비스디자이너가 바라보는 AX 디자인 ↗
 
@@ -1108,14 +1108,14 @@ UIUX 컨설팅 프로그램 런칭
 
 ---
 
-# AI가 잘 쓰는 UI의 다섯 가지 조건 | VINYL X Insight
+# AI 친화적인 UI의 다섯 가지 조건 | VINYL X Insight
 URL: https://vinyl-x.com/insights/agent-friendly-ui.html
 
 ← Insight
 
 정보성 · 2026.09.28 · 5 MIN READ
 
-## AI가 잘 쓰는 UI의 다섯 가지 조건
+## AI 친화적인 UI의 다섯 가지 조건
 
 고객의 AI가 막히지 않는 웹·앱 화면 설계 (고객의 AI 시리즈 2편)
 
@@ -1133,7 +1133,7 @@ Google의 web.dev 가이드 에 따르면 AI는 화면을 캡처해 보거나, H
 
 같은 연구에서 AI는 슬라이더 조작에 60%, 표의 열 너비 조절에 76% 실패했습니다. 사람에게는 한두 번이면 되는 조작입니다. 다른 사전 공개 연구에서는 팝업이나 결제 직전 가격 변동 같은 속이는 화면에 AI가 크게 흔들렸습니다( WebDecept, 2025 ). 모두 사람, 특히 보조기기를 쓰는 사람도 불편을 겪던 지점입니다.
 
-### AI가 잘 쓰는 UI의 다섯 가지 조건
+### AI 친화적인 UI의 다섯 가지 조건
 
 - 진짜 버튼과 라벨을 씁니다. 상자를 버튼처럼 꾸미지 말고 실제 버튼, 링크, 라벨을 쓰고 입력칸과 라벨을 연결합니다.
 
@@ -1241,7 +1241,7 @@ AI는 화면을 캡처해 읽거나, 접근성 정보를 읽거나, API를 직�
 - Amazon loses injunction blocking Perplexity's AI shopping agent (PPC Land, 2026)
 
 2편
-AI가 잘 쓰는 UI의 다섯 가지 조건
+AI 친화적인 UI의 다섯 가지 조건
 
 이어 읽기
 서비스디자이너가 바라보는 AX 디자인

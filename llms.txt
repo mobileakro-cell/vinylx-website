@@ -26,7 +26,7 @@
 - [완주 청년디자인리빙랩 2025](https://vinyl-x.com/events/design-living-lab/): 한국디자인진흥원·완주군과 진행한 완주일반산업단지 서비스디자인 리빙랩. 워크숍 6회, 설문 132명, 아이디어 12개.
 
 ## Insight
-- [AI가 잘 쓰는 UI의 다섯 가지 조건](https://vinyl-x.com/insights/agent-friendly-ui.html): 고객의 AI는 우리 화면에서 어디서 막힐까요? Google의 가이드와 최근 연구를 바탕으로, AI도 사람도 막히지 않는 웹·앱 UI의 다섯 가지 조건과 점검표를 정리합니다.
+- [AI 친화적인 UI의 다섯 가지 조건](https://vinyl-x.com/insights/agent-friendly-ui.html): 고객의 AI는 우리 화면에서 어디서 막힐까요? Google의 가이드와 최근 연구를 바탕으로, AI도 사람도 막히지 않는 웹·앱 UI의 다섯 가지 조건과 점검표를 정리합니다.
 - [고객의 AI가 우리 서비스를 쓸 수 있을까요?](https://vinyl-x.com/insights/agents-on-blueprint.html): 고객이 AI에게 예약과 구매를 맡기기 시작했습니다. 고객의 AI가 막힘없이 쓸 수 있는 웹·앱·API의 조건을 사례로 정리하고, 서비스 블루프린트로 점검하는 방법을 제안합니다.
 - [서비스디자이너가 바라보는 AX 디자인](https://vinyl-x.com/insights/service-designer-ax.html): 서비스디자이너와 UX기획자는 AX(AI Transformation)를 어떻게 바라볼까요. 고객지원 사례 하나를 서비스 블루프린트 위에서 따라가며, 이미 아는 일과 새로 배울 일을 구분합니다.
 
