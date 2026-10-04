@@ -18,5 +18,12 @@
 - [Log](https://vinyl-x.com/log.html): 프로젝트·이벤트·수상 기록
 - [Contact](https://vinyl-x.com/contact.html): 프로젝트 문의
 
+## Field Log
+- [K-Beauty Global Bridge 2026](https://vinyl-x.com/events/k-beauty-2026/): 서울인디뷰티쇼(IBS)·스탠퍼드 SCIDR·바이널엑스 공동 주최 세미나. 2026년 3월 27일 코엑스 마곡, 실무자 약 200명 참석.
+- [산업단지 디자인리빙랩 2025](https://vinyl-x.com/events/design-living-lab/): 한국디자인진흥원·완주군과 진행한 완주일반산업단지 서비스디자인 리빙랩. 워크숍 6회, 설문 132명, 아이디어 12개.
+
 ## Insight
 - [서비스디자이너가 바라보는 AX 디자인](https://vinyl-x.com/insights/service-designer-ax.html): 서비스디자이너와 UX기획자는 AX(AI Transformation)를 어떻게 바라볼까요. 고객지원 사례 하나를 서비스 블루프린트 위에서 따라가며, 이미 아는 일과 새로 배울 일을 구분합니다.
+
+## Optional
+- [전체 본문 (llms-full.txt)](https://vinyl-x.com/llms-full.txt): 주요 페이지 본문 전체를 한 파일로 모은 텍스트
