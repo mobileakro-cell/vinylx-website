@@ -1481,3 +1481,9 @@
 .insight-longform .insight-article-body td { padding: 12px 14px; border-bottom: 1px solid rgba(26, 26, 26, .15); text-align: left; vertical-align: top; word-break: keep-all; }
 .insight-longform .insight-article-body thead th { border-bottom: 1px solid #1a1a1a; font-size: 12px; letter-spacing: .06em; color: rgba(26, 26, 26, .6); }
 @media (min-width: 1100px) { .insight-longform .insight-article-body figure { margin-left: -120px; margin-right: -120px; } }
+
+/* Service page video */
+.service-video { margin: 48px 0 8px; }
+.service-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: #1a1a1a; }
+.service-video figcaption { margin-top: 10px; font-size: 13px; line-height: 1.6; color: rgba(26, 26, 26, .55); word-break: keep-all; }
+@media (min-width: 1100px) { .service-video { margin-left: -120px; margin-right: -120px; } }
