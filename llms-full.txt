@@ -567,6 +567,7 @@ DREAMPLUS UIUX 멤버십 — 스타트업 대상 UI/UX 워크숍·멘토링 (202
 
 RELATED INSIGHT
 
+AI가 잘 쓰는 UI의 다섯 가지 조건 ↗
 고객의 AI가 우리 서비스를 쓸 수 있을까요? ↗
 서비스디자이너가 바라보는 AX 디자인 ↗
 
@@ -1107,6 +1108,81 @@ UIUX 컨설팅 프로그램 런칭
 
 ---
 
+# AI가 잘 쓰는 UI의 다섯 가지 조건 | VINYL X Insight
+URL: https://vinyl-x.com/insights/agent-friendly-ui.html
+
+← Insight
+
+정보성 · 2026.09.28 · 5 MIN READ
+
+## AI가 잘 쓰는 UI의 다섯 가지 조건
+
+고객의 AI가 막히지 않는 웹·앱 화면 설계 (고객의 AI 시리즈 2편)
+
+#AI에이전트 #UI디자인 #접근성
+
+고객의 AI는 우리 화면에서 어디서 막힐까요? Google의 가이드와 최근 연구를 바탕으로, AI도 사람도 막히지 않는 웹·앱 UI의 다섯 가지 조건과 점검표를 정리합니다.
+
+고객의 AI가 우리 웹사이트에서 예약 버튼을 못 찾는다면, 그건 AI의 문제일까요, 화면의 문제일까요? 1편 에서 고객이 AI에게 일을 맡기기 시작했다는 이야기를 했습니다. 이번에는 화면 이야기입니다.
+
+### 고객의 AI는 화면을 이렇게 봅니다
+
+Google의 web.dev 가이드 에 따르면 AI는 화면을 캡처해 보거나, HTML 구조를 읽거나, 접근성 트리를 읽습니다. 접근성 트리는 화면 낭독기 같은 보조기기가 읽는 요소 목록으로, 각 요소가 버튼인지 입력칸인지와 이름, 상태를 담고 있습니다. 한 사전 공개 연구에서는 같은 AI라도 접근성 트리로 읽을 때 성공률이 83%, 화면 캡처로 볼 때 49%였습니다( ComponentBench, 2026 ).
+
+### AI가 막히는 곳은 사람도 막힙니다
+
+같은 연구에서 AI는 슬라이더 조작에 60%, 표의 열 너비 조절에 76% 실패했습니다. 사람에게는 한두 번이면 되는 조작입니다. 다른 사전 공개 연구에서는 팝업이나 결제 직전 가격 변동 같은 속이는 화면에 AI가 크게 흔들렸습니다( WebDecept, 2025 ). 모두 사람, 특히 보조기기를 쓰는 사람도 불편을 겪던 지점입니다.
+
+### AI가 잘 쓰는 UI의 다섯 가지 조건
+
+- 진짜 버튼과 라벨을 씁니다. 상자를 버튼처럼 꾸미지 말고 실제 버튼, 링크, 라벨을 쓰고 입력칸과 라벨을 연결합니다.
+
+- 화면을 흔들지 않습니다. 같은 기능은 같은 자리에 두고, 투명한 레이어로 버튼을 가리지 않습니다.
+
+- 끌기보다 입력과 선택을 줍니다. 슬라이더나 끌어 놓기에는 숫자 입력칸이나 선택지를 함께 둡니다.
+
+- 선택은 확정 버튼으로 끝냅니다. 마우스를 올려야 뜨는 메뉴나 금방 닫히는 팝업 대신, 고른 뒤 '적용'을 누르게 합니다.
+
+- 속이지 않습니다. 몰래 담기는 상품이나 결제 직전 가격 변동을 없애고, 금액과 상태를 글자로 분명히 보여 줍니다.
+
+1~2번은 web.dev 가이드, 3~5번은 위 연구의 결과를 저희가 설계 원칙으로 옮긴 것입니다.
+
+### 중요한 행동은 고객 확인으로 끝냅니다
+
+저희의 제안 다섯 조건은 새로운 규칙이 아니라 원래 좋은 UI와 접근성의 원칙입니다. 접근성을 미뤄 온 서비스는 이제 고객의 AI까지 놓칩니다. 다만 결제나 예약 확정처럼 되돌리기 어려운 행동은 AI가 준비하고 마지막 확인은 고객이 하도록 설계해 두세요. Google 가이드도 이런 행동에는 사용자 확인을 거치게 하는 방식을 제시합니다.
+
+### 점검표 다섯 문항
+
+- 클릭할 수 있는 요소가 모두 실제 버튼이나 링크인가요?
+
+- 입력칸마다 연결된 라벨이 있나요?
+
+- 슬라이더나 끌어 놓기에 입력 대안이 있나요?
+
+- 선택과 변경을 확정하는 버튼이 있나요?
+
+- 결제 전에 금액과 담긴 항목이 글자로 보이나요?
+
+### 참고문헌
+
+- Mortati, M., & Viana Mundstock Freitas, G. (2025). AI in service design: A new framework for hybrid human–AI service encounters. Journal of Service Research, 29 (1), 81–96. https://doi.org/10.1177/10946705251344387
+
+### 공개 자료 출처
+
+- Build agent-friendly websites (Google web.dev, 2026)
+
+- ComponentBench: Diagnosing Component-Level Failures in Computer-Use Agents (arXiv 사전 공개 논문, 2026)
+
+- Benchmarking Web Agent Safety under E-commerce Deceptive Interfaces (arXiv 사전 공개 논문, 2025)
+
+- AI Agents as Users (Nielsen Norman Group, 2026)
+
+이어 읽기
+1편: 고객의 AI가 우리 서비스를 쓸 수 있을까요?
+
+
+---
+
 # 고객의 AI가 우리 서비스를 쓸 수 있을까요? | VINYL X Insight
 URL: https://vinyl-x.com/insights/agents-on-blueprint.html
 
@@ -1132,7 +1208,7 @@ AI는 화면을 캡처해 읽거나, 접근성 정보를 읽거나, API를 직�
 
 최근 사례를 살펴보면 네 가지 조건이 보입니다.
 
-- 읽을 수 있다. Shopify는 구조화된 상품 정보를 바탕으로 판매자의 상품이 여러 AI 대화 안에 노출되고 결제까지 이어지게 했습니다( Shopify, 2026 ).
+- 읽을 수 있다. Shopify는 구조화된 상품 정보를 바탕으로 판매자의 상품이 여러 AI 대화 안에 노출되고 결제까지 이어지게 했습니다( Shopify, 2026 ). 화면을 어떻게 만들어야 하는지는 2편 에서 다룹니다.
 
 - 행동할 수 있다. Stripe와 OpenAI가 만든 Agentic Commerce Protocol에서는 AI가 받은 주문이 정해진 통로로 판매자 시스템에 들어가고, 수락과 거절은 판매자가 합니다( Stripe, 2025 ).
 
@@ -1163,6 +1239,9 @@ AI는 화면을 캡처해 읽거나, 접근성 정보를 읽거나, API를 직�
 - Signed agents (Cloudflare 개발자 문서)
 
 - Amazon loses injunction blocking Perplexity's AI shopping agent (PPC Land, 2026)
+
+2편
+AI가 잘 쓰는 UI의 다섯 가지 조건
 
 이어 읽기
 서비스디자이너가 바라보는 AX 디자인
