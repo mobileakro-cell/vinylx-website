@@ -1469,7 +1469,7 @@
 .insight-longform .insight-article-body ol { margin: 0 0 24px 1.2em; font-size: 16px; line-height: 1.9; color: rgba(26, 26, 26, .78); }
 .insight-longform .insight-article-body li { margin-bottom: 8px; word-break: keep-all; }
 .insight-longform .insight-article-body strong { color: #1a1a1a; }
-.insight-longform .insight-article-body a { text-decoration: underline; text-underline-offset: 3px; word-break: break-all; }
+.insight-longform .insight-article-body a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .insight-longform .insight-article-body blockquote { margin: 32px 0; padding: 24px 28px; background: rgba(26, 26, 26, .04); border-left: 3px solid #1a1a1a; font-size: 16px; line-height: 1.85; color: rgba(26, 26, 26, .82); word-break: keep-all; }
 .insight-longform .insight-article-body blockquote strong { display: block; margin-bottom: 6px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: rgba(26, 26, 26, .55); }
 .insight-longform .insight-article-body figure { margin: 40px 0; }
