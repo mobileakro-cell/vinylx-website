@@ -31,7 +31,6 @@ const pages = {
   'about.html': { path: '/about.html', type: 'AboutPage', title: 'About | VINYL X', description: '산업 도메인과 사용자 경험을 연결해 AX 컨설팅, UI/UX 컨설팅, 서비스디자인으로 비즈니스의 변화를 설계하는 바이널엑스(VINYL X)를 소개합니다.' },
   'portfolio.html': { path: '/portfolio.html', type: 'CollectionPage', title: 'Portfolio | VINYL X', description: '엔터테인먼트, 리테일, 제조, 축산, 공공·지역 분야의 서비스 전략과 UX 프로젝트.' },
   'log.html': { path: '/log.html', type: 'CollectionPage', title: 'Log | VINYL X', description: 'VINYL X의 프로젝트, 실증 과정, 이벤트와 디자인 현장 기록.' },
-  'insights.html': { path: '/insights.html', type: 'CollectionPage', title: 'Insight | VINYL X', description: '산업의 변화를 읽고 실제 프로젝트의 질문으로 옮기는 VINYL X의 핵심 인사이트.' },
   'contact.html': { path: '/contact.html', type: 'ContactPage', title: 'Contact | VINYL X', description: '산업별 서비스 전략, UX·AX, 디지털 제품과 지역·공공 경험 프로젝트를 VINYL X와 논의하세요.' },
   'project-livinglab.html': { path: '/project-livinglab.html', type: 'CreativeWork', title: '산업단지 디자인리빙랩 | VINYL X', description: '산업단지의 이동, 안전, 문화와 근로자 경험을 서비스디자인으로 개선한 VINYL X 프로젝트.' }
 };
