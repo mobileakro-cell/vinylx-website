@@ -13,6 +13,7 @@
 - [UI/UX 컨설팅](https://vinyl-x.com/ux-consulting.html): 바이널엑스(VINYL X)의 UI/UX 컨설팅은 산업 도메인과 현장 사용자를 먼저 이해한 뒤 UX 리서치, UX 전략, 서비스 기획, UI 디자인, 디자인 시스템까지 디지털 서비스 경험을 설계합니다.
 - [서비스디자인 컨설팅](https://vinyl-x.com/service-design.html): 바이널엑스(VINYL X)의 서비스디자인 컨설팅은 고객여정 지도와 서비스 블루프린트로 고객 접점과 내부 운영을 함께 진단하고, 리빙랩과 시범운영으로 검증해 실제로 작동하는 서비스를 설계합니다. 공공·지역, 산업단지, 금융, 제조 분야 수행.
 - [산업단지 디자인리빙랩](https://vinyl-x.com/design-livinglab.html): 청년디자인리빙랩·산업단지 공공디자인. 산단 청년근로자·주민·지자체가 함께 문제를 찾고 휴게·이동·숙박·문화 공간과 서비스를 설계해 시범운영으로 검증합니다. 완주 문화선도산단 청년디자인리빙랩 수행(2025), 완주루프 수소버스 시범운행 서비스 평가(2026.7), 인더스테이 라운지 '완주 오감재' 모의 구현(2026.9).
+- [AX 리빙랩](https://axlivinglab.com): 바이널엑스(VINYL X)가 운영하는 AX 리빙랩 전문 사이트. 현장의 사람들과 AI로 문제를 푸는 리빙랩 방법, 현장 사례, 서비스디자인·AX 가이드와 인사이트를 공개합니다.
 
 ## Company
 - [About](https://vinyl-x.com/about.html): VINYL X 회사 소개 — Company Building, Service Accelerating, Digital & AI Production

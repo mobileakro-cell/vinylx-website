@@ -23,6 +23,7 @@ const ORGANIZATION = {
     { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AX 컨설팅', url: `${origin}/ax-consulting.html` } },
     { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX 컨설팅', url: `${origin}/ux-consulting.html` } }
   ],
+  subOrganization: { '@type': 'Organization', name: 'AX 리빙랩', alternateName: 'AX Living Lab', url: 'https://axlivinglab.com' },
   sameAs: ['https://blog.naver.com/vinylx', 'https://www.instagram.com/vinyl_x_official', 'https://www.facebook.com/vinylxdesign']
 };
 const pages = {
