@@ -1572,3 +1572,10 @@
 .about-leader-role { font-size: .45em; font-weight: 600; letter-spacing: 0; color: rgba(26, 26, 26, .55); }
 .about-leader-career { list-style: none; align-self: center; border-top: 1px solid #1a1a1a; }
 .about-leader-career li { padding: 18px 0; border-bottom: 1px solid rgba(26, 26, 26, .15); font-size: 16px; line-height: 1.6; color: rgba(26, 26, 26, .8); word-break: keep-all; }
+
+/* Contact form status */
+.form-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-status { margin-top: 18px; min-height: 1.4em; font-size: 14px; line-height: 1.5; color: rgba(255, 255, 255, 0.7); }
+.form-status.is-ok { color: #8fd19e; }
+.form-status.is-error { color: #ff8a80; }
+.form-submit[disabled] { opacity: 0.5; pointer-events: none; }

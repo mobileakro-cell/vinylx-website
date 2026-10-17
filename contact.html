@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/interaction.css?v=110">
-  <link rel="stylesheet" href="css/pages.css?v=124">
+  <link rel="stylesheet" href="css/pages.css?v=125">
 
   <!-- SITE-SEO:START -->
   <link rel="canonical" href="https://vinyl-x.com/contact.html">
@@ -142,7 +142,8 @@
     <div class="contact-form-content">
       <p class="section-label section-label-dark reveal" data-i18n="contact.inquiry-label">프로젝트 문의</p>
       <h2 class="contact-form-title reveal reveal-delay-1">Project<br>Inquiry.</h2>
-      <form class="contact-form" id="contactForm" action="mailto:INFO@VINYL-X.COM" method="POST" enctype="text/plain">
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/mobileakro@gmail.com" method="POST">
+        <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-group reveal reveal-delay-1">
           <label class="form-label" for="name">Name *</label>
           <input type="text" id="name" name="name" class="form-input" required autocomplete="name">
@@ -167,6 +168,7 @@
             </svg>
           </div>
         </button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </div>
   </section>
@@ -207,6 +209,49 @@
     } else {
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
     }
+  </script>
+
+  <script>
+    (function () {
+      var form = document.getElementById('contactForm');
+      var status = document.getElementById('formStatus');
+      if (!form) return;
+      var en = function () { return window.VinylxI18n && window.VinylxI18n.getLang && window.VinylxI18n.getLang() === 'en'; };
+      var msg = {
+        sending: ['보내는 중입니다…', 'Sending…'],
+        ok: ['문의가 접수됐습니다. 확인 후 회신드리겠습니다.', 'Thanks — your inquiry has been sent. We will get back to you soon.'],
+        fail: ['전송하지 못했습니다. 잠시 후 다시 시도하거나 INFO@VINYL-X.COM으로 메일 주세요.', 'Could not send. Please try again or email INFO@VINYL-X.COM.']
+      };
+      var say = function (k, cls) { status.textContent = msg[k][en() ? 1 : 0]; status.className = 'form-status ' + (cls || ''); };
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form.querySelector('[name=_honey]').value) return;
+        var btn = form.querySelector('.form-submit');
+        var data = {
+          name: form.name.value,
+          email: form.email.value,
+          company: form.company.value,
+          message: form.message.value,
+          _subject: '[VINYL X 문의] ' + form.name.value + (form.company.value ? ' / ' + form.company.value : ''),
+          _replyto: form.email.value,
+          _template: 'table',
+          _captcha: 'false',
+          page: location.href
+        };
+        btn.disabled = true; say('sending');
+        fetch('https://formsubmit.co/ajax/mobileakro@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            if (res.ok && String(res.j.success) === 'true') { form.reset(); say('ok', 'is-ok'); }
+            else { say('fail', 'is-error'); }
+          })
+          .catch(function () { say('fail', 'is-error'); })
+          .finally(function () { btn.disabled = false; });
+      });
+    })();
   </script>
 </body>
 </html>
