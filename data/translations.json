@@ -69,6 +69,10 @@
     "log-title-livinglab": {
       "ko": "완주산단 디자인리빙랩",
       "en": "Wanju Industrial Complex Design Living Lab"
+    },
+    "insight-subtitle": {
+      "ko": "AX 리빙랩에서 발행하는 AX·서비스디자인 인사이트",
+      "en": "AX and service design insights published by AX Living Lab"
     }
   },
   "about": {

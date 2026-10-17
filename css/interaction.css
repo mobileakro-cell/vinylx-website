@@ -2155,7 +2155,7 @@ button:focus-visible {
    ============================================ */
 .home-insight-section {
   min-height: auto;
-  padding: var(--section-padding-y) 0;
+  padding: 0 50px 120px;
   background: #f0ebe4;
   color: #1a1a1a;
 }
@@ -2163,8 +2163,29 @@ button:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  padding: 0 50px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
+/* Insight header: same pattern as Selected Works. */
+.insight-header-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+.insight-header-side .projects-desc { text-align: right; }
+.insight-see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.insight-see-all:hover .project-arrow { transform: translateX(5px); border-color: #1a1a1a; }
 .home-insight-card {
   display: flex;
   flex-direction: column;
@@ -2186,8 +2207,13 @@ button:focus-visible {
 .home-insight-arrow { font-size: 22px; color: #1a1a1a; transition: transform .3s ease; }
 .home-insight-card:hover .home-insight-arrow { transform: rotate(45deg); }
 .home-insight-section a:focus-visible { outline: 2px solid #1a1a1a; outline-offset: 4px; }
+@media (max-width: 768px) {
+  .home-insight-section { padding: 0 20px 50px; }
+  .insight-header-side { align-items: flex-start; gap: 14px; }
+  .insight-header-side .projects-desc { text-align: left; }
+}
 @media (max-width: 1024px) {
-  .home-insight-grid { grid-template-columns: 1fr; padding: 0 25px; gap: 16px; }
+  .home-insight-grid { grid-template-columns: 1fr; gap: 16px; }
   .home-insight-card { min-height: 0; padding: 24px; }
   .home-insight-title { margin-top: 32px; }
 }
