@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/interaction.css?v=110">
+  <link rel="stylesheet" href="css/interaction.css?v=111">
   <link rel="stylesheet" href="css/pages.css?v=125">
 
   <meta name="naver-site-verification" content="89ab832f1d9f9a78ba75d374a35d211dd6026bb0">
@@ -74,6 +74,10 @@
 
     <!-- Section 1: Hero (Dark) - Sticky -->
     <section class="section hero-section" data-theme="dark">
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="videos/styletech-poster.jpg?v=5"><source src="videos/styletech-highlight.mp4?v=4" type="video/mp4"></video>
+        <div class="hero-shade"></div>
+      </div>
       <div class="hero-text">
         <h1 class="sr-only">바이널엑스(VINYL X) — UI/UX · 서비스디자인 · AX 컨설팅 디자인 에이전시</h1>
         <div class="hero-line line-1" aria-hidden="true">Service</div>
@@ -565,6 +569,15 @@
 
   <script src="js/i18n.js?v=10"></script>
   <script src="js/interaction.js?v=103"></script>
+  <script>
+    (function () {
+      var v = document.querySelector('.hero-video');
+      if (!v) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); return; }
+      var p = v.play(); if (p && p.catch) p.catch(function () {});
+      document.addEventListener('visibilitychange', function () { document.hidden ? v.pause() : v.play().catch(function () {}); });
+    })();
+  </script>
   <script>
     // Project row modal
     (function() {

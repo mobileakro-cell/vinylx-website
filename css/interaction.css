@@ -352,6 +352,36 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   clip-path: inset(0);
 }
 
+/* Hero background video — cinematic, dimmed for type contrast */
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #000;
+  pointer-events: none;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.72) contrast(1.08) brightness(0.9);
+  transform: scale(1.04);
+}
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 120% 90% at 50% 45%, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.55) 70%, rgba(0,0,0,0.85) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 30%, rgba(0,0,0,0.3) 65%, rgba(0,0,0,0.8) 100%),
+    rgba(0,0,0,0.36);
+}
+@media (max-width: 768px) {
+  .hero-video { filter: saturate(0.7) contrast(1.06) brightness(0.82); }
+}
+
 .hero-text {
   position: fixed;
   top: 50%;
