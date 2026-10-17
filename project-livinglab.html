@@ -60,20 +60,29 @@
     .lb-stat b { display: block; font-size: clamp(40px, 5vw, 72px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
     .lb-stat span { display: block; margin-top: 8px; font-size: 14px; color: var(--lb-muted); }
 
-    /* Context data */
-    .lb-data { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 0; margin-top: 56px; border-top: 1px solid var(--lb-rule); }
-    .lb-data > div { padding: 24px 24px 0 0; min-width: 0; }
-    .lb-data > div + div { padding-left: 24px; border-left: 1px solid var(--lb-rule); }
-    .lb-data h3 { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; margin: 0 0 4px; }
-    .lb-data .src { font-size: 12px; color: var(--lb-muted); margin: 0 0 20px; }
-    .lb-bar { margin-bottom: 14px; }
-    .lb-bar-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 6px; font-variant-numeric: tabular-nums; }
-    .lb-bar-track { height: 8px; background: var(--lb-card); }
-    .lb-bar-fill { height: 100%; background: var(--lb-text); }
-    .lb-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; }
-    .lb-mini b { display: block; font-size: 32px; font-weight: 800; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
-    .lb-mini span { display: block; margin-top: 6px; font-size: 13px; color: var(--lb-muted); }
-    .lb-mini b.hi { color: var(--lb-accent); }
+    /* Context facts */
+    .lb-facts { margin-top: 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; border-top: 1px solid var(--lb-text); }
+    .lb-facts-head { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; gap: 8px 24px; flex-wrap: wrap; padding: 18px 0 6px; }
+    .lb-facts-head h3 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+    .lb-facts-head p { margin: 0; font-size: 13px; color: var(--lb-muted); font-variant-numeric: tabular-nums; }
+    .lb-fact.wide { grid-column: 1 / -1; }
+    .lb-fact { padding: 18px 0 20px; border-bottom: 1px solid var(--lb-rule); min-width: 0; }
+    .lb-fact-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .lb-fact-top span { font-size: 15px; font-weight: 600; }
+    .lb-fact-top b { font-size: clamp(32px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .lb-fact-top b.hi { color: var(--lb-accent); }
+    .lb-fact-note { margin: 6px 0 12px; font-size: 13px; line-height: 1.5; color: var(--lb-muted); }
+    .lb-stack { display: flex; height: 10px; gap: 2px; }
+    .lb-stack i, .lb-legend i { display: block; background: var(--lb-card); }
+    .lb-stack .s1, .lb-legend .s1 { background: var(--lb-text); }
+    .lb-stack .s2, .lb-legend .s2 { background: #8f877b; }
+    .lb-stack .s3, .lb-legend .s3 { background: #c4baab; }
+    .lb-stack .sa { background: var(--lb-accent); }
+    .lb-stack .s0 { background: var(--lb-card); }
+    .lb-legend { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--lb-muted); }
+    .lb-legend li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .lb-legend li i { width: 8px; height: 8px; }
+    .lb-legend b { color: var(--lb-text); font-weight: 600; font-variant-numeric: tabular-nums; }
 
     /* Direction */
     .lb-dir { margin-top: 56px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--lb-card); }
@@ -150,8 +159,6 @@
       .lb-step:nth-child(n+4) { border-top: 1px solid var(--lb-rule-dark); }
       .lb-phase { display: none; }
       .lb-ideas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .lb-data { grid-template-columns: 1fr 1fr; }
-      .lb-data > div:nth-child(3) { grid-column: 1 / -1; border-left: none; padding-left: 0; border-top: 1px solid var(--lb-rule); margin-top: 24px; }
     }
     @media (max-width: 768px) {
       :root { --lb-x: 20px; }
@@ -167,9 +174,9 @@
       .lb-stats { grid-template-columns: 1fr 1fr; }
       .lb-stat:nth-child(3) { border-left: none; padding-left: 0; }
       .lb-stat:nth-child(n+3) { border-top: 1px solid var(--lb-rule); }
-      .lb-data { grid-template-columns: 1fr; margin-top: 36px; }
-      .lb-data > div, .lb-data > div + div, .lb-data > div:nth-child(3) { padding: 22px 0 0; border-left: none; margin-top: 22px; }
-      .lb-data > div + div { border-top: 1px solid var(--lb-rule); }
+      .lb-facts { grid-template-columns: 1fr; margin-top: 36px; }
+      .lb-facts-head { flex-direction: column; gap: 4px; }
+      .lb-facts-head h3 { font-size: 18px; }
       .lb-dir { grid-template-columns: 1fr 1fr; margin-top: 36px; }
       .lb-dir div:nth-child(3) { border-left: none; }
       .lb-dir div:nth-child(n+3) { border-top: 1px solid var(--lb-paper); }
@@ -273,30 +280,37 @@
           <div class="lb-stat"><b>756</b><span>입주 기업</span></div>
         </div>
 
-        <div class="lb-data">
-          <div>
-            <h3>기업 규모별 비율</h3>
-            <p class="src">입주기업 756개 기준</p>
-            <div class="lb-bar"><div class="lb-bar-row"><span>100인 미만</span><span>91.2%</span></div><div class="lb-bar-track"><div class="lb-bar-fill" style="width:91.2%"></div></div></div>
-            <div class="lb-bar"><div class="lb-bar-row"><span>100–299인</span><span>6.5%</span></div><div class="lb-bar-track"><div class="lb-bar-fill" style="width:6.5%"></div></div></div>
-            <div class="lb-bar"><div class="lb-bar-row"><span>300인 이상</span><span>2.3%</span></div><div class="lb-bar-track"><div class="lb-bar-fill" style="width:2.3%"></div></div></div>
+        <div class="lb-facts">
+          <div class="lb-facts-head">
+            <h3>완주산단 기업 및 근로자 현황</h3>
+            <p>입주기업 756개 · 근로자 27,456명 기준</p>
           </div>
-          <div>
-            <h3>근로자 구성</h3>
-            <p class="src">근로자 27,456명 기준</p>
-            <div class="lb-mini">
-              <div><b>68%</b><span>내국인 근로자</span></div>
-              <div><b>32%</b><span>외국인 근로자</span></div>
-              <div><b>43%</b><span>청년 근로자</span></div>
-            </div>
+          <div class="lb-fact wide">
+            <div class="lb-fact-top"><span>기업 규모</span><b>91.2%</b></div>
+            <p class="lb-fact-note">입주기업 대부분이 100인 미만 소규모 기업</p>
+            <div class="lb-stack" role="img" aria-label="100인 미만 91.2%, 100–299인 6.5%, 300인 이상 2.3%"><i class="s1" style="flex:91.2"></i><i class="s2" style="flex:6.5"></i><i class="s3" style="flex:2.3"></i></div>
+            <ul class="lb-legend"><li><i class="s1"></i>100인 미만 <b>91.2%</b></li><li><i class="s2"></i>100–299인 <b>6.5%</b></li><li><i class="s3"></i>300인 이상 <b>2.3%</b></li></ul>
           </div>
-          <div>
-            <h3>생활·복지 여건</h3>
-            <p class="src">설문·현장 조사</p>
-            <div class="lb-mini">
-              <div><b class="hi">79.9%</b><span>문화복지시설 미사용</span></div>
-              <div><b class="hi">50%+</b><span>구내식당 미보유 기업</span></div>
-            </div>
+          <div class="lb-fact">
+            <div class="lb-fact-top"><span>외국인 근로자</span><b>32%</b></div>
+            <p class="lb-fact-note">근로자 3명 중 1명은 외국인</p>
+            <div class="lb-stack" role="img" aria-label="내국인 68%, 외국인 32%"><i class="s1" style="flex:68"></i><i class="s2" style="flex:32"></i></div>
+            <ul class="lb-legend"><li><i class="s1"></i>내국인 <b>68%</b></li><li><i class="s2"></i>외국인 <b>32%</b></li></ul>
+          </div>
+          <div class="lb-fact">
+            <div class="lb-fact-top"><span>청년 근로자</span><b>43%</b></div>
+            <p class="lb-fact-note">20~30대 청년이 근로자의 절반에 가까움</p>
+            <div class="lb-stack" role="img" aria-label="청년 근로자 43%"><i class="s1" style="flex:43"></i><i class="s0" style="flex:57"></i></div>
+          </div>
+          <div class="lb-fact">
+            <div class="lb-fact-top"><span>문화복지시설 미사용</span><b class="hi">79.9%</b></div>
+            <p class="lb-fact-note">근로자 10명 중 8명이 산단 문화복지시설을 쓰지 않음</p>
+            <div class="lb-stack" role="img" aria-label="문화복지시설 미사용 79.9%"><i class="sa" style="flex:79.9"></i><i class="s0" style="flex:20.1"></i></div>
+          </div>
+          <div class="lb-fact">
+            <div class="lb-fact-top"><span>구내식당 미보유 기업</span><b class="hi">50%+</b></div>
+            <p class="lb-fact-note">절반 이상의 기업이 구내식당이 없어 식사 환경이 열악</p>
+            <div class="lb-stack" role="img" aria-label="구내식당 미보유 기업 50% 이상"><i class="sa" style="flex:50"></i><i class="s0" style="flex:50"></i></div>
           </div>
         </div>
 
