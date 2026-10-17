@@ -12,7 +12,7 @@
   // Fetch translations JSON (cached by browser)
   function loadTranslations() {
     if (translations) return Promise.resolve(translations);
-    return fetch('data/translations.json?v=7')
+    return fetch('data/translations.json?v=8')
       .then(function (r) { return r.json(); })
       .then(function (data) { translations = data; return data; });
   }
