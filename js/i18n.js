@@ -6,7 +6,7 @@
   'use strict';
 
   var translations = null;
-  var currentLang = localStorage.getItem('vinylx-lang') || 'en';
+  var currentLang = localStorage.getItem('vinylx-lang') || 'ko';
   var originalTexts = new Map();
 
   // Fetch translations JSON (cached by browser)

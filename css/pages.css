@@ -353,8 +353,9 @@
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 24px;
+  align-items: start;
 }
 
 .portfolio-card {
@@ -363,18 +364,32 @@
   display: block;
 }
 
-.portfolio-card.card-large {
-  grid-column: span 7;
+.portfolio-archive-head {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-text-dark);
 }
-
-.portfolio-card.card-medium {
-  grid-column: span 5;
+.portfolio-archive-head h2 {
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: rgba(26, 26, 26, 0.4);
+}
+.portfolio-archive-head span {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: rgba(26, 26, 26, 0.45);
 }
 
 .portfolio-card-img {
   border-radius: 12px;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   background: linear-gradient(110deg, #e8e3dc 8%, #f5f0e9 18%, #e8e3dc 33%);
   background-size: 200% 100%;
   animation: skeletonShimmer 1.5s linear infinite;
@@ -384,6 +399,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.6s ease;
@@ -436,6 +452,15 @@
   margin: 60px auto 0;
   text-align: center;
 }
+.portfolio-load-more .cta-link {
+  border: 0;
+  background: none;
+  padding: 0;
+  margin-top: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+.portfolio-load-more .cta-link:focus-visible { outline: 2px solid var(--color-text-dark); outline-offset: 6px; border-radius: 30px; }
 
 /* Portfolio card fade-in animation */
 .portfolio-card {
@@ -930,6 +955,41 @@
   margin-bottom: 16px;
 }
 
+.pm-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 0 24px;
+  border-top: 1px solid var(--color-text-dark);
+}
+.pm-facts div { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--border-light); min-width: 0; }
+.pm-facts dt { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(26, 26, 26, 0.45); margin-bottom: 4px; }
+.pm-facts dd { margin: 0; font-size: 14px; color: var(--color-text-dark); word-break: keep-all; }
+.pm-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-light);
+}
+.pm-nav-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-text-dark);
+  min-width: 0;
+}
+.pm-nav-btn.next { text-align: right; align-items: flex-end; }
+.pm-nav-btn small { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: rgba(26, 26, 26, 0.45); }
+.pm-nav-btn span { font-size: 15px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+.pm-nav-btn:hover span { text-decoration: underline; }
+
 .project-modal-meta {
   display: flex;
   gap: 20px;
@@ -1061,19 +1121,23 @@
 
   /* Portfolio */
   .portfolio-filter-bar {
-    padding: 16px 25px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    padding: 12px 20px;
   }
 
   .portfolio-filter-inner {
-    flex-wrap: nowrap;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
   .filter-btn {
     white-space: nowrap;
-    flex-shrink: 0;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .portfolio-count {
+    width: 100%;
+    margin: 4px 0 0;
   }
 
   .portfolio-grid-section {
@@ -1082,13 +1146,10 @@
 
   .portfolio-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
   }
 
-  .portfolio-card.card-large,
-  .portfolio-card.card-medium {
-    grid-column: span 1;
-  }
+  .portfolio-archive-head { padding-top: 28px; }
 
   /* Log */
   .log-feed-section {
@@ -1177,12 +1238,7 @@
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .portfolio-card.card-large,
-  .portfolio-card.card-medium {
-    grid-column: span 1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

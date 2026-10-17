@@ -2,17 +2,62 @@
   "meta": {
     "source": "https://vinyl-x.com (WordPress REST API + Page Scraping)",
     "exported_date": "2026-03-20",
-    "updated_date": "2026-03-21",
-    "total_items": 30,
+    "updated_date": "2026-10-17",
+    "total_items": 27,
     "note": "이미지 URL 및 상세 설명은 공개 포트폴리오 페이지에서 수집"
   },
   "categories": [
-    { "id": 17, "name": "Digital Transformation", "slug": "digital-transformation" },
-    { "id": 19, "name": "Open Innovation", "slug": "open-innovation" },
-    { "id": 90, "name": "Company Building", "slug": "company-building" },
-    { "id": 18, "name": "Entertainment Design", "slug": "entertainment-design" }
+    {
+      "id": 17,
+      "name": "Digital Transformation",
+      "slug": "digital-transformation"
+    },
+    {
+      "id": 19,
+      "name": "Open Innovation",
+      "slug": "open-innovation"
+    },
+    {
+      "id": 90,
+      "name": "Company Building",
+      "slug": "company-building"
+    },
+    {
+      "id": 18,
+      "name": "Entertainment Design",
+      "slug": "entertainment-design"
+    }
   ],
   "portfolio": [
+    {
+      "id": 4001,
+      "title": "완주산단 디자인리빙랩",
+      "title_en": "Wanju Industrial Complex Design Living Lab",
+      "slug": "wanju-design-livinglab",
+      "date": "2025-12-01",
+      "category": "Open Innovation",
+      "category_id": 19,
+      "client": "한국디자인진흥원 / 완주군",
+      "client_en": "Korea Institute of Design Promotion / Wanju County",
+      "year": "2025",
+      "tags": [
+        "Service Design",
+        "Living Lab",
+        "Public Service"
+      ],
+      "awards": [],
+      "featured_image_url": "images/livinglab/thumbnail-2026b.jpg",
+      "thumbnail_url": "images/livinglab/thumbnail-2026b.jpg",
+      "detail_images": [],
+      "excerpt": "산업단지 근로자 경험을 서비스디자인으로 개선한 리빙랩",
+      "excerpt_en": "A living lab improving worker experience in an industrial complex through service design",
+      "description": "완주일반산업단지 근로자와 청년의 생활·문화·근무환경을 리빙랩 방식으로 조사하고, 워크숍 6회와 설문 132명을 거쳐 실행 아이디어 12개를 도출했습니다.",
+      "description_en": "We studied the life, culture and working conditions of workers and young people in the Wanju Industrial Complex through a living lab, and developed 12 actionable ideas from 6 workshops and a 132-person survey.",
+      "credit": "by VINYLX 바이널엑스",
+      "credit_en": "by VINYLX",
+      "link": "",
+      "page": "project-livinglab.html"
+    },
     {
       "id": 3263,
       "title": "DREAMPLUS UIUX MEMBERSHIP",
@@ -22,7 +67,10 @@
       "category_id": 19,
       "client": "DREAMPLUS",
       "year": "2025",
-      "tags": ["Open Innovation", "UX"],
+      "tags": [
+        "Open Innovation",
+        "UX"
+      ],
       "awards": [],
       "featured_media_id": 3316,
       "featured_image_url": "images/wp-uploads/KakaoTalk_20250929_162921481.jpg",
@@ -51,7 +99,9 @@
       "category_id": 90,
       "client": "101PACKERS",
       "year": "2025",
-      "tags": ["Company Building"],
+      "tags": [
+        "Company Building"
+      ],
       "awards": [],
       "featured_media_id": 3205,
       "featured_image_url": "images/wp-uploads/101packers_thumbnail.png",
@@ -76,7 +126,9 @@
       "category_id": 90,
       "client": "101EXPERIENCE",
       "year": "2025",
-      "tags": ["Company Building"],
+      "tags": [
+        "Company Building"
+      ],
       "awards": [],
       "featured_media_id": 3204,
       "featured_image_url": "images/wp-uploads/101X_thumbnail-1-1920x1920.jpg",
@@ -101,8 +153,15 @@
       "category_id": 17,
       "client": "HD HYUNDAI INFRACORE",
       "year": "2023",
-      "tags": ["Open Innovation", "Web", "UX"],
-      "awards": ["Web Award Korea (Shopping Category)", "Good Design Korea"],
+      "tags": [
+        "Open Innovation",
+        "Web",
+        "UX"
+      ],
+      "awards": [
+        "Web Award Korea (Shopping Category)",
+        "Good Design Korea"
+      ],
       "featured_media_id": 2908,
       "featured_image_url": "images/wp-uploads/develon-banner.jpg",
       "thumbnail_url": "images/wp-uploads/develon-banner.jpg",
@@ -131,7 +190,10 @@
       "client": "KB 스타뱅킹",
       "client_en": "KB Star Banking",
       "year": "2021",
-      "tags": ["Digital Transformation", "Mobile App"],
+      "tags": [
+        "Digital Transformation",
+        "Mobile App"
+      ],
       "awards": [],
       "featured_media_id": 2636,
       "featured_image_url": "images/wp-uploads/KakaoTalk_20211208_162835995_01.jpg",
@@ -159,8 +221,14 @@
       "category_id": 17,
       "client": "LLOYD",
       "year": "2021",
-      "tags": ["Digital Transformation", "Web", "UX"],
-      "awards": ["i-AWARDS"],
+      "tags": [
+        "Digital Transformation",
+        "Web",
+        "UX"
+      ],
+      "awards": [
+        "i-AWARDS"
+      ],
       "featured_media_id": null,
       "featured_image_url": "images/wp-uploads/lloyd-banner.jpg",
       "thumbnail_url": "images/wp-uploads/lloyd-banner.jpg",
@@ -188,7 +256,10 @@
       "category_id": 17,
       "client": "TURN BAG",
       "year": "2020",
-      "tags": ["Open Innovation", "UX"],
+      "tags": [
+        "Open Innovation",
+        "UX"
+      ],
       "awards": [],
       "featured_media_id": 2771,
       "featured_image_url": "images/wp-uploads/turnback_banner.jpg",
@@ -215,7 +286,9 @@
       "category_id": 18,
       "client": "ENTERTAINMENT",
       "year": "2020~",
-      "tags": ["Entertainment Design"],
+      "tags": [
+        "Entertainment Design"
+      ],
       "awards": [],
       "featured_media_id": 2739,
       "featured_image_url": "images/wp-uploads/lightstick_00.jpg",
@@ -242,7 +315,11 @@
       "category_id": 18,
       "client": "ENTERTAINMENT",
       "year": "2020",
-      "tags": ["Entertainment Design", "IoT", "Mobile App"],
+      "tags": [
+        "Entertainment Design",
+        "IoT",
+        "Mobile App"
+      ],
       "awards": [],
       "featured_media_id": 2729,
       "featured_image_url": "images/wp-uploads/lightstick_app_01.jpg",
@@ -270,7 +347,11 @@
       "client": "블록베리엔터테인먼트",
       "client_en": "BlockBerry Creative",
       "year": "2021",
-      "tags": ["Entertainment Design", "IoT", "Mobile App"],
+      "tags": [
+        "Entertainment Design",
+        "IoT",
+        "Mobile App"
+      ],
       "awards": [],
       "featured_media_id": 2721,
       "featured_image_url": "images/wp-uploads/LOONA_01.jpg",
@@ -297,7 +378,9 @@
       "category_id": 17,
       "client": "LG",
       "year": "2021",
-      "tags": ["Web"],
+      "tags": [
+        "Web"
+      ],
       "awards": [],
       "featured_media_id": 2681,
       "featured_image_url": "images/wp-uploads/KakaoTalk_20211215_154318401.jpg",
@@ -313,7 +396,8 @@
       "excerpt_en": "Produced LG OLED TV campaign USP creative materials.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2645,
@@ -323,20 +407,29 @@
       "category": "Digital Transformation",
       "category_id": 17,
       "client": "DISCOVERY EXPEDITION",
-      "year": "2021",
-      "tags": ["Digital Transformation", "Design"],
+      "year": "2020 ~ 2021",
+      "tags": [
+        "Digital Transformation",
+        "Design",
+        "Exhibitions",
+        "Promotion"
+      ],
       "awards": [],
       "featured_media_id": 2670,
       "featured_image_url": "images/wp-uploads/vinyl_work_BN_DX-2.jpg",
       "thumbnail_url": "images/wp-uploads/vinyl_work_BN_DX-2.jpg",
       "detail_images": [
-        "images/wp-uploads/vinyl_DX_detail_21FW.jpg"
+        "images/wp-uploads/vinyl_DX_detail_21FW.jpg",
+        "images/wp-uploads/vinyl_DX_detail.jpg",
+        "images/wp-uploads/dis_02.jpg",
+        "images/wp-uploads/vinyl_DX_exhibition.jpg"
       ],
-      "excerpt": "콘텐츠 전략 및 디자인",
-      "excerpt_en": "Content strategy and design.",
+      "excerpt": "상세페이지·프로모션 콘텐츠 전략 및 디자인",
+      "excerpt_en": "Strategy and design for product detail and promotion content",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2639,
@@ -346,20 +439,28 @@
       "category": "Digital Transformation",
       "category_id": 17,
       "client": "MLB KOREA",
-      "year": "2021",
-      "tags": ["Digital Transformation", "Design"],
+      "year": "2020 ~ 2021",
+      "tags": [
+        "Digital Transformation",
+        "Design",
+        "Exhibitions"
+      ],
       "awards": [],
       "featured_media_id": 2671,
       "featured_image_url": "images/wp-uploads/mlb_01.jpg",
       "thumbnail_url": "images/wp-uploads/mlb_01.jpg",
       "detail_images": [
-        "images/wp-uploads/vinyl_mlb_detail_21FW.jpg"
+        "images/wp-uploads/vinyl_mlb_detail_21FW.jpg",
+        "images/wp-uploads/mlb_02.jpg",
+        "images/wp-uploads/vinyl_mlb_detail.jpg",
+        "images/wp-uploads/vinyl_mlb_exhibition.png"
       ],
-      "excerpt": "MLB KOREA 콘텐츠 디자인",
-      "excerpt_en": "MLB KOREA content design.",
+      "excerpt": "상세페이지·프로모션 콘텐츠 디자인",
+      "excerpt_en": "Product detail and promotion content design",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2532,
@@ -371,7 +472,10 @@
       "client": "대상그룹",
       "client_en": "Daesang Group",
       "year": "2021",
-      "tags": ["Digital Transformation", "Mobile App"],
+      "tags": [
+        "Digital Transformation",
+        "Mobile App"
+      ],
       "awards": [],
       "featured_media_id": null,
       "featured_image_url": "images/wp-uploads/GOGI_211019.png",
@@ -386,18 +490,24 @@
       "excerpt_en": "A platform connecting livestock producers and consumers through location-based services.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2514,
       "title": "STYLETECH",
       "slug": "styletech-2",
       "date": "2021-10-19",
-      "category": "Digital Transformation",
-      "category_id": 17,
+      "category": "Open Innovation",
+      "category_id": 19,
       "client": "STYLETECH",
       "year": "2019 ~ 2021",
-      "tags": ["Digital Transformation", "Web", "UX"],
+      "tags": [
+        "Open Innovation",
+        "Accelerating",
+        "Web",
+        "UX"
+      ],
       "awards": [],
       "featured_media_id": 2635,
       "featured_image_url": "images/wp-uploads/021.jpg",
@@ -413,87 +523,8 @@
       "excerpt_en": "Large enterprise and startup collaboration in fashion and beauty sectors, accelerator operation.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": "http://styletech.kidp.or.kr/"
-    },
-    {
-      "id": 2509,
-      "title": "DISCOVERY EXPEDITION Contents Design (Detailed)",
-      "slug": "discovery-expedition-detailed-page",
-      "date": "2021-10-19",
-      "category": "Digital Transformation",
-      "category_id": 17,
-      "client": "DISCOVERY EXPEDITION",
-      "year": "2020 ~ 2021",
-      "tags": ["Digital Transformation", "Design"],
-      "awards": [],
-      "featured_media_id": 2589,
-      "featured_image_url": "images/wp-uploads/vinyl_work_BN_DX-2.jpg",
-      "detail_images": ["images/wp-uploads/vinyl_DX_detail.jpg"],
-      "excerpt": "디스커버리 상세페이지 콘텐츠 디자인",
-      "excerpt_en": "Discovery Expedition detailed page content design.",
-      "credit": "by VINYLX 바이널엑스",
-      "credit_en": "by VINYLX",
-      "link": "https://www.discovery-expedition.com/main/mall/view"
-    },
-    {
-      "id": 2503,
-      "title": "DISCOVERY EXPEDITION Promotion Contents Design",
-      "slug": "discovery-expedition-promotion-page",
-      "date": "2021-10-19",
-      "category": "Digital Transformation",
-      "category_id": 17,
-      "client": "DISCOVERY EXPEDITION",
-      "year": "2020 ~ 2021",
-      "tags": ["Digital Transformation", "Design", "Exhibitions", "Promotion"],
-      "awards": [],
-      "featured_media_id": 2591,
-      "featured_image_url": "images/wp-uploads/dis_02.jpg",
-      "detail_images": ["images/wp-uploads/vinyl_DX_exhibition.jpg"],
-      "excerpt": "디스커버리 프로모션 콘텐츠 디자인",
-      "excerpt_en": "Discovery Expedition promotion content design.",
-      "credit": "by VINYLX 바이널엑스",
-      "credit_en": "by VINYLX",
-      "link": ""
-    },
-    {
-      "id": 2495,
-      "title": "MLB KOREA Contents Design (Detailed)",
-      "slug": "mlb-korea-detailed-page",
-      "date": "2021-10-19",
-      "category": "Digital Transformation",
-      "category_id": 17,
-      "client": "MLB KOREA",
-      "year": "2020 ~ 2021",
-      "tags": ["Digital Transformation", "Design"],
-      "awards": [],
-      "featured_media_id": null,
-      "featured_image_url": "images/wp-uploads/mlb_02.jpg",
-      "detail_images": ["images/wp-uploads/vinyl_mlb_detail.jpg"],
-      "excerpt": "MLB KOREA 상세페이지 콘텐츠 디자인",
-      "excerpt_en": "MLB KOREA detailed page content design.",
-      "credit": "by VINYLX 바이널엑스",
-      "credit_en": "by VINYLX",
-      "link": "https://www.mlb-korea.com/"
-    },
-    {
-      "id": 2491,
-      "title": "MLB KOREA Promotion Contents Design",
-      "slug": "mlb-korea-promotion-page-2",
-      "date": "2021-10-19",
-      "category": "Digital Transformation",
-      "category_id": 17,
-      "client": "MLB KOREA",
-      "year": "2020 ~ 2021",
-      "tags": ["Digital Transformation", "Design", "Exhibitions"],
-      "awards": [],
-      "featured_media_id": 2583,
-      "featured_image_url": "images/wp-uploads/mlb_01.jpg",
-      "detail_images": ["images/wp-uploads/vinyl_mlb_exhibition.png"],
-      "excerpt": "MLB KOREA 프로모션 콘텐츠 디자인",
-      "excerpt_en": "MLB KOREA promotion content design.",
-      "credit": "by VINYLX 바이널엑스",
-      "credit_en": "by VINYLX",
-      "link": ""
+      "link": "http://styletech.kidp.or.kr/",
+      "description": ""
     },
     {
       "id": 2488,
@@ -504,7 +535,11 @@
       "category_id": 18,
       "client": "CUBE Entertainment",
       "year": "2020",
-      "tags": ["Digital Transformation", "Mobile App", "UX"],
+      "tags": [
+        "Digital Transformation",
+        "Mobile App",
+        "UX"
+      ],
       "awards": [],
       "featured_media_id": 2560,
       "featured_image_url": "images/wp-uploads/211019_01.jpg",
@@ -517,7 +552,8 @@
       "excerpt_en": "K-POP official fan site platform with real-time chat and commerce.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2484,
@@ -528,16 +564,26 @@
       "category_id": 19,
       "client": "",
       "year": "2020",
-      "tags": ["Open Innovation", "IoT", "Service", "Mobile App", "Web", "UX"],
+      "tags": [
+        "Open Innovation",
+        "IoT",
+        "Service",
+        "Mobile App",
+        "Web",
+        "UX"
+      ],
       "awards": [],
       "featured_media_id": 2338,
       "featured_image_url": "images/wp-uploads/27_IoT-Smart.jpg",
-      "detail_images": ["images/wp-uploads/10_IoT-smart-resort-service-scaled.jpg"],
+      "detail_images": [
+        "images/wp-uploads/10_IoT-smart-resort-service-scaled.jpg"
+      ],
       "excerpt": "IoT 기반 리조트 관리 시스템, 베트남 3개 지역 테스트",
       "excerpt_en": "IoT-based resort management system, tested in 3 regions in Vietnam.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2481,
@@ -548,16 +594,26 @@
       "category_id": 19,
       "client": "KANARBOT",
       "year": "2020",
-      "tags": ["Open Innovation", "Mobile App", "Healthcare", "UX"],
-      "awards": ["Award Gold"],
+      "tags": [
+        "Open Innovation",
+        "Mobile App",
+        "Healthcare",
+        "UX"
+      ],
+      "awards": [
+        "Award Gold"
+      ],
       "featured_media_id": 2336,
       "featured_image_url": "images/wp-uploads/26_KANARBOT.jpg",
-      "detail_images": ["images/wp-uploads/09_global-healthcare-media-service.jpg"],
+      "detail_images": [
+        "images/wp-uploads/09_global-healthcare-media-service.jpg"
+      ],
       "excerpt": "제약사와 해외 의사를 연결하는 헬스케어 커뮤니케이션 플랫폼",
       "excerpt_en": "Healthcare communication platform connecting pharmaceutical companies with overseas doctors.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2477,
@@ -568,7 +624,10 @@
       "category_id": 19,
       "client": "",
       "year": "2020",
-      "tags": ["Open Innovation", "Service"],
+      "tags": [
+        "Open Innovation",
+        "Service"
+      ],
       "awards": [],
       "featured_media_id": null,
       "featured_image_url": "images/wp-uploads/24_Servitization-Consulting.jpg",
@@ -582,7 +641,8 @@
       "excerpt_en": "Manufacturing-to-service business transformation consulting.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2473,
@@ -594,7 +654,13 @@
       "client": "자사서비스",
       "client_en": "In-house Service",
       "year": "2019",
-      "tags": ["Digital Transformation", "Mobile App", "Service", "Web", "Back Office"],
+      "tags": [
+        "Digital Transformation",
+        "Mobile App",
+        "Service",
+        "Web",
+        "Back Office"
+      ],
       "awards": [],
       "featured_media_id": 2329,
       "featured_image_url": "",
@@ -607,7 +673,8 @@
       "excerpt_en": "Parent-child collaborative habit management service for 2nd-4th grade elementary students.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2280,
@@ -618,7 +685,9 @@
       "category_id": 17,
       "client": "SAMSUNG",
       "year": "2020",
-      "tags": ["Digital Transformation"],
+      "tags": [
+        "Digital Transformation"
+      ],
       "awards": [],
       "featured_media_id": 2370,
       "featured_image_url": "",
@@ -626,7 +695,8 @@
       "excerpt_en": "Samsung ChatON service character promotion.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2274,
@@ -638,7 +708,13 @@
       "client": "삼성전자 - MILK",
       "client_en": "Samsung - MILK",
       "year": "2020",
-      "tags": ["Digital Transformation", "Web", "Mobile App", "SNS", "Marketing"],
+      "tags": [
+        "Digital Transformation",
+        "Web",
+        "Mobile App",
+        "SNS",
+        "Marketing"
+      ],
       "awards": [],
       "featured_media_id": 2385,
       "featured_image_url": "",
@@ -646,7 +722,8 @@
       "excerpt_en": "Samsung music streaming service event campaign.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2268,
@@ -657,7 +734,11 @@
       "category_id": 17,
       "client": "SKT",
       "year": "2020",
-      "tags": ["Digital Transformation", "IoT", "Platform Design"],
+      "tags": [
+        "Digital Transformation",
+        "IoT",
+        "Platform Design"
+      ],
       "awards": [],
       "featured_media_id": 2384,
       "featured_image_url": "",
@@ -665,7 +746,8 @@
       "excerpt_en": "IoT technology showcase online exhibition platform.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2263,
@@ -677,7 +759,10 @@
       "client": "한국타이어",
       "client_en": "Hankook Tire",
       "year": "2020",
-      "tags": ["Digital Transformation", "Web"],
+      "tags": [
+        "Digital Transformation",
+        "Web"
+      ],
       "awards": [],
       "featured_media_id": null,
       "featured_image_url": "",
@@ -685,7 +770,8 @@
       "excerpt_en": "Hankook Tire sub-brand Laufenn website design.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2257,
@@ -696,7 +782,9 @@
       "category_id": 17,
       "client": "SKT",
       "year": "2020",
-      "tags": ["Digital Transformation"],
+      "tags": [
+        "Digital Transformation"
+      ],
       "awards": [],
       "featured_media_id": 2380,
       "featured_image_url": "",
@@ -704,7 +792,8 @@
       "excerpt_en": "Cloud desk service.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     },
     {
       "id": 2250,
@@ -716,7 +805,11 @@
       "client": "SK플래닉",
       "client_en": "SK Planick",
       "year": "2020",
-      "tags": ["Digital Transformation", "Service", "UX"],
+      "tags": [
+        "Digital Transformation",
+        "Service",
+        "UX"
+      ],
       "awards": [],
       "featured_media_id": 2402,
       "featured_image_url": "",
@@ -724,7 +817,8 @@
       "excerpt_en": "Social local restaurant recommendation service, food/travel/entertainment discovery and sharing platform.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "",
+      "description": ""
     }
   ]
 }
