@@ -12,19 +12,19 @@
 - [AX 컨설팅](https://vinyl-x.com/ax-consulting.html): 바이널엑스(VINYL X)의 AX 컨설팅은 업무·데이터·의사결정 구조를 먼저 진단해 현업이 실제로 쓰는 AI 과제를 정의하고, AI 기반 서비스 운영모델로 설계하는 서비스디자인 기반 AI 전환 컨설팅입니다.
 - [UI/UX 컨설팅](https://vinyl-x.com/ux-consulting.html): 바이널엑스(VINYL X)의 UI/UX 컨설팅은 산업 도메인과 현장 사용자를 먼저 이해한 뒤 UX 리서치, UX 전략, 서비스 기획, UI 디자인, 디자인 시스템까지 디지털 서비스 경험을 설계합니다.
 - [서비스디자인 컨설팅](https://vinyl-x.com/service-design.html): 바이널엑스(VINYL X)의 서비스디자인 컨설팅은 고객여정 지도와 서비스 블루프린트로 고객 접점과 내부 운영을 함께 진단하고, 리빙랩과 시범운영으로 검증해 실제로 작동하는 서비스를 설계합니다. 공공·지역, 산업단지, 금융, 제조 분야 수행.
-- [산업단지 디자인리빙랩](https://vinyl-x.com/design-livinglab.html): 청년디자인리빙랩·산업단지 공공디자인. 산단 청년근로자·주민·지자체가 함께 문제를 찾고 휴게·이동·숙박·문화 공간과 서비스를 설계해 시범운영으로 검증합니다. 완주 문화선도산단 청년디자인리빙랩 수행(2025), 완주루프 수소버스 시범운행 서비스 평가(2026.7), 인더스테이 라운지 '완주 오감재' 모의 구현(2026.9).
+- [산업단지 디자인리빙랩](https://vinyl-x.com/design-livinglab.html): 청년디자인리빙랩·산업단지 공공디자인. 산단 청년근로자·주민·지자체가 함께 문제를 찾고 휴게·이동·숙박·문화 공간과 서비스를 설계해 시범운영으로 검증합니다. 완주산단 디자인리빙랩 수행(2025), 완주루프 수소버스 시범운행 서비스 평가(2026.7), 인더스테이 라운지 '완주 오감재' 모의 구현(2026.9).
 - [AX 리빙랩](https://axlivinglab.com): 바이널엑스(VINYL X)가 운영하는 AX 리빙랩 전문 사이트. 현장의 사람들과 AI로 문제를 푸는 리빙랩 방법, 현장 사례, 서비스디자인·AX 가이드와 인사이트를 공개합니다.
 
 ## Company
 - [About](https://vinyl-x.com/about.html): VINYL X 회사 소개 — Company Building, Service Accelerating, Digital & AI Production
 - [Portfolio](https://vinyl-x.com/portfolio.html): HD HYUNDAI DEVELON, KB 디지털 기부, LLOYD, LOONA 팬클럽 앱, STYLETECH, 101PACKERS 등 프로젝트
-- [완주 청년디자인리빙랩](https://vinyl-x.com/project-livinglab.html): 산업단지 근로자 경험을 서비스디자인으로 개선한 리빙랩 프로젝트
+- [완주산단 디자인리빙랩](https://vinyl-x.com/project-livinglab.html): 산업단지 근로자 경험을 서비스디자인으로 개선한 리빙랩 프로젝트
 - [Log](https://vinyl-x.com/log.html): 프로젝트·이벤트·수상 기록
 - [Contact](https://vinyl-x.com/contact.html): 프로젝트 문의
 
 ## Field Log
 - [K-Beauty Global Bridge 2026](https://vinyl-x.com/events/k-beauty-2026/): 서울인디뷰티쇼(IBS)·스탠퍼드 SCIDR·바이널엑스 공동 주최 세미나. 2026년 3월 27일 코엑스 마곡, 실무자 약 200명 참석.
-- [완주 청년디자인리빙랩 2025](https://vinyl-x.com/events/design-living-lab/): 한국디자인진흥원·완주군과 진행한 완주일반산업단지 서비스디자인 리빙랩. 워크숍 6회, 설문 132명, 아이디어 12개.
+- [완주산단 디자인리빙랩 2025](https://vinyl-x.com/events/design-living-lab/): 한국디자인진흥원·완주군과 진행한 완주일반산업단지 서비스디자인 리빙랩. 워크숍 6회, 설문 132명, 아이디어 12개.
 
 ## Insight
 - [AX 리빙랩 인사이트](https://axlivinglab.com/insights/): 바이널엑스(VINYL X)의 인사이트 글은 AX 리빙랩 사이트에서 발행합니다. 리빙랩, 서비스디자인, AX, AI 에이전트, 산업단지 관련 가이드와 현장 인사이트.
