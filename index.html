@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/interaction.css?v=109">
-  <link rel="stylesheet" href="css/pages.css?v=121">
+  <link rel="stylesheet" href="css/pages.css?v=122">
 
   <meta name="naver-site-verification" content="89ab832f1d9f9a78ba75d374a35d211dd6026bb0">
   <meta name="google-site-verification" content="7m0WqwvhKCl3ILrA3tR_djCTEkfLBjTNzZTmq9prDQY">
@@ -121,7 +121,7 @@
           <img src="images/wp-uploads/KakaoTalk_20250929_162921481.jpg" alt="DREAMPLUS UIUX MEMBERSHIP" loading="lazy">
         </div>
         <div class="gallery-item item-11" data-speed="0.15">
-          <img src="images/wp-uploads/KakaoTalk_20211215_154318401.jpg" alt="LG Display Campaign" loading="lazy">
+          <img src="images/projects/semiconductor-process.jpg" alt="(가칭) 반도체 공정 프로젝트" loading="lazy">
         </div>
         <div class="gallery-item item-12" data-speed="0.42">
           <img src="images/wp-uploads/27_IoT-Smart.jpg" alt="IoT Smart Resort Service" loading="lazy">
@@ -264,17 +264,17 @@
         <div class="service-detail-projects">
           <h3 class="service-projects-label">Featured Projects</h3>
           <div class="service-project-cards">
+            <a href="#" class="service-project-card" data-project-title="(가칭) 반도체 공정 프로젝트">
+              <div class="service-project-img">
+                <img src="images/projects/semiconductor-process.jpg" alt="(가칭) 반도체 공정 프로젝트" loading="lazy">
+              </div>
+              <span class="service-project-name">반도체 공정 프로젝트 (가칭)</span>
+            </a>
             <a href="#" class="service-project-card" data-project-title="HD HYUNDAI INFRACORE DEVELON Online Store">
               <div class="service-project-img">
                 <img src="images/wp-uploads/develon-banner.jpg" alt="HD HYUNDAI DEVELON" loading="lazy" style="object-fit: contain; background: #f5f5f5;">
               </div>
               <span class="service-project-name">HD HYUNDAI DEVELON</span>
-            </a>
-            <a href="#" class="service-project-card" data-project-title="LLOYD">
-              <div class="service-project-img">
-                <img src="images/wp-uploads/lloyd-banner.jpg" alt="LLOYD" loading="lazy" style="object-fit: contain; background: #f5f5f5;">
-              </div>
-              <span class="service-project-name">LLOYD</span>
             </a>
           </div>
         </div>
@@ -331,6 +331,19 @@
       <p class="projects-desc" data-i18n="interaction.projects-subtitle">서비스 디자인 기반의 디지털 프로덕션과 비즈니스 인큐베이팅 프로젝트</p>
     </div>
     <div class="projects-list">
+      <a href="portfolio.html#semiconductor-process" class="project-row">
+        <div class="project-info">
+          <span class="project-name">(가칭) 반도체 공정 프로젝트</span>
+          <span class="project-cat">Digital Twin · SK hynix</span>
+        </div>
+        <div class="project-year">2026</div>
+        <div class="project-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="project-img-preview">
+          <img src="images/projects/semiconductor-process.jpg" alt="(가칭) 반도체 공정 프로젝트" loading="lazy">
+        </div>
+      </a>
       <a href="portfolio.html" class="project-row">
         <div class="project-info">
           <span class="project-name">STYLETECH</span>
@@ -527,7 +540,7 @@
       let portfolioData = null;
       let savedScrollY = 0;
 
-      fetch('data/portfolio-db.json')
+      fetch('data/portfolio-db.json?v=3')
         .then(r => r.json())
         .then(d => { portfolioData = d.portfolio; })
         .catch(() => {});
@@ -589,7 +602,7 @@
         content.innerHTML = `
           <h2 class="project-modal-title">${project.title}</h2>
           <div class="project-modal-meta"><span>${cat}</span><span>${project.year || ''}</span>${project.client ? `<span>${project.client}</span>` : ''}</div>
-          <p class="project-modal-desc">${project.description || project.excerpt || ''}</p>
+          <p class="project-modal-desc">${project.description || project.excerpt || ''}</p>${project.confidential ? '<p class="pm-confidential">대외비 프로젝트로 상세 내용은 공개하지 않습니다.</p>' : ''}
           ${tags}${awards}
           <div class="project-modal-images">${imgsHTML}</div>
           ${link}

@@ -1,0 +1,59 @@
+<html><head><style>
+html,body{margin:0;width:1600px;height:1200px;overflow:hidden;background:#06080e;font-family:Inter,'Noto Sans CJK KR',sans-serif}
+canvas{position:absolute;inset:0}
+.conf{position:absolute;left:50%;top:64px;transform:translateX(-50%);display:flex;align-items:center;gap:12px;padding:10px 20px;border:1.5px solid rgba(255,255,255,.35);border-radius:40px;color:#fff;font-size:22px;font-weight:600;letter-spacing:.22em}
+.conf i{width:10px;height:10px;border-radius:50%;background:#ff5a4f;box-shadow:0 0 12px #ff5a4f}
+.foot{position:absolute;left:0;right:0;bottom:96px;text-align:center;color:#fff}
+.client{display:inline-flex;align-items:center;justify-content:center;height:64px;margin-bottom:22px}
+.client img{height:64px}
+.client span{font-size:52px;font-weight:800;letter-spacing:-1px}
+.t1{font-size:58px;font-weight:800;letter-spacing:-1.5px;line-height:1.1}
+.t2{margin-top:14px;font-size:26px;color:rgba(255,255,255,.6);font-weight:500}
+</style></head><body>
+<canvas id="c" width="1600" height="1200"></canvas>
+<div class="conf"><i></i>CONFIDENTIAL</div>
+<div class="foot"><div class="client" id="client"><span>SK hynix</span></div><div class="t1">(가칭) 반도체 공정 프로젝트</div><div class="t2">반도체 설비 디지털 트윈 · 관리환경 구축</div></div>
+<script>
+const c=document.getElementById('c'),g=c.getContext('2d');
+const W=1600,H=1200,cx=800,cy=470,s=84;
+const A='#5b7cff';
+// grid glow
+const rg=g.createRadialGradient(cx,cy,50,cx,cy,800);rg.addColorStop(0,'#101a3a');rg.addColorStop(1,'#06080e');g.fillStyle=rg;g.fillRect(0,0,W,H);
+const iso=(x,y,z)=>[cx+(x-y)*Math.cos(Math.PI/6)*s, cy+(x+y)*Math.sin(Math.PI/6)*s - z*s];
+// floor grid
+g.strokeStyle='rgba(91,124,255,.10)';g.lineWidth=1;
+for(let i=-6;i<=6;i++){let a=iso(i,-6,0),b=iso(i,6,0);g.beginPath();g.moveTo(...a);g.lineTo(...b);g.stroke();a=iso(-6,i,0);b=iso(6,i,0);g.beginPath();g.moveTo(...a);g.lineTo(...b);g.stroke();}
+function face(pts,fill){g.beginPath();pts.forEach((p,i)=>{const q=iso(...p);i?g.lineTo(...q):g.moveTo(...q)});g.closePath();g.fillStyle=fill;g.fill();g.strokeStyle='rgba(140,165,255,.9)';g.lineWidth=1.6;g.stroke();}
+function box(x,y,z,dx,dy,dz,hi){
+  const top=hi?'rgba(91,124,255,.42)':'rgba(91,124,255,.16)';
+  face([[x,y+dy,z],[x+dx,y+dy,z],[x+dx,y+dy,z+dz],[x,y+dy,z+dz]],'rgba(30,45,110,.55)'); // front-left (y max)
+  face([[x+dx,y,z],[x+dx,y+dy,z],[x+dx,y+dy,z+dz],[x+dx,y,z+dz]],'rgba(20,30,80,.7)'); // front-right (x max)
+  face([[x,y,z+dz],[x+dx,y,z+dz],[x+dx,y+dy,z+dz],[x,y+dy,z+dz]],top);
+}
+const parts=[];
+// order back to front: sort by x+y
+const B=[
+ {n:'PM-01',x:-2.9,y:-1.0,dx:1.7,dy:2.0,dz:1.3},
+ {n:'PM-02',x:-1.0,y:-2.9,dx:2.0,dy:1.7,dz:1.3,hi:1},
+ {n:'TM',x:-1.0,y:-1.0,dx:2.0,dy:2.0,dz:.55},
+ {n:'PM-03',x:1.2,y:-1.0,dx:1.7,dy:2.0,dz:1.3},
+ {n:'LL',x:-0.8,y:1.1,dx:1.6,dy:0.9,dz:.7},
+ {n:'EFEM',x:-1.9,y:2.15,dx:3.8,dy:1.3,dz:1.5},
+];
+B.sort((a,b)=>(a.x+a.dx/2+a.y+a.dy/2)-(b.x+b.dx/2+b.y+b.dy/2)).forEach(b=>box(b.x,b.y,0,b.dx,b.dy,b.dz,b.hi));
+// load ports
+[-1.6,-0.3,1.0].forEach(px=>box(px,3.45,0,0.9,0.5,0.9,false));
+// robot arm hint on TM
+g.strokeStyle=A;g.lineWidth=3;g.beginPath();g.moveTo(...iso(0,0,.56));g.lineTo(...iso(.6,-.5,.56));g.lineTo(...iso(.2,-1.0,.56));g.stroke();
+// callouts
+function tag(p,dx,dy,label,live){const q=iso(...p);const t=[q[0]+dx,q[1]+dy];
+ g.fillStyle=A;g.beginPath();g.arc(q[0],q[1],6,0,7);g.fill();g.strokeStyle='rgba(91,124,255,.35)';g.lineWidth=10;g.beginPath();g.arc(q[0],q[1],12,0,7);g.stroke();
+ g.setLineDash([6,6]);g.strokeStyle='rgba(160,180,255,.7)';g.lineWidth=1.5;g.beginPath();g.moveTo(...q);g.lineTo(t[0],t[1]);g.lineTo(t[0]+(dx>0?40:-40),t[1]);g.stroke();g.setLineDash([]);
+ g.font='600 22px Inter, sans-serif';const tw=g.measureText(label).width;const bx=dx>0?t[0]+46:t[0]-46-tw-28;
+ g.fillStyle='rgba(8,12,28,.9)';g.strokeStyle='rgba(140,165,255,.8)';g.lineWidth=1.2;g.beginPath();g.roundRect(bx,t[1]-20,tw+28,40,8);g.fill();g.stroke();
+ g.fillStyle='#fff';g.fillText(label,bx+14,t[1]+8);}
+tag([-1.0+1.0,-2.9+0.85,1.3],70,-70,'PM-02 · SYNC');
+tag([-2.9+0.85,-1.0+1.0,1.3],-40,-70,'PM-01');
+tag([1.2+0.85,-1.0+1.0,1.3],40,70,'PM-03');
+tag([0.0,2.8,1.5],-60,80,'EFEM');
+</script></body></html>

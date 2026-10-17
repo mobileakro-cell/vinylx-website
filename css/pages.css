@@ -1004,6 +1004,17 @@
   gap: 6px;
 }
 
+.pm-confidential {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: -8px 0 24px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #c0392b;
+}
+.pm-confidential::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+
 .project-modal-desc {
   font-size: 15px;
   line-height: 1.8;

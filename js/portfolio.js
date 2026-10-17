@@ -35,7 +35,7 @@
   };
 
   // Fetch portfolio data
-  fetch('data/portfolio-db.json?v=2')
+  fetch('data/portfolio-db.json?v=3')
     .then(res => res.json())
     .then(data => {
       allProjects = data.portfolio.filter(p => p.featured_image_url);
@@ -43,6 +43,9 @@
       updateCount();
       renderGrid();
       initReveal();
+      const slug = (location.hash || '').slice(1);
+      const target = slug && allProjects.find(p => p.slug === slug);
+      if (target && !target.page) openModal(target);
     })
     .catch(err => console.error('Portfolio load error:', err));
 
@@ -195,6 +198,7 @@
     modalContent.innerHTML = `
       <h2 class="project-modal-title">${esc(titleOf(project))}</h2>
       ${desc ? `<p class="project-modal-desc">${esc(desc)}</p>` : ''}
+      ${project.confidential ? `<p class="pm-confidential">${en ? 'This is a confidential project, so details are not disclosed.' : '대외비 프로젝트로 상세 내용은 공개하지 않습니다.'}</p>` : ''}
       <dl class="pm-facts">${rows.map(r => `<div><dt>${r[0]}</dt><dd>${esc(r[1])}</dd></div>`).join('')}</dl>
       ${awards}
       ${tags}

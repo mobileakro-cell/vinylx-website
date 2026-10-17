@@ -3,7 +3,7 @@
     "source": "https://vinyl-x.com (WordPress REST API + Page Scraping)",
     "exported_date": "2026-03-20",
     "updated_date": "2026-10-17",
-    "total_items": 27,
+    "total_items": 28,
     "note": "이미지 URL 및 상세 설명은 공개 포트폴리오 페이지에서 수집"
   },
   "categories": [
@@ -29,6 +29,35 @@
     }
   ],
   "portfolio": [
+    {
+      "id": 4002,
+      "title": "(가칭) 반도체 공정 프로젝트",
+      "title_en": "Semiconductor Process Project (working title)",
+      "slug": "semiconductor-process",
+      "date": "2026-10-01",
+      "category": "Digital Transformation",
+      "category_id": 17,
+      "client": "SK hynix",
+      "client_en": "SK hynix",
+      "year": "2026",
+      "tags": [
+        "Digital Twin",
+        "Equipment Management",
+        "AX"
+      ],
+      "awards": [],
+      "featured_image_url": "images/projects/semiconductor-process.jpg",
+      "thumbnail_url": "images/projects/semiconductor-process.jpg",
+      "detail_images": [],
+      "confidential": true,
+      "excerpt": "반도체 설비 디지털 트윈 · 관리환경 구축",
+      "excerpt_en": "Digital twin and management environment for semiconductor equipment",
+      "description": "SK하이닉스 반도체 공장의 설비 디지털 트윈과 관리환경을 구축하고 있습니다.",
+      "description_en": "We are building a digital twin and management environment for equipment in an SK hynix semiconductor fab.",
+      "credit": "by VINYLX 바이널엑스",
+      "credit_en": "by VINYLX",
+      "link": ""
+    },
     {
       "id": 4001,
       "title": "완주산단 디자인리빙랩",
