@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/interaction.css?v=112">
+  <link rel="stylesheet" href="css/interaction.css?v=113">
   <link rel="stylesheet" href="css/pages.css?v=125">
 
   <meta name="naver-site-verification" content="89ab832f1d9f9a78ba75d374a35d211dd6026bb0">
@@ -598,32 +598,50 @@
         var s = Math.max(W / vw, H / vh) * 1.04, sw = W / s, sh = H / s;
         return { x: (vw - sw) / 2, y: (vh - sh) / 2, w: sw, h: sh, k: s };
       }
-      function frame() {
+      var hero = document.querySelector('.hero-section');
+      var lines = document.querySelectorAll('.hero-text .hero-line');
+      function frame(strong) {
         var W = c.width, H = c.height, r = src();
         ctx.clearRect(0, 0, W, H);
-        var n = 2 + (Math.random() * 4 | 0);
-        for (var i = 0; i < n; i++) {
-          var y = Math.random() * H, bh = 3 + Math.random() * H * 0.09, dx = (Math.random() - 0.5) * W * 0.08;
-          var sy = r.y + y / r.k, sh = bh / r.k;
-          ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
-          ctx.drawImage(v, r.x, sy, r.w, sh, dx, y, W, bh);
-          ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = 0.35;
-          ctx.drawImage(v, r.x, sy, r.w, sh, dx + 5, y, W, bh);
-          ctx.fillStyle = 'rgba(255,0,70,0.18)'; ctx.fillRect(dx + 5, y, W, bh);
-          ctx.drawImage(v, r.x, sy, r.w, sh, dx - 5, y, W, bh);
-          ctx.fillStyle = 'rgba(0,200,255,0.16)'; ctx.fillRect(dx - 5, y, W, bh);
+        // 1) row jitter: whole frame redrawn in thin rows, shifted by a wave + noise (jagged edges)
+        var rows = 2 + (Math.random() * 3 | 0), amp = (strong ? 0.035 : 0.018) * W, ph = Math.random() * 6.28, fq = 0.02 + Math.random() * 0.06;
+        for (var y = 0; y < H; y += rows) {
+          var dx = Math.sin(y * fq + ph) * amp * Math.random() + (Math.random() < 0.06 ? (Math.random() - 0.5) * amp * 3 : 0);
+          ctx.drawImage(v, r.x, r.y + y / r.k, r.w, rows / r.k, dx, y, W, rows);
         }
+        // 2) smear: a thin strip stretched out sideways
+        var sm = strong ? 2 : 1 + (Math.random() < 0.5 ? 1 : 0);
+        for (var i = 0; i < sm; i++) {
+          var sy = Math.random() * H, sh = 2 + Math.random() * H * 0.05, sx = Math.random() * W * 0.7;
+          ctx.drawImage(v, r.x + sx / r.k, r.y + sy / r.k, 6 / r.k, sh / r.k, sx, sy, W - sx, sh);
+        }
+        // 3) one band with RGB fringe
+        var by = Math.random() * H, bh = 4 + Math.random() * H * 0.06, bx = (Math.random() - 0.5) * W * 0.05;
+        ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = 0.4;
+        ctx.drawImage(v, r.x, r.y + by / r.k, r.w, bh / r.k, bx + 6, by, W, bh); ctx.fillStyle = 'rgba(255,0,90,0.2)'; ctx.fillRect(bx + 6, by, W, bh);
+        ctx.drawImage(v, r.x, r.y + by / r.k, r.w, bh / r.k, bx - 6, by, W, bh); ctx.fillStyle = 'rgba(0,210,255,0.2)'; ctx.fillRect(bx - 6, by, W, bh);
         ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
-        media.style.setProperty('--gx', ((Math.random() - 0.5) * 8).toFixed(1) + 'px');
+        // 4) type: RGB split + random band dropout on one line
+        lines.forEach(function (l) { l.style.clipPath = ''; });
+        if (Math.random() < 0.7) {
+          var l = lines[Math.random() * lines.length | 0], t = Math.random() * 60 | 0;
+          l.style.clipPath = 'polygon(0 0,100% 0,100% ' + t + '%,0 ' + t + '%,0 ' + (t + 12 + Math.random() * 20 | 0) + '%,100% ' + (t + 12 + Math.random() * 20 | 0) + '%,100% 100%,0 100%)';
+        }
+        hero.style.setProperty('--tx', ((Math.random() - 0.5) * 8).toFixed(1) + 'px');
       }
       function burst() {
         if (document.hidden || v.paused || !v.videoWidth) return schedule();
-        var left = 3 + (Math.random() * 6 | 0);
-        media.classList.add('is-glitch');
+        var strong = Math.random() < 0.35, left = (strong ? 6 : 3) + (Math.random() * 4 | 0);
+        media.classList.add('is-glitch'); hero.classList.add('is-glitch');
         (function step() {
-          frame();
-          if (--left > 0) return setTimeout(step, 45 + Math.random() * 60);
-          setTimeout(function () { ctx.clearRect(0, 0, c.width, c.height); media.classList.remove('is-glitch'); schedule(); }, 60);
+          frame(strong);
+          if (--left > 0) return setTimeout(step, 40 + Math.random() * 70);
+          setTimeout(function () {
+            ctx.clearRect(0, 0, c.width, c.height);
+            media.classList.remove('is-glitch'); hero.classList.remove('is-glitch');
+            lines.forEach(function (l) { l.style.clipPath = ''; });
+            schedule();
+          }, 70);
         })();
       }
       function schedule() { setTimeout(burst, 2600 + Math.random() * 4200); }
