@@ -79,6 +79,22 @@
     .lb-stack .s3, .lb-legend .s3 { background: #c4baab; }
     .lb-stack .sa { background: var(--lb-accent); }
     .lb-stack .s0 { background: var(--lb-card); }
+    .lb-picto { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .lb-picto .pi { position: relative; display: block; color: var(--lb-card); }
+    .lb-picto .pi svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+    .lb-picto .pi .part { position: absolute; inset: 0 auto 0 0; overflow: hidden; }
+    .lb-picto .pi .part svg { width: auto; height: 100%; aspect-ratio: inherit; }
+    .lb-picto.ppl .pi { width: 30px; height: 40px; aspect-ratio: 24 / 32; }
+    .lb-picto.ppl .pi .part svg { width: 30px; }
+    .lb-picto.ppl { gap: 6px 8px; }
+    .lb-picto .on, .lb-picto .c1 { color: var(--lb-text); }
+    .lb-picto .acc { color: var(--lb-accent); }
+    .lb-picto .off { color: #d6cdc0; }
+    .lb-picto.co { display: grid; grid-template-columns: repeat(25, minmax(0, 1fr)); gap: 6px 4px; }
+    .lb-picto.co .pi { width: 100%; aspect-ratio: 1; }
+    .lb-picto .c2 { color: #8f877b; }
+    .lb-picto .c3 { color: var(--lb-accent); }
+    .lb-legend .s3 { background: var(--lb-accent) !important; }
     .lb-legend { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--lb-muted); }
     .lb-legend li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
     .lb-legend li i { width: 8px; height: 8px; }
@@ -177,6 +193,10 @@
       .lb-facts { grid-template-columns: 1fr; margin-top: 36px; }
       .lb-facts-head { flex-direction: column; gap: 4px; }
       .lb-facts-head h3 { font-size: 18px; }
+      .lb-picto.co { grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 4px 3px; }
+      .lb-picto.ppl { gap: 6px; }
+      .lb-picto.ppl .pi, .lb-picto.ppl .pi .part svg { width: 24px; }
+      .lb-picto.ppl .pi { height: 32px; }
       .lb-dir { grid-template-columns: 1fr 1fr; margin-top: 36px; }
       .lb-dir div:nth-child(3) { border-left: none; }
       .lb-dir div:nth-child(n+3) { border-top: 1px solid var(--lb-paper); }
@@ -281,36 +301,43 @@
         </div>
 
         <div class="lb-facts">
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+            <symbol id="ic-person" viewBox="0 0 24 32"><circle cx="12" cy="6" r="4.6"/><path d="M4 31V19.5a8 8 0 0 1 16 0V31z"/></symbol>
+            <symbol id="ic-factory" viewBox="0 0 24 24"><path d="M2 22V12l6 3.5V12l6 3.5V7h3V3h3v19z"/></symbol>
+            <symbol id="ic-mid" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4 22V6h16v16zM7 9h3v3H7zm7 0h3v3h-3zm-7 5h3v3H7zm7 0h3v3h-3z"/></symbol>
+            <symbol id="ic-tower" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6 23V1h12v22zM9 4h2v2H9zm4 0h2v2h-2zM9 8h2v2H9zm4 0h2v2h-2zm-4 4h2v2H9zm4 0h2v2h-2zm-4 4h2v2H9zm4 0h2v2h-2z"/></symbol>
+            <symbol id="ic-bowl" viewBox="0 0 24 24"><path d="M2 12h20a10 9 0 0 1-20 0zM5 22h14v1.5H5z"/><path d="M8 9.5c-1.2-1.6 1.2-2.6 0-4.5M12 9.5c-1.2-1.6 1.2-2.6 0-4.5M16 9.5c-1.2-1.6 1.2-2.6 0-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+            <symbol id="ic-bowl-x" viewBox="0 0 24 24"><path d="M2 12h20a10 9 0 0 1-20 0zM5 22h14v1.5H5z" opacity=".35"/><path d="M3 3l18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+          </svg>
           <div class="lb-facts-head">
             <h3>완주산단 기업 및 근로자 현황</h3>
             <p>입주기업 756개 · 근로자 27,456명 기준</p>
           </div>
           <div class="lb-fact wide">
             <div class="lb-fact-top"><span>기업 규모</span><b>91.2%</b></div>
-            <p class="lb-fact-note">입주기업 대부분이 100인 미만 소규모 기업</p>
-            <div class="lb-stack" role="img" aria-label="100인 미만 91.2%, 100–299인 6.5%, 300인 이상 2.3%"><i class="s1" style="flex:91.2"></i><i class="s2" style="flex:6.5"></i><i class="s3" style="flex:2.3"></i></div>
+            <p class="lb-fact-note">기업 100곳을 세우면 91곳이 100인 미만 소규모 공장입니다</p>
+            <div class="lb-picto co" role="img" aria-label="100곳 중 100인 미만 91곳, 100–299인 7곳, 300인 이상 2곳"><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c1"><svg><use href="#ic-factory"/></svg></span><span class="pi c2"><svg><use href="#ic-mid"/></svg></span><span class="pi c2"><svg><use href="#ic-mid"/></svg></span><span class="pi c2"><svg><use href="#ic-mid"/></svg></span><span class="pi c2"><svg><use href="#ic-mid"/></svg></span><span class="pi c2"><svg><use href="#ic-mid"/></svg></span><span class="pi c2"><svg><use href="#ic-mid"/></svg></span><span class="pi c2"><svg><use href="#ic-mid"/></svg></span><span class="pi c3"><svg><use href="#ic-tower"/></svg></span><span class="pi c3"><svg><use href="#ic-tower"/></svg></span></div>
             <ul class="lb-legend"><li><i class="s1"></i>100인 미만 <b>91.2%</b></li><li><i class="s2"></i>100–299인 <b>6.5%</b></li><li><i class="s3"></i>300인 이상 <b>2.3%</b></li></ul>
           </div>
           <div class="lb-fact">
             <div class="lb-fact-top"><span>외국인 근로자</span><b>32%</b></div>
-            <p class="lb-fact-note">근로자 3명 중 1명은 외국인</p>
-            <div class="lb-stack" role="img" aria-label="내국인 68%, 외국인 32%"><i class="s1" style="flex:68"></i><i class="s2" style="flex:32"></i></div>
-            <ul class="lb-legend"><li><i class="s1"></i>내국인 <b>68%</b></li><li><i class="s2"></i>외국인 <b>32%</b></li></ul>
+            <p class="lb-fact-note">근로자 10명 중 3명 이상이 외국인</p>
+            <div class="lb-picto ppl" role="img" aria-label="10명 중 3.2명"><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg><span class="part on" style="width:20%"><svg><use href="#ic-person"/></svg></span></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span></div>
           </div>
           <div class="lb-fact">
             <div class="lb-fact-top"><span>청년 근로자</span><b>43%</b></div>
             <p class="lb-fact-note">20~30대 청년이 근로자의 절반에 가까움</p>
-            <div class="lb-stack" role="img" aria-label="청년 근로자 43%"><i class="s1" style="flex:43"></i><i class="s0" style="flex:57"></i></div>
+            <div class="lb-picto ppl" role="img" aria-label="10명 중 4.3명"><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg><span class="part on" style="width:30%"><svg><use href="#ic-person"/></svg></span></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span></div>
           </div>
           <div class="lb-fact">
             <div class="lb-fact-top"><span>문화복지시설 미사용</span><b class="hi">79.9%</b></div>
             <p class="lb-fact-note">근로자 10명 중 8명이 산단 문화복지시설을 쓰지 않음</p>
-            <div class="lb-stack" role="img" aria-label="문화복지시설 미사용 79.9%"><i class="sa" style="flex:79.9"></i><i class="s0" style="flex:20.1"></i></div>
+            <div class="lb-picto ppl" role="img" aria-label="10명 중 8명 미사용"><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg><span class="part acc" style="width:99%"><svg><use href="#ic-person"/></svg></span></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span></div>
           </div>
           <div class="lb-fact">
             <div class="lb-fact-top"><span>구내식당 미보유 기업</span><b class="hi">50%+</b></div>
-            <p class="lb-fact-note">절반 이상의 기업이 구내식당이 없어 식사 환경이 열악</p>
-            <div class="lb-stack" role="img" aria-label="구내식당 미보유 기업 50% 이상"><i class="sa" style="flex:50"></i><i class="s0" style="flex:50"></i></div>
+            <p class="lb-fact-note">기업 절반 이상이 구내식당이 없어 식사 환경이 열악</p>
+            <div class="lb-picto ppl" role="img" aria-label="10곳 중 5곳 이상 구내식당 없음"><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span></div>
           </div>
         </div>
 
