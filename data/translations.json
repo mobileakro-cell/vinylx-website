@@ -1037,8 +1037,8 @@
       "en": "STYLETECH, now in its eighth year"
     },
     "k-35": {
-      "ko": "바이널엑스가 초기부터 함께한 프로그램은 2026년 8기까지 이어지고 있습니다.",
-      "en": "The program VINYL X joined from the start continues with its 8th cohort in 2026."
+      "ko": "바이널엑스가 1기부터 7기까지 함께한 프로그램은 2026년 8기로 이어지고 있습니다.",
+      "en": "The program VINYL X supported from cohort 1 through cohort 7 continues with cohort 8 in 2026."
     },
     "k-36": {
       "ko": "1기 출범",
@@ -1127,6 +1127,14 @@
     "k-amt": {
       "ko": "1,070<small>억</small>",
       "en": "107<small>B KRW</small>"
+    },
+    "k-y25t": {
+      "ko": "7기 · 스타일테크 리포트",
+      "en": "Cohort 7 · STYLETECH Report"
+    },
+    "k-y25d": {
+      "ko": "7기까지 이어진 프로그램의 선정 기업과 성과가 2025 스타일테크 리포트로 정리됐습니다.",
+      "en": "Selected companies and results through cohort 7 were compiled in the 2025 STYLETECH Report."
     }
   }
 }
