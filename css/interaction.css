@@ -372,16 +372,20 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   transform: scale(1.04);
 }
 .hero-media.is-glitch .hero-video {
-  filter: saturate(1.05) contrast(1.25) brightness(0.95);
+  transform: scale(1.04) translateX(var(--gx));
 }
-
-.hero-glitch {
+.hero-band {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  transform: scale(1);
+  left: 0;
+  right: 0;
+  top: 40%;
+  height: 3%;
+  background-size: 180px 60px;
+  mix-blend-mode: overlay;
+  opacity: 0;
 }
+.hero-media.is-glitch .hero-band { opacity: 0.5; }
+
 .hero-shade {
   position: absolute;
   inset: 0;
@@ -396,7 +400,7 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   background: repeating-linear-gradient(180deg, rgba(0,0,0,0.22) 0, rgba(0,0,0,0.22) 1px, transparent 1px, transparent 3px);
   opacity: 0.55;
 }
-.hero-media.is-glitch .hero-scan { opacity: 0.9; }
+.hero-media.is-glitch .hero-scan { opacity: 0.75; }
 .hero-grain {
   position: absolute;
   inset: -50%;
@@ -405,7 +409,7 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   mix-blend-mode: overlay;
   animation: hero-grain 0.9s steps(6) infinite;
 }
-.hero-media.is-glitch .hero-grain { opacity: 0.22; }
+.hero-media.is-glitch .hero-grain { opacity: 0.18; }
 @keyframes hero-grain {
   0% { transform: translate(0, 0); }
   17% { transform: translate(-7%, 4%); }
