@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/interaction.css?v=109">
+  <link rel="stylesheet" href="css/interaction.css?v=110">
   <link rel="stylesheet" href="css/pages.css?v=122">
 
   <!-- SITE-SEO:START -->
@@ -38,7 +38,14 @@
 
   <header class="header">
     <a href="index.html" class="logo"><img src="images/vinylx-logo-white.png" alt="VINYL X." class="logo-img"></a>
-    <button class="menu-toggle" aria-label="Toggle menu">MENU</button>
+    <div class="header-right">
+      <button class="lang-toggle" aria-label="Switch language">
+        <span class="lang-option is-active" data-lang="ko">KO</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+      <button class="menu-toggle" aria-label="Toggle menu">MENU</button>
+    </div>
   </header>
 
   <div class="menu-overlay">
@@ -56,11 +63,6 @@
         <a href="https://www.facebook.com/vinylxdesign" target="_blank" rel="noopener">Facebook</a>
         <a href="https://axlivinglab.com" target="_blank" rel="noopener">AX Living Lab</a>
       </div>
-      <button class="lang-toggle" aria-label="Switch language">
-        <span class="lang-option is-active" data-lang="ko">KO</span>
-        <span class="lang-divider">/</span>
-        <span class="lang-option" data-lang="en">EN</span>
-      </button>
     </div>
   </div>
 
@@ -194,14 +196,14 @@
     <div class="about-detail-inner">
       <div class="about-detail-text">
         <span class="service-label reveal">CEO</span>
-        <h2 class="about-detail-title reveal reveal-delay-1" style="color: var(--color-text-dark);">곽승훈<br><span class="about-leader-role">대표</span></h2>
-        <p class="about-detail-desc reveal reveal-delay-2">삼성전자 중앙연구소에서 UI 연구로 시작해, 제품 디자인·UI/UX·서비스 전략·스타트업 액셀러레이팅을 아우르는 약 25년의 경험으로 바이널엑스를 이끌고 있습니다.</p>
+        <h2 class="about-detail-title reveal reveal-delay-1" style="color: var(--color-text-dark);" data-i18n="about.v2-01" data-i18n-html="true">곽승훈<br><span class="about-leader-role">대표</span></h2>
+        <p class="about-detail-desc reveal reveal-delay-2" data-i18n="about.v2-02">삼성전자 중앙연구소에서 UI 연구로 시작해, 제품 디자인·UI/UX·서비스 전략·스타트업 액셀러레이팅을 아우르는 약 25년의 경험으로 바이널엑스를 이끌고 있습니다.</p>
       </div>
       <ul class="about-leader-career reveal reveal-delay-2">
-          <li>現 스타트업 액셀러레이터 / 서비스 컨설턴트</li>
-          <li>現 서비스디자인학회 이사 · 디지털정부 UI·UX 혁신 자문위원</li>
-          <li>한국디자인진흥원 서비스디자인 및 완주산단 디자인리빙랩 관련 업무 수행</li>
-          <li>前 삼성전자 중앙연구소 선임연구원</li>
+          <li data-i18n="about.v2-03">現 스타트업 액셀러레이터 / 서비스 컨설턴트</li>
+          <li data-i18n="about.v2-04">現 서비스디자인학회 이사 · 디지털정부 UI·UX 혁신 자문위원</li>
+          <li data-i18n="about.v2-05">한국디자인진흥원 서비스디자인 및 완주산단 디자인리빙랩 관련 업무 수행</li>
+          <li data-i18n="about.v2-06">前 삼성전자 중앙연구소 선임연구원</li>
       </ul>
     </div>
   </section>
@@ -253,7 +255,7 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=4"></script>
+  <script src="js/i18n.js?v=5"></script>
   <script src="js/interaction.js?v=100"></script>
   <script>
     // Scroll reveal

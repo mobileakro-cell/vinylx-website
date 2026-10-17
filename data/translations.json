@@ -73,6 +73,62 @@
     "insight-subtitle": {
       "ko": "AX 리빙랩에서 발행하는 AX·서비스디자인 인사이트",
       "en": "AX and service design insights published by AX Living Lab"
+    },
+    "v2-01": {
+      "ko": "반도체 공정 프로젝트 (가칭)",
+      "en": "Semiconductor Process Project (working title)"
+    },
+    "v2-02": {
+      "ko": "(가칭) 반도체 공정 프로젝트",
+      "en": "Semiconductor Process Project (working title)"
+    },
+    "v2-03": {
+      "ko": "AX·UI/UX 컨설팅 자세히 보기",
+      "en": "More on AX · UI/UX consulting"
+    },
+    "v2-04": {
+      "ko": "서비스디자이너가 바라보는 AX 디자인",
+      "en": "AX design through a service designer’s eyes"
+    },
+    "v2-05": {
+      "ko": "블루프린트를 그려 온 사람이 AX의 지도를 읽는 법",
+      "en": "How someone who draws blueprints reads the map of AX"
+    },
+    "v2-06": {
+      "ko": "AI 친화적인 UI의 다섯 가지 조건",
+      "en": "Five conditions for AI-friendly UI"
+    },
+    "v2-07": {
+      "ko": "고객의 AI가 막히지 않는 웹·앱 화면 설계",
+      "en": "Designing web and app screens your customers’ AI won’t get stuck on"
+    },
+    "v2-08": {
+      "ko": "고객의 AI가 우리 서비스를 쓸 수 있을까요?",
+      "en": "Can your customers’ AI use your service?"
+    },
+    "v2-09": {
+      "ko": "AI가 쓰기 좋은 서비스의 네 가지 조건과 블루프린트로 점검하는 법",
+      "en": "Four conditions for AI-ready services, and how to check them with a blueprint"
+    },
+    "v2-10": {
+      "ko": "#서비스디자인",
+      "en": "#ServiceDesign"
+    },
+    "v2-11": {
+      "ko": "#서비스블루프린트",
+      "en": "#ServiceBlueprint"
+    },
+    "v2-12": {
+      "ko": "#AI에이전트",
+      "en": "#AIAgents"
+    },
+    "v2-13": {
+      "ko": "#UI디자인",
+      "en": "#UIDesign"
+    },
+    "v2-14": {
+      "ko": "#접근성",
+      "en": "#Accessibility"
     }
   },
   "about": {
@@ -107,6 +163,30 @@
     "livinglab-name": {
       "ko": "완주산단 디자인리빙랩",
       "en": "Wanju Industrial Complex Design Living Lab"
+    },
+    "v2-01": {
+      "ko": "곽승훈<br><span class=\"about-leader-role\">대표</span>",
+      "en": "Seunghoon Kwak<br><span class=\"about-leader-role\">CEO</span>"
+    },
+    "v2-02": {
+      "ko": "삼성전자 중앙연구소에서 UI 연구로 시작해, 제품 디자인·UI/UX·서비스 전략·스타트업 액셀러레이팅을 아우르는 약 25년의 경험으로 바이널엑스를 이끌고 있습니다.",
+      "en": "He began in UI research at Samsung Electronics’ central research lab and now leads VINYL X with about 25 years of experience across product design, UI/UX, service strategy and startup accelerating."
+    },
+    "v2-03": {
+      "ko": "現 스타트업 액셀러레이터 / 서비스 컨설턴트",
+      "en": "Startup accelerator / service consultant"
+    },
+    "v2-04": {
+      "ko": "現 서비스디자인학회 이사 · 디지털정부 UI·UX 혁신 자문위원",
+      "en": "Board member, Service Design Society · Advisor, Digital Government UI/UX Innovation"
+    },
+    "v2-05": {
+      "ko": "한국디자인진흥원 서비스디자인 및 완주산단 디자인리빙랩 관련 업무 수행",
+      "en": "Service design and Wanju Industrial Complex Design Living Lab work with the Korea Institute of Design Promotion"
+    },
+    "v2-06": {
+      "ko": "前 삼성전자 중앙연구소 선임연구원",
+      "en": "Former senior researcher, Samsung Electronics central research lab"
     }
   },
   "portfolio": {
@@ -175,6 +255,110 @@
     "footer-desc": {
       "ko": "서비스 디자인 기반의 UI/UX 컨설팅과 디지털 서비스 개발 전문 에이전시",
       "en": "A specialized agency in service design-based UI/UX consulting and digital service development"
+    },
+    "v2-01": {
+      "ko": "바이널엑스(VINYL X)는 2012년 설립된 서울 성수동의 서비스 경험 디자인 회사입니다. 산업 현장의 문제를 AX 컨설팅, UI/UX 컨설팅, 서비스디자인 컨설팅, 산업단지 디자인리빙랩으로 연결합니다.",
+      "en": "VINYL X is a service experience design company founded in 2012 in Seongsu, Seoul. We connect real-world industry problems to AX consulting, UI/UX consulting, service design consulting and industrial complex design living labs."
+    },
+    "v2-02": {
+      "ko": "AX 컨설팅",
+      "en": "AX Consulting"
+    },
+    "v2-03": {
+      "ko": "바이널엑스(VINYL X)의 AX 컨설팅은 업무·데이터·의사결정 구조를 먼저 진단해 현업이 실제로 쓰는 AI 과제를 정의하고, AI 기반 서비스 운영모델로 설계하는 서비스디자인 기반 AI 전환 컨설팅입니다.",
+      "en": "Our AX consulting first diagnoses how work, data and decisions flow, then defines AI tasks people will actually use and designs them into an AI-based service operating model."
+    },
+    "v2-04": {
+      "ko": "UI/UX 컨설팅",
+      "en": "UI/UX Consulting"
+    },
+    "v2-05": {
+      "ko": "바이널엑스(VINYL X)의 UI/UX 컨설팅은 산업 도메인과 현장 사용자를 먼저 이해한 뒤 UX 리서치, UX 전략, 서비스 기획, UI 디자인, 디자인 시스템까지 디지털 서비스 경험을 설계합니다.",
+      "en": "Our UI/UX consulting starts by understanding the industry and its users, then designs the digital experience through UX research, UX strategy, service planning, UI design and design systems."
+    },
+    "v2-06": {
+      "ko": "서비스디자인 컨설팅",
+      "en": "Service Design Consulting"
+    },
+    "v2-07": {
+      "ko": "고객여정 지도와 서비스 블루프린트로 고객 접점과 내부 운영을 함께 진단하고, 이해관계자 워크숍과 리빙랩 시범운영으로 검증해 실제로 작동하는 서비스를 설계합니다.",
+      "en": "We diagnose customer touchpoints and internal operations together with journey maps and service blueprints, then validate through stakeholder workshops and living lab pilots to design services that actually work."
+    },
+    "v2-08": {
+      "ko": "산업단지 디자인리빙랩",
+      "en": "Industrial Complex Design Living Lab"
+    },
+    "v2-09": {
+      "ko": "산단 청년근로자·주민·지자체가 함께 문제를 찾고, 휴게·이동·숙박·문화 공간과 서비스를 공공디자인으로 설계해 시범운영으로 검증합니다. 완주산단 디자인리빙랩 수행.",
+      "en": "Young workers, residents and local government find problems together; we design rest, mobility, lodging and cultural spaces and services as public design and validate them in pilots. Delivered the Wanju Industrial Complex Design Living Lab."
+    },
+    "v2-10": {
+      "ko": "#AX컨설팅",
+      "en": "#AXConsulting"
+    },
+    "v2-11": {
+      "ko": "#AI전환",
+      "en": "#AITransformation"
+    },
+    "v2-12": {
+      "ko": "#서비스운영모델",
+      "en": "#ServiceOperatingModel"
+    },
+    "v2-13": {
+      "ko": "#제조AX",
+      "en": "#ManufacturingAX"
+    },
+    "v2-14": {
+      "ko": "#공공AX",
+      "en": "#PublicAX"
+    },
+    "v2-15": {
+      "ko": "#UIUX컨설팅",
+      "en": "#UIUXConsulting"
+    },
+    "v2-16": {
+      "ko": "#UX컨설팅",
+      "en": "#UXConsulting"
+    },
+    "v2-17": {
+      "ko": "#UX리서치",
+      "en": "#UXResearch"
+    },
+    "v2-18": {
+      "ko": "#서비스디자인",
+      "en": "#ServiceDesign"
+    },
+    "v2-19": {
+      "ko": "#AI경험설계",
+      "en": "#AIExperienceDesign"
+    },
+    "v2-20": {
+      "ko": "#고객여정",
+      "en": "#CustomerJourney"
+    },
+    "v2-21": {
+      "ko": "#서비스블루프린트",
+      "en": "#ServiceBlueprint"
+    },
+    "v2-22": {
+      "ko": "#공공서비스디자인",
+      "en": "#PublicServiceDesign"
+    },
+    "v2-23": {
+      "ko": "#디자인리빙랩",
+      "en": "#DesignLivingLab"
+    },
+    "v2-24": {
+      "ko": "#청년디자인리빙랩",
+      "en": "#YouthDesignLivingLab"
+    },
+    "v2-25": {
+      "ko": "#산업단지공공디자인",
+      "en": "#IndustrialComplexPublicDesign"
+    },
+    "v2-26": {
+      "ko": "#문화선도산단",
+      "en": "#CultureLeadingComplex"
     }
   },
   "livinglab": {

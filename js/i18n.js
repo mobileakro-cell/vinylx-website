@@ -12,7 +12,7 @@
   // Fetch translations JSON (cached by browser)
   function loadTranslations() {
     if (translations) return Promise.resolve(translations);
-    return fetch('data/translations.json?v=3')
+    return fetch('data/translations.json?v=5')
       .then(function (r) { return r.json(); })
       .then(function (data) { translations = data; return data; });
   }
@@ -80,6 +80,22 @@
     });
   }
 
+
+  // Korean-only pages: show a small notice in English mode
+  function updateLangOnlyNotice(lang) {
+    var only = document.body && document.body.getAttribute('data-lang-only');
+    var el = document.getElementById('langOnlyNotice');
+    if (!only || lang === only) { if (el) el.remove(); return; }
+    if (el) return;
+    el = document.createElement('div');
+    el.id = 'langOnlyNotice';
+    el.className = 'lang-only-notice';
+    el.setAttribute('role', 'status');
+    el.innerHTML = '<span>This page is available in Korean only.</span><button type="button" aria-label="Close">×</button>';
+    el.querySelector('button').addEventListener('click', function () { el.remove(); });
+    document.body.appendChild(el);
+  }
+
   // Set language
   function setLang(lang) {
     currentLang = lang;
@@ -89,6 +105,7 @@
     loadTranslations().then(function () {
       applyTranslations(lang);
       updateToggleUI(lang);
+      updateLangOnlyNotice(lang);
       // Dispatch event for dynamic content (portfolio.js)
       document.dispatchEvent(new CustomEvent('vinylx-lang-change', { detail: { lang: lang } }));
     });
@@ -106,6 +123,7 @@
 
     // Update toggle UI
     updateToggleUI(currentLang);
+    updateLangOnlyNotice(currentLang);
 
     // Bind toggle click events
     document.querySelectorAll('.lang-toggle').forEach(function (toggle) {
