@@ -531,8 +531,8 @@
       "date": "2021-10-19",
       "category": "Open Innovation",
       "category_id": 19,
-      "client": "STYLETECH",
-      "year": "2019 ~ 2021",
+      "client": "한국디자인진흥원",
+      "year": "2019 ~ 2022",
       "tags": [
         "Open Innovation",
         "Accelerating",
@@ -541,8 +541,8 @@
       ],
       "awards": [],
       "featured_media_id": 2635,
-      "featured_image_url": "images/wp-uploads/021.jpg",
-      "thumbnail_url": "images/wp-uploads/021.jpg",
+      "featured_image_url": "images/projects/styletech-thumb.jpg",
+      "thumbnail_url": "images/projects/styletech-thumb.jpg",
       "detail_images": [
         "images/wp-uploads/STYLE_TECH_01.jpg",
         "images/wp-uploads/STYLE_TECH_02.jpg",
@@ -550,12 +550,15 @@
         "images/wp-uploads/STYLE_TECH_004.jpg",
         "images/wp-uploads/STYLE_TECH_05.jpg"
       ],
-      "excerpt": "패션, 뷰티 분야 대기업 및 스타트업 협업, 액셀러레이터 운영",
-      "excerpt_en": "Large enterprise and startup collaboration in fashion and beauty sectors, accelerator operation.",
+      "excerpt": "패션·뷰티 스타트업 액셀러레이팅 · 대기업 오픈이노베이션",
+      "excerpt_en": "Fashion & beauty startup accelerating and open innovation with large companies",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
       "link": "http://styletech.kidp.or.kr/",
-      "description": ""
+      "description": "한국디자인진흥원 스타일테크 프로그램에 액셀러레이팅 협력기업으로 참여해 BM·UX 멘토링, 대기업 협업, 데모데이를 운영했습니다.",
+      "page": "project-styletech.html",
+      "client_en": "Korea Institute of Design Promotion",
+      "description_en": "As an accelerating partner of KIDP’s STYLETECH program, we ran BM and UX mentoring, large-company collaborations and demo days."
     },
     {
       "id": 2488,

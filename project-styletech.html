@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STYLETECH | VINYL X</title>
+  <meta name="description" content="패션·뷰티 스타트업과 대기업을 잇는 한국디자인진흥원 스타일테크 프로그램에 액셀러레이팅 협력기업으로 참여한 VINYL X 프로젝트.">
+  <link rel="icon" href="images/vinylx-logo-color.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/interaction.css?v=110">
+  <link rel="stylesheet" href="css/pages.css?v=122">
+  <style>
+    /* Case study layout: dark photo hero → dense paper sections → dark process/ideas bands. Tokens follow the site (black / #f0ebe4 / Inter). */
+    :root {
+      --lb-ink: #0b0b0b;
+      --lb-paper: #f0ebe4;
+      --lb-card: #e7e0d6;
+      --lb-text: #1a1a1a;
+      --lb-muted: rgba(26, 26, 26, 0.58);
+      --lb-rule: rgba(26, 26, 26, 0.14);
+      --lb-rule-dark: rgba(255, 255, 255, 0.14);
+      --lb-muted-dark: rgba(255, 255, 255, 0.55);
+      --lb-accent: #4e5ed3;
+      --lb-x: 50px;
+      --lb-max: 1400px;
+    }
+    body { background: var(--lb-paper); }
+    .lb { color: var(--lb-text); font-family: 'Inter', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; word-break: keep-all; }
+    .lb-band { padding: 96px var(--lb-x); background: var(--lb-paper); }
+    .lb-band.dark { background: var(--lb-ink); color: #fff; }
+    .lb-wrap { max-width: var(--lb-max); margin: 0 auto; }
+    .lb-head { display: grid; grid-template-columns: 220px 1fr; gap: 24px 40px; margin-bottom: 48px; align-items: start; }
+    .lb-label { font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lb-muted); padding-top: 10px; }
+    .dark .lb-label { color: var(--lb-muted-dark); }
+    .lb-h2 { font-size: clamp(30px, 3.6vw, 52px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.12; margin: 0; text-wrap: balance; }
+    .lb-lead { grid-column: 2; font-size: 17px; line-height: 1.7; color: var(--lb-muted); max-width: 62ch; margin: 0; }
+    .dark .lb-lead { color: var(--lb-muted-dark); }
+
+    /* Hero */
+    .lb-hero { position: relative; min-height: 88vh; min-height: 88svh; display: flex; align-items: flex-end; background: var(--lb-ink); color: #fff; overflow: hidden; padding: 140px var(--lb-x) 48px; }
+    .lb-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% 45%; }
+    .lb-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.88) 100%); }
+    .lb-hero .lb-wrap { position: relative; z-index: 1; width: 100%; }
+    .lb-kicker { font-size: 13px; font-weight: 600; letter-spacing: 0.15em; color: rgba(255,255,255,.7); margin-bottom: 20px; }
+    .lb-title { font-size: clamp(48px, 8.4vw, 132px); font-weight: 900; letter-spacing: -0.05em; line-height: 0.98; margin: 0 0 40px; }
+    .lb-meta { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,.28); }
+    .lb-meta div { padding: 18px 20px 0 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .lb-meta span:first-child { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,.5); }
+    .lb-meta span:last-child { font-size: 16px; font-weight: 500; }
+
+    /* Overview */
+    .lb-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--lb-text); border-bottom: 1px solid var(--lb-rule); }
+    .lb-stat { padding: 22px 20px 22px 0; }
+    .lb-stat + .lb-stat { padding-left: 20px; border-left: 1px solid var(--lb-rule); }
+    .lb-stat b { display: block; font-size: clamp(40px, 5vw, 72px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; }
+    .lb-stat span { display: block; margin-top: 8px; font-size: 14px; color: var(--lb-muted); }
+
+    /* Context facts */
+    .lb-facts { margin-top: 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; border-top: 1px solid var(--lb-text); }
+    .lb-facts-head { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; gap: 8px 24px; flex-wrap: wrap; padding: 18px 0 6px; }
+    .lb-facts-head h3 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+    .lb-facts-head p { margin: 0; font-size: 13px; color: var(--lb-muted); font-variant-numeric: tabular-nums; }
+    .lb-fact.wide { grid-column: 1 / -1; }
+    .lb-fact { padding: 18px 0 20px; border-bottom: 1px solid var(--lb-rule); min-width: 0; }
+    .lb-fact-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .lb-fact-top span { font-size: 15px; font-weight: 600; }
+    .lb-fact-top b { font-size: clamp(32px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .lb-fact-top b.hi { color: var(--lb-accent); }
+    .lb-fact-note { margin: 6px 0 12px; font-size: 13px; line-height: 1.5; color: var(--lb-muted); }
+    .lb-picto { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .lb-picto .pi { position: relative; display: block; color: var(--lb-card); }
+    .lb-picto .pi svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+    .lb-picto .pi .part { position: absolute; inset: 0 auto 0 0; overflow: hidden; }
+    .lb-picto .pi .part svg { width: auto; height: 100%; aspect-ratio: inherit; }
+    .lb-picto.ppl .pi { width: 30px; height: 40px; aspect-ratio: 24 / 32; }
+    .lb-picto.ppl .pi .part svg { width: 30px; }
+    .lb-picto.ppl { gap: 6px 8px; }
+    .lb-picto .on { color: var(--lb-text); }
+    .lb-picto .acc { color: var(--lb-accent); }
+    .lb-picto .off { color: #d6cdc0; }
+    .lb-size { --u: clamp(3.4px, 0.9vw, 4.6px); display: flex; align-items: flex-end; gap: clamp(18px, 4vw, 56px); margin-top: 12px; padding-bottom: 0; border-bottom: 0; }
+    .lb-size .sz { margin: 0; display: flex; flex-direction: column; justify-content: flex-end; min-width: 0; }
+    .lb-size .sz-ico { width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u)); border-bottom: 2px solid var(--lb-text); }
+    .lb-size .sz-ico svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+    .lb-size .c1 { color: var(--lb-text); }
+    .lb-size .c2 { color: #8f877b; }
+    .lb-size .c3 { color: var(--lb-accent); }
+    .lb-size figcaption { padding-top: 8px; display: flex; flex-direction: column; gap: 2px; white-space: nowrap; }
+    .lb-size figcaption b { font-size: 15px; font-weight: 700; color: var(--lb-text); font-variant-numeric: tabular-nums; }
+    .lb-size figcaption span { font-size: 12px; color: var(--lb-muted); }
+    .lb-size-note { margin: 10px 0 0; font-size: 11px; color: var(--lb-muted); }
+
+    /* Direction */
+    .lb-dir { margin-top: 56px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--lb-card); }
+    .lb-dir div { padding: 22px 22px 24px; min-width: 0; }
+    .lb-dir div + div { border-left: 1px solid var(--lb-paper); }
+    .lb-dir small { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; color: var(--lb-accent); }
+    .lb-dir strong { display: block; margin: 8px 0 10px; font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+    .lb-dir p { margin: 0; font-size: 14px; color: var(--lb-muted); line-height: 1.55; }
+    .lb-dir-note { margin: 14px 0 0; font-size: 13px; color: var(--lb-muted); }
+
+    /* Process */
+    .lb-steps { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,.5); }
+    .lb-step { padding: 18px 18px 22px 0; min-width: 0; }
+    .lb-step + .lb-step { padding-left: 18px; border-left: 1px solid var(--lb-rule-dark); }
+    .lb-step small { font-size: 12px; font-weight: 600; color: var(--lb-muted-dark); font-variant-numeric: tabular-nums; }
+    .lb-step h4 { margin: 10px 0 8px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+    .lb-step p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--lb-muted-dark); }
+    .lb-phase { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); font-size: 11px; letter-spacing: 0.12em; color: var(--lb-muted-dark); margin-bottom: 10px; }
+    .lb-phase span:nth-child(1) { grid-column: 1 / 4; }
+    .lb-phase span:nth-child(2) { grid-column: 4 / 7; padding-left: 18px; }
+    .lb-photos { margin-top: 40px; display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 220px 220px; gap: 8px; }
+    .lb-photos figure { margin: 0; overflow: hidden; background: #1c1c1c; position: relative; min-width: 0; }
+    .lb-photos figure:first-child { grid-row: 1 / 3; }
+    .lb-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .lb-photos figcaption { position: absolute; left: 10px; bottom: 8px; font-size: 12px; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.6); }
+
+    /* Insights */
+    .lb-ins { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--lb-text); }
+    .lb-in { padding: 28px 28px 30px 0; border-bottom: 1px solid var(--lb-rule); min-width: 0; display: grid; grid-template-columns: 64px 1fr; gap: 0 18px; }
+    .lb-in:nth-child(2n) { padding-left: 28px; border-left: 1px solid var(--lb-rule); }
+    .lb-in .ltr { font-size: 52px; font-weight: 800; line-height: 0.9; color: var(--lb-accent); letter-spacing: -0.04em; }
+    .lb-in small { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--lb-muted); }
+    .lb-in h4 { margin: 6px 0 10px; font-size: 21px; font-weight: 700; line-height: 1.35; letter-spacing: -0.02em; }
+    .lb-in p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--lb-muted); }
+    .lb-in .ideas { margin-top: 12px; font-size: 13px; color: var(--lb-text); }
+
+    /* Ideas */
+    .lb-ideas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 40px; }
+    .lb-idea { display: grid; grid-template-columns: 44px 1fr; gap: 0 12px; padding: 16px 0; border-top: 1px solid var(--lb-rule-dark); min-width: 0; }
+    .lb-idea .tag { font-size: 13px; font-weight: 700; color: var(--lb-muted-dark); font-variant-numeric: tabular-nums; padding-top: 3px; }
+    .lb-idea h4 { margin: 0 0 4px; font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+    .lb-idea p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--lb-muted-dark); }
+    .lb-idea.pilot h4::after { content: 'CONCEPT'; margin-left: 8px; font-size: 10px; font-weight: 700; letter-spacing: .12em; padding: 3px 6px; vertical-align: 3px; border: 1px solid rgba(255,255,255,.4); color: rgba(255,255,255,.75); }
+
+    /* Concepts */
+    .lb-concepts { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
+    .lb-concepts figure { margin: 0; min-width: 0; }
+    .lb-concepts figure:nth-child(1), .lb-concepts figure:nth-child(2) { grid-column: span 3; }
+    .lb-concepts figure:nth-child(n+3) { grid-column: span 2; }
+    .lb-concepts .img { aspect-ratio: 1400 / 690; overflow: hidden; background: var(--lb-card); max-width: 100%; }
+    .lb-concepts img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+    .lb-concepts figcaption { display: flex; gap: 10px; align-items: baseline; padding: 10px 0 4px; font-size: 14px; }
+    .lb-concepts figcaption b { font-size: 12px; color: var(--lb-muted); font-weight: 700; }
+    .lb-concepts figcaption span { color: var(--lb-muted); font-size: 13px; }
+    .lb-concepts figcaption .nm { color: var(--lb-text); font-size: 14px; }
+
+    /* Press + credits */
+    .lb-press { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--lb-text); }
+    .lb-press article { padding: 24px 28px 26px 0; min-width: 0; }
+    .lb-press article + article { padding-left: 28px; border-left: 1px solid var(--lb-rule); }
+    .lb-press .src { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--lb-muted); }
+    .lb-press h4 { margin: 8px 0 10px; font-size: 22px; font-weight: 700; line-height: 1.35; letter-spacing: -0.02em; }
+    .lb-press p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--lb-muted); }
+    .lb-press a { display: inline-flex; align-items: center; gap: 10px; margin-top: 16px; font-size: 13px; font-weight: 500; letter-spacing: .15em; color: var(--lb-text); text-decoration: none; }
+    .lb-press a .project-arrow { width: 36px; height: 36px; }
+    .lb-credits { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) auto; gap: 24px; align-items: end; padding-top: 28px; margin-top: 64px; border-top: 1px solid var(--lb-rule); }
+    .lb-credits div span { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--lb-muted); margin-bottom: 6px; }
+    .lb-credits div b { font-size: 16px; font-weight: 600; }
+    .lb-back { display: inline-flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 500; letter-spacing: .15em; color: var(--lb-text); text-decoration: none; white-space: nowrap; }
+    .lb-back:hover .project-arrow, .lb-press a:hover .project-arrow { transform: translateX(5px); border-color: var(--lb-text); }
+
+    @media (max-width: 1024px) {
+      .lb-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .lb-step:nth-child(4) { border-left: none; padding-left: 0; }
+      .lb-step:nth-child(n+4) { border-top: 1px solid var(--lb-rule-dark); }
+      .lb-phase { display: none; }
+      .lb-ideas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 768px) {
+      :root { --lb-x: 20px; }
+      .lb-band { padding: 56px var(--lb-x); }
+      .lb-hero { min-height: 78svh; padding: 120px var(--lb-x) 28px; }
+      .lb-hero img { object-position: 64% 45%; }
+      .lb-title { margin-bottom: 28px; }
+      .lb-meta { grid-template-columns: 1fr 1fr; }
+      .lb-meta div { padding-bottom: 14px; }
+      .lb-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 32px; }
+      .lb-label { padding-top: 0; }
+      .lb-lead { grid-column: 1; font-size: 15px; }
+      .lb-stats { grid-template-columns: 1fr 1fr; }
+      .lb-stat:nth-child(3) { border-left: none; padding-left: 0; }
+      .lb-stat:nth-child(n+3) { border-top: 1px solid var(--lb-rule); }
+      .lb-facts { grid-template-columns: 1fr; margin-top: 36px; }
+      .lb-facts-head { flex-direction: column; gap: 4px; }
+      .lb-facts-head h3 { font-size: 18px; }
+      .lb-size { --u: 3.1px; gap: 14px; }
+      .lb-picto.ppl { gap: 6px; }
+      .lb-picto.ppl .pi, .lb-picto.ppl .pi .part svg { width: 24px; }
+      .lb-picto.ppl .pi { height: 32px; }
+      .lb-dir { grid-template-columns: 1fr 1fr; margin-top: 36px; }
+      .lb-dir div:nth-child(3) { border-left: none; }
+      .lb-dir div:nth-child(n+3) { border-top: 1px solid var(--lb-paper); }
+      .lb-steps { grid-template-columns: 1fr 1fr; }
+      .lb-step:nth-child(n) { border-left: none; padding-left: 0; border-top: 1px solid var(--lb-rule-dark); }
+      .lb-step:nth-child(2n) { padding-left: 14px; border-left: 1px solid var(--lb-rule-dark); }
+      .lb-steps { border-top: none; }
+      .lb-photos { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 130px 130px; }
+      .lb-photos figure:first-child { grid-column: 1 / 3; grid-row: 1; }
+      .lb-ins { grid-template-columns: 1fr; }
+      .lb-in, .lb-in:nth-child(2n) { padding: 22px 0; border-left: none; grid-template-columns: 44px 1fr; gap: 0 12px; }
+      .lb-in .ltr { font-size: 38px; }
+      .lb-in h4 { font-size: 18px; }
+      .lb-ideas { grid-template-columns: 1fr; }
+      .lb-concepts { grid-template-columns: 1fr; }
+      .lb-concepts figure:nth-child(n) { grid-column: auto; }
+      .lb-press { grid-template-columns: 1fr; }
+      .lb-press article, .lb-press article + article { padding: 22px 0; border-left: none; }
+      .lb-press article + article { border-top: 1px solid var(--lb-rule); }
+      .lb-credits { grid-template-columns: 1fr 1fr; margin-top: 40px; }
+      .lb-credits .lb-back { grid-column: 1 / -1; }
+    }
+    /* STYLETECH additions */
+    .lb-stat b small { font-size: 0.45em; font-weight: 700; margin-left: 2px; }
+    .st-steps { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .st-partners { display: flex; flex-wrap: wrap; border-top: 1px solid var(--lb-text); }
+    .st-partners span { flex: 1 1 25%; padding: 16px 16px 16px 0; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; border-bottom: 1px solid var(--lb-rule); }
+    .st-hero-photo { margin: 40px 0 0; }
+    .st-hero-photo img { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; object-position: 50% 40%; }
+    .st-hero-photo figcaption { padding-top: 10px; font-size: 13px; color: var(--lb-muted-dark); }
+    .st-cases { margin: 32px 0 0; background: #fff; }
+    .st-cases img { display: block; width: 100%; max-width: 960px; margin: 0 auto; }
+    .st-cases figcaption { padding: 10px 0 0; font-size: 13px; color: var(--lb-muted); background: var(--lb-paper); }
+    .st-time { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(255,255,255,.5); }
+    .st-time li { display: grid; grid-template-columns: 140px 1fr; gap: 0 24px; padding: 20px 0; border-bottom: 1px solid var(--lb-rule-dark); }
+    .st-time b { font-size: 32px; font-weight: 800; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; line-height: 1; }
+    .st-time h4 { margin: 0 0 6px; font-size: 19px; font-weight: 700; }
+    .st-time p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--lb-muted-dark); }
+    @media (max-width: 1024px) { .st-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 768px) {
+      .st-steps { grid-template-columns: 1fr 1fr; }
+      .st-partners span { flex-basis: 50%; font-size: 15px; padding: 12px 12px 12px 0; }
+      .st-time li { grid-template-columns: 72px 1fr; gap: 0 14px; padding: 16px 0; }
+      .st-time b { font-size: 22px; }
+      .st-hero-photo img { aspect-ratio: 4 / 3; }
+      .st-time h4 { font-size: 17px; }
+    }
+  </style>
+
+  <!-- SITE-SEO:START -->
+  <link rel="canonical" href="https://vinyl-x.com/project-styletech.html">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta property="og:title" content="STYLETECH | VINYL X">
+  <meta property="og:description" content="패션·뷰티 스타트업과 대기업을 잇는 한국디자인진흥원 스타일테크 프로그램에 액셀러레이팅 협력기업으로 참여한 VINYL X 프로젝트.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vinyl-x.com/project-styletech.html">
+  <meta property="og:image" content="https://vinyl-x.com/images/vinylx-insight-og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="STYLETECH | VINYL X">
+  <meta name="twitter:description" content="패션·뷰티 스타트업과 대기업을 잇는 한국디자인진흥원 스타일테크 프로그램에 액셀러레이팅 협력기업으로 참여한 VINYL X 프로젝트.">
+  <meta name="twitter:image" content="https://vinyl-x.com/images/vinylx-insight-og.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"STYLETECH","description":"패션·뷰티 스타트업과 대기업을 잇는 한국디자인진흥원 스타일테크 프로그램에 액셀러레이팅 협력기업으로 참여한 VINYL X 프로젝트.","creator":{"@id":"https://vinyl-x.com/#organization"},"url":"https://vinyl-x.com/project-styletech.html"}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "VINYL X", "item": "https://vinyl-x.com/"}, {"@type": "ListItem", "position": 2, "name": "STYLETECH", "item": "https://vinyl-x.com/project-styletech.html"}]}</script>
+  <!-- SITE-SEO:END -->
+</head>
+<body>
+
+  <div class="cursor-dot"></div>
+
+  <header class="header">
+    <a href="index.html" class="logo"><img src="images/vinylx-logo-white.png" alt="VINYL X." class="logo-img"></a>
+    <div class="header-right">
+      <button class="lang-toggle" aria-label="Switch language">
+        <span class="lang-option is-active" data-lang="ko">KO</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+      <button class="menu-toggle" aria-label="Toggle menu">MENU</button>
+    </div>
+  </header>
+
+  <div class="menu-overlay">
+    <nav class="menu-nav">
+      <a href="about.html" class="menu-link" data-num="01">About</a>
+      <a href="services.html" class="menu-link" data-num="02">Service</a>
+      <a href="portfolio.html" class="menu-link" data-num="03">Portfolio</a>
+      <a href="contact.html" class="menu-link" data-num="04">Contact</a>
+    </nav>
+    <div class="menu-footer">
+      <a href="mailto:INFO@VINYL-X.COM">INFO@VINYL-X.COM</a>
+      <div class="menu-social">
+        <a href="https://blog.naver.com/vinylx" target="_blank" rel="noopener">Blog</a>
+        <a href="https://www.instagram.com/vinyl_x_official" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/vinylxdesign" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://axlivinglab.com" target="_blank" rel="noopener">AX Living Lab</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="lb">
+    <!-- Hero -->
+    <section class="lb-hero" data-theme="dark">
+      <img src="images/wp-uploads/021.jpg" alt="STYLETECH 데모데이 2021" fetchpriority="high" style="object-position:50% 40%">
+      <div class="lb-wrap">
+        <p class="lb-kicker">OPEN INNOVATION · ACCELERATING · 2019–2022</p>
+        <h1 class="lb-title">STYLETECH</h1>
+        <div class="lb-meta">
+          <div><span>Client</span><span data-i18n="styletech.k-01">한국디자인진흥원 · 산업통상자원부</span></div>
+          <div><span>Year</span><span>2019–2022</span></div>
+          <div><span>Role</span><span data-i18n="styletech.k-02">액셀러레이팅 협력기업</span></div>
+          <div><span>Field</span><span data-i18n="styletech.k-03">패션 · 뷰티 · 라이프스타일</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="lb-band" data-theme="light">
+      <div class="lb-wrap">
+        <div class="lb-head">
+          <p class="lb-label">Overview</p>
+          <h2 class="lb-h2" data-i18n="styletech.k-04" data-i18n-html="true">패션·뷰티 스타트업과<br>대기업을 잇는 액셀러레이팅</h2>
+          <p class="lb-lead" data-i18n="styletech.k-05">스타일테크는 패션·뷰티 분야에 4차 산업혁명 기술을 융합하는 유망기업을 키우는 한국디자인진흥원 프로그램입니다. 바이널엑스는 액셀러레이팅 협력기업으로 참여해 BM·UX 멘토링, 대기업 오픈이노베이션 연결, 데모데이를 함께 운영했습니다.</p>
+        </div>
+        <div class="lb-stats">
+          <div class="lb-stat"><b>54</b><span data-i18n="styletech.k-06">선정 기업</span></div>
+          <div class="lb-stat"><b>678</b><span data-i18n="styletech.k-07">멘토링·컨설팅 세션</span></div>
+          <div class="lb-stat"><b>20</b><span data-i18n="styletech.k-08">대기업 협업</span></div>
+          <div class="lb-stat"><b data-i18n="styletech.k-amt" data-i18n-html="true">1,070<small>억</small></b><span data-i18n="styletech.k-09">누적 투자유치</span></div>
+        </div>
+        <p class="lb-dir-note" data-i18n="styletech.k-10">스타일테크 프로그램 1~3기 전체 실적(한국디자인진흥원 자료) 기준입니다. 31개사가 투자를 유치했고, 데모데이는 6회 열렸습니다.</p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="lb-band dark" data-theme="dark">
+      <div class="lb-wrap">
+        <div class="lb-head">
+          <p class="lb-label">Process</p>
+          <h2 class="lb-h2" data-i18n="styletech.k-11">아이디어에서 시장 진입까지</h2>
+          <p class="lb-lead" data-i18n="styletech.k-12">신사업 아이디어 발굴부터 사업화까지 다섯 단계로 스타트업과 대·중견기업의 협업을 설계했습니다.</p>
+        </div>
+        <div class="lb-steps st-steps">
+          <div class="lb-step"><small>01</small><h4>Ideation</h4><p data-i18n="styletech.k-13" data-i18n-html="true">신규사업<br>아이디어 발굴</p></div>
+          <div class="lb-step"><small>02</small><h4>Business Planning</h4><p data-i18n="styletech.k-14" data-i18n-html="true">사업화 가설 수립<br>사업계획서 작성</p></div>
+          <div class="lb-step"><small>03</small><h4>Team Building</h4><p data-i18n="styletech.k-15" data-i18n-html="true">창업 팀 구성<br>신규법인 설립</p></div>
+          <div class="lb-step"><small>04</small><h4>System Development</h4><p data-i18n="styletech.k-16" data-i18n-html="true">BM 가설 검증<br>서비스 개발</p></div>
+          <div class="lb-step"><small>05</small><h4>Go to Market</h4><p data-i18n="styletech.k-17" data-i18n-html="true">사업화·서비스 지원<br>후속 투자 검토</p></div>
+        </div>
+        <figure class="st-hero-photo"><img src="images/wp-uploads/021.jpg" alt="STYLETECH 데모데이 2021" loading="lazy"><figcaption data-i18n="styletech.k-18">데모데이 2021</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Open innovation -->
+    <section class="lb-band" data-theme="light">
+      <div class="lb-wrap">
+        <div class="lb-head">
+          <p class="lb-label">Open Innovation</p>
+          <h2 class="lb-h2" data-i18n="styletech.k-23">대기업 협업 사례</h2>
+          <p class="lb-lead" data-i18n="styletech.k-24">스타트업의 서비스와 대·중견기업의 유통·브랜드 자산을 연결해 신사업과 신상품 기회를 만들었습니다.</p>
+        </div>
+        <div class="st-partners">
+          <span data-i18n="styletech.k-25">두산그룹</span><span data-i18n="styletech.k-26">아모레퍼시픽</span><span data-i18n="styletech.k-27">이랜드리테일</span><span data-i18n="styletech.k-28">GS리테일</span><span data-i18n="styletech.k-29">삼양</span><span data-i18n="styletech.k-30">유닉스</span><span data-i18n="styletech.k-31">더마힐</span><span data-i18n="styletech.k-32">이화여자대학교</span>
+        </div>
+        <figure class="st-cases"><img src="images/wp-uploads/STYLE_TECH_05.jpg" alt="대기업 협업 사례 발굴 2019–2020" loading="lazy"><figcaption data-i18n="styletech.k-33">대기업 협업 사례 발굴 (2019–2020)</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="lb-band dark" data-theme="dark">
+      <div class="lb-wrap">
+        <div class="lb-head">
+          <p class="lb-label">Timeline</p>
+          <h2 class="lb-h2" data-i18n="styletech.k-34">8년째 이어지는 스타일테크</h2>
+          <p class="lb-lead" data-i18n="styletech.k-35">바이널엑스가 초기부터 함께한 프로그램은 2026년 8기까지 이어지고 있습니다.</p>
+        </div>
+        <ol class="st-time">
+          <li><b>2019</b><div><h4 data-i18n="styletech.k-36">1기 출범</h4><p data-i18n="styletech.k-37">코엑스 데모데이. 1기 참여기업 중 6개사가 469억 원 투자를 유치했습니다.</p></div></li>
+          <li><b>2020</b><div><h4 data-i18n="styletech.k-38">2기</h4><p data-i18n="styletech.k-39">82개 지원사 중 10개사를 선정했습니다.</p></div></li>
+          <li><b>2021</b><div><h4 data-i18n="styletech.k-40">3기 · 데모데이 2021</h4><p data-i18n="styletech.k-41">1~3기 누적 투자유치 1,070억 원을 기록했습니다.</p></div></li>
+          <li><b>2022</b><div><h4 data-i18n="styletech.k-42">4기</h4><p data-i18n="styletech.k-43">기업당 최대 5천만 원 규모로 지원이 확대됐습니다.</p></div></li>
+          <li><b>2026</b><div><h4 data-i18n="styletech.k-44">8기 · K-Beauty Global Bridge</h4><p data-i18n="styletech.k-45">8기 약 30개사를 모집했고, 바이널엑스가 연 K-Beauty Global Bridge 2026에서 스타일테크 세션이 진행됐습니다.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Sources -->
+    <section class="lb-band" data-theme="light">
+      <div class="lb-wrap">
+        <div class="lb-head">
+          <p class="lb-label">Sources</p>
+          <h2 class="lb-h2" data-i18n="styletech.k-46">관련 자료</h2>
+        </div>
+        <div class="lb-press">
+          <article>
+            <span class="src" data-i18n="styletech.k-47">바이라인네트워크 · 2026.01</span>
+            <h4 data-i18n="styletech.k-48">2025 스타일테크 리포트</h4>
+            <p data-i18n="styletech.k-49">스타일테크 액셀러레이팅 프로그램 1~7기 선정 유망기업과 성과를 정리한 리포트.</p>
+            <a href="https://byline.network/2026/01/styletech-report/" target="_blank" rel="noopener"><span data-i18n="styletech.k-50">자료 보기</span><span class="project-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          </article>
+          <article>
+            <span class="src" data-i18n="styletech.k-51">한국디자인진흥원 · 2022</span>
+            <h4 data-i18n="styletech.k-52">스타일테크 유망기업 성장지원 프로그램</h4>
+            <p data-i18n="styletech.k-53">1~3기 실적과 4기 지원 내용을 담은 프로그램 안내 자료.</p>
+            <a href="https://designdb.com/usr/upload/board/zboardphotogallery254/20221110022014885_4430.0.pdf" target="_blank" rel="noopener"><span data-i18n="styletech.k-50">자료 보기</span><span class="project-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          </article>
+        </div>
+        <div class="lb-credits">
+          <div><span>Role</span><b data-i18n="styletech.k-54">바이널엑스</b></div>
+          <div><span>Client</span><b data-i18n="styletech.k-55">한국디자인진흥원</b></div>
+          <div><span>Ministry</span><b data-i18n="styletech.k-56">산업통상자원부</b></div>
+          <a href="portfolio.html" class="lb-back"><span>ALL PROJECTS</span><span class="project-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/i18n.js?v=6"></script>
+  <script src="js/interaction.js?v=103"></script>
+</body>
+</html>

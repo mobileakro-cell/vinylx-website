@@ -898,5 +898,235 @@
       "ko": "최종 아이디어 종합<br>보완점 논의",
       "en": "Synthesize final ideas<br>Discuss improvements"
     }
+  },
+  "styletech": {
+    "k-01": {
+      "ko": "한국디자인진흥원 · 산업통상자원부",
+      "en": "KIDP · Ministry of Trade, Industry and Energy"
+    },
+    "k-02": {
+      "ko": "액셀러레이팅 협력기업",
+      "en": "Accelerating partner"
+    },
+    "k-03": {
+      "ko": "패션 · 뷰티 · 라이프스타일",
+      "en": "Fashion · Beauty · Lifestyle"
+    },
+    "k-04": {
+      "ko": "패션·뷰티 스타트업과<br>대기업을 잇는 액셀러레이팅",
+      "en": "Accelerating that connects fashion and beauty startups<br>with large companies"
+    },
+    "k-05": {
+      "ko": "스타일테크는 패션·뷰티 분야에 4차 산업혁명 기술을 융합하는 유망기업을 키우는 한국디자인진흥원 프로그램입니다. 바이널엑스는 액셀러레이팅 협력기업으로 참여해 BM·UX 멘토링, 대기업 오픈이노베이션 연결, 데모데이를 함께 운영했습니다.",
+      "en": "STYLETECH is a Korea Institute of Design Promotion program that grows promising companies combining fashion and beauty with new technology. VINYL X joined as an accelerating partner, running BM and UX mentoring, open innovation with large companies, and demo days."
+    },
+    "k-06": {
+      "ko": "선정 기업",
+      "en": "Selected companies"
+    },
+    "k-07": {
+      "ko": "멘토링·컨설팅 세션",
+      "en": "Mentoring & consulting sessions"
+    },
+    "k-08": {
+      "ko": "대기업 협업",
+      "en": "Large-company collaborations"
+    },
+    "k-09": {
+      "ko": "누적 투자유치",
+      "en": "Cumulative investment"
+    },
+    "k-10": {
+      "ko": "스타일테크 프로그램 1~3기 전체 실적(한국디자인진흥원 자료) 기준입니다. 31개사가 투자를 유치했고, 데모데이는 6회 열렸습니다.",
+      "en": "Figures are totals for STYLETECH cohorts 1–3 (KIDP data). 31 companies attracted investment, and six demo days were held."
+    },
+    "k-11": {
+      "ko": "아이디어에서 시장 진입까지",
+      "en": "From idea to market"
+    },
+    "k-12": {
+      "ko": "신사업 아이디어 발굴부터 사업화까지 다섯 단계로 스타트업과 대·중견기업의 협업을 설계했습니다.",
+      "en": "We designed collaboration between startups and large and mid-sized companies in five stages, from new business ideas to commercialization."
+    },
+    "k-13": {
+      "ko": "신규사업<br>아이디어 발굴",
+      "en": "Discover new<br>business ideas"
+    },
+    "k-14": {
+      "ko": "사업화 가설 수립<br>사업계획서 작성",
+      "en": "Set business hypotheses<br>Write the business plan"
+    },
+    "k-15": {
+      "ko": "창업 팀 구성<br>신규법인 설립",
+      "en": "Form the founding team<br>Set up a new company"
+    },
+    "k-16": {
+      "ko": "BM 가설 검증<br>서비스 개발",
+      "en": "Validate the business model<br>Develop the service"
+    },
+    "k-17": {
+      "ko": "사업화·서비스 지원<br>후속 투자 검토",
+      "en": "Commercialization support<br>Follow-on investment review"
+    },
+    "k-18": {
+      "ko": "데모데이 2021",
+      "en": "Demo Day 2021"
+    },
+    "k-19": {
+      "ko": "BM·UX 멘토링",
+      "en": "BM & UX mentoring"
+    },
+    "k-20": {
+      "ko": "스타트업 육성",
+      "en": "Startup growth"
+    },
+    "k-21": {
+      "ko": "오픈이노베이션",
+      "en": "Open innovation"
+    },
+    "k-22": {
+      "ko": "운영 프로세스",
+      "en": "Operating process"
+    },
+    "k-23": {
+      "ko": "대기업 협업 사례",
+      "en": "Collaboration with large companies"
+    },
+    "k-24": {
+      "ko": "스타트업의 서비스와 대·중견기업의 유통·브랜드 자산을 연결해 신사업과 신상품 기회를 만들었습니다.",
+      "en": "We linked startup services with the retail and brand assets of large and mid-sized companies to create new business and product opportunities."
+    },
+    "k-25": {
+      "ko": "두산그룹",
+      "en": "Doosan Group"
+    },
+    "k-26": {
+      "ko": "아모레퍼시픽",
+      "en": "Amorepacific"
+    },
+    "k-27": {
+      "ko": "이랜드리테일",
+      "en": "E-Land Retail"
+    },
+    "k-28": {
+      "ko": "GS리테일",
+      "en": "GS Retail"
+    },
+    "k-29": {
+      "ko": "삼양",
+      "en": "Samyang"
+    },
+    "k-30": {
+      "ko": "유닉스",
+      "en": "UNIX"
+    },
+    "k-31": {
+      "ko": "더마힐",
+      "en": "Dermaheal"
+    },
+    "k-32": {
+      "ko": "이화여자대학교",
+      "en": "Ewha Womans University"
+    },
+    "k-33": {
+      "ko": "대기업 협업 사례 발굴 (2019–2020)",
+      "en": "Collaboration cases with large companies (2019–2020)"
+    },
+    "k-34": {
+      "ko": "8년째 이어지는 스타일테크",
+      "en": "STYLETECH, now in its eighth year"
+    },
+    "k-35": {
+      "ko": "바이널엑스가 초기부터 함께한 프로그램은 2026년 8기까지 이어지고 있습니다.",
+      "en": "The program VINYL X joined from the start continues with its 8th cohort in 2026."
+    },
+    "k-36": {
+      "ko": "1기 출범",
+      "en": "Cohort 1 launches"
+    },
+    "k-37": {
+      "ko": "코엑스 데모데이. 1기 참여기업 중 6개사가 469억 원 투자를 유치했습니다.",
+      "en": "Demo day at COEX. Six cohort-1 companies raised 46.9 billion won in investment."
+    },
+    "k-38": {
+      "ko": "2기",
+      "en": "Cohort 2"
+    },
+    "k-39": {
+      "ko": "82개 지원사 중 10개사를 선정했습니다.",
+      "en": "10 companies were selected from 82 applicants."
+    },
+    "k-40": {
+      "ko": "3기 · 데모데이 2021",
+      "en": "Cohort 3 · Demo Day 2021"
+    },
+    "k-41": {
+      "ko": "1~3기 누적 투자유치 1,070억 원을 기록했습니다.",
+      "en": "Cohorts 1–3 reached 107 billion won in cumulative investment."
+    },
+    "k-42": {
+      "ko": "4기",
+      "en": "Cohort 4"
+    },
+    "k-43": {
+      "ko": "기업당 최대 5천만 원 규모로 지원이 확대됐습니다.",
+      "en": "Support grew to up to 50 million won per company."
+    },
+    "k-44": {
+      "ko": "8기 · K-Beauty Global Bridge",
+      "en": "Cohort 8 · K-Beauty Global Bridge"
+    },
+    "k-45": {
+      "ko": "8기 약 30개사를 모집했고, 바이널엑스가 연 K-Beauty Global Bridge 2026에서 스타일테크 세션이 진행됐습니다.",
+      "en": "About 30 companies were recruited for cohort 8, and a STYLETECH session was held at K-Beauty Global Bridge 2026, hosted by VINYL X."
+    },
+    "k-46": {
+      "ko": "관련 자료",
+      "en": "Sources"
+    },
+    "k-47": {
+      "ko": "바이라인네트워크 · 2026.01",
+      "en": "Byline Network · 2026.01"
+    },
+    "k-48": {
+      "ko": "2025 스타일테크 리포트",
+      "en": "2025 STYLETECH Report"
+    },
+    "k-49": {
+      "ko": "스타일테크 액셀러레이팅 프로그램 1~7기 선정 유망기업과 성과를 정리한 리포트.",
+      "en": "A report on promising companies and results from STYLETECH cohorts 1–7."
+    },
+    "k-50": {
+      "ko": "자료 보기",
+      "en": "View source"
+    },
+    "k-51": {
+      "ko": "한국디자인진흥원 · 2022",
+      "en": "KIDP · 2022"
+    },
+    "k-52": {
+      "ko": "스타일테크 유망기업 성장지원 프로그램",
+      "en": "STYLETECH growth support program"
+    },
+    "k-53": {
+      "ko": "1~3기 실적과 4기 지원 내용을 담은 프로그램 안내 자료.",
+      "en": "Program guide with cohort 1–3 results and cohort 4 support details."
+    },
+    "k-54": {
+      "ko": "바이널엑스",
+      "en": "VINYL X"
+    },
+    "k-55": {
+      "ko": "한국디자인진흥원",
+      "en": "KIDP"
+    },
+    "k-56": {
+      "ko": "산업통상자원부",
+      "en": "Ministry of Trade, Industry and Energy"
+    },
+    "k-amt": {
+      "ko": "1,070<small>억</small>",
+      "en": "107<small>B KRW</small>"
+    }
   }
 }

@@ -94,7 +94,7 @@
         </div>
         <!-- Zone 2: 중상단 — key visuals -->
         <div class="gallery-item item-3" data-speed="0.12">
-          <img src="images/wp-uploads/021.jpg" alt="STYLETECH" loading="lazy">
+          <img src="images/projects/styletech-thumb.jpg" alt="STYLETECH" loading="lazy">
         </div>
         <div class="gallery-item item-4" data-speed="0.5">
           <img src="images/wp-uploads/main_bn03_250528.jpg" alt="Brand & Commerce" loading="lazy">
@@ -304,9 +304,9 @@
               </div>
               <span class="service-project-name">DESIGN LIVING LAB</span>
             </a>
-            <a href="#" class="service-project-card" data-project-title="STYLETECH">
+            <a href="project-styletech.html" class="service-project-card" data-page="project-styletech.html">
               <div class="service-project-img">
-                <img src="images/wp-uploads/main_bn03_250528.jpg" alt="STYLETECH" loading="lazy">
+                <img src="images/projects/styletech-thumb.jpg" alt="STYLETECH" loading="lazy">
               </div>
               <span class="service-project-name">STYLETECH</span>
             </a>
@@ -344,17 +344,17 @@
           <img src="images/projects/semiconductor-process.jpg" alt="(가칭) 반도체 공정 프로젝트" loading="lazy">
         </div>
       </a>
-      <a href="portfolio.html" class="project-row">
+      <a href="project-styletech.html" class="project-row" data-page="project-styletech.html">
         <div class="project-info">
           <span class="project-name">STYLETECH</span>
-          <span class="project-cat">Open Innovation</span>
+          <span class="project-cat">Service Accelerating</span>
         </div>
-        <div class="project-year">2019</div>
+        <div class="project-year">2019–2022</div>
         <div class="project-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
         <div class="project-img-preview">
-          <img src="images/wp-uploads/021.jpg" alt="STYLETECH" loading="lazy">
+          <img src="images/projects/styletech-thumb.jpg" alt="STYLETECH" loading="lazy">
         </div>
       </a>
       <a href="project-livinglab.html" class="project-row" data-livinglab="true">
@@ -563,7 +563,7 @@
   </div>
 
 
-  <script src="js/i18n.js?v=5"></script>
+  <script src="js/i18n.js?v=6"></script>
   <script src="js/interaction.js?v=103"></script>
   <script>
     // Project row modal
@@ -577,7 +577,7 @@
       let portfolioData = null;
       let savedScrollY = 0;
 
-      fetch('data/portfolio-db.json?v=5')
+      fetch('data/portfolio-db.json?v=6')
         .then(r => r.json())
         .then(d => { portfolioData = d.portfolio; })
         .catch(() => {});
@@ -608,6 +608,7 @@
 
       document.querySelectorAll('.project-row').forEach(row => {
         row.addEventListener('click', (e) => {
+          if (row.dataset.page) return;
           e.preventDefault();
           // DESIGN LIVING LAB – iframe 팝업
           if (row.dataset.livinglab) {
