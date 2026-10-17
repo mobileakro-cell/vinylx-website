@@ -791,6 +791,16 @@
 .contact-map-container:hover img {
   transform: scale(1.02);
 }
+.contact-map-container > a { display: block; height: 100%; color: #fff; text-decoration: none; }
+.loc-card { position: relative; height: 100%; background: #141414; font-family: 'Inter', 'Apple SD Gothic Neo', sans-serif; }
+.loc-map { position: absolute; inset: 0; width: 100%; height: 100%; }
+.loc-card > span { position: absolute; font-size: 12px; letter-spacing: 0.06em; }
+.loc-park { left: 25%; top: 38%; transform: translate(-50%, -50%); color: #6f8f72; }
+.loc-station { left: 56%; top: 70%; color: #c9a227; padding-left: 6px; }
+.loc-pin { left: 65.5%; top: 39%; transform: translate(-50%, -190%); padding: 6px 10px; background: #fff; color: #111; font-weight: 800; letter-spacing: 0.04em; border-radius: 4px; white-space: nowrap; }
+.loc-foot { left: 20px; right: 20px; bottom: 18px; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; color: rgba(255, 255, 255, 0.6); }
+.loc-foot b { color: #fff; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; }
+.contact-map-container:hover .loc-foot span { color: #fff; }
 
 /* Inquiry Form */
 .contact-form-section {

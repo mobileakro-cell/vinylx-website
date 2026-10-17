@@ -221,6 +221,22 @@
     "inquiry-label": {
       "ko": "프로젝트 문의",
       "en": "Project Inquiry"
+    },
+    "loc-park": {
+      "ko": "서울숲",
+      "en": "Seoul Forest"
+    },
+    "loc-station": {
+      "ko": "서울숲역",
+      "en": "Seoul Forest Stn."
+    },
+    "loc-building": {
+      "ko": "서울숲 M타워",
+      "en": "Seoul Forest M Tower"
+    },
+    "loc-open": {
+      "ko": "네이버 지도에서 보기 ↗",
+      "en": "Open in Naver Map ↗"
     }
   },
   "service": {
