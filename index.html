@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/interaction.css?v=110">
-  <link rel="stylesheet" href="css/pages.css?v=122">
+  <link rel="stylesheet" href="css/pages.css?v=123">
 
   <meta name="naver-site-verification" content="89ab832f1d9f9a78ba75d374a35d211dd6026bb0">
   <meta name="google-site-verification" content="7m0WqwvhKCl3ILrA3tR_djCTEkfLBjTNzZTmq9prDQY">
@@ -414,7 +414,7 @@
           <span class="project-name">HD HYUNDAI DEVELON</span>
           <span class="project-cat">Digital Transformation</span>
         </div>
-        <div class="project-year">2023</div>
+        <div class="project-year">2023–2026</div>
         <div class="project-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
@@ -577,7 +577,7 @@
       let portfolioData = null;
       let savedScrollY = 0;
 
-      fetch('data/portfolio-db.json?v=8')
+      fetch('data/portfolio-db.json?v=9')
         .then(r => r.json())
         .then(d => { portfolioData = d.portfolio; })
         .catch(() => {});
