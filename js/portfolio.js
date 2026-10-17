@@ -35,7 +35,7 @@
   };
 
   // Fetch portfolio data
-  fetch('data/portfolio-db.json?v=3')
+  fetch('data/portfolio-db.json?v=4')
     .then(res => res.json())
     .then(data => {
       allProjects = data.portfolio.filter(p => p.featured_image_url);
