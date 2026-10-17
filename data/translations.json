@@ -1005,8 +1005,8 @@
       "en": "Operating process"
     },
     "k-23": {
-      "ko": "대기업 협업 사례",
-      "en": "Collaboration with large companies"
+      "ko": "34개 대·중견기업과 함께",
+      "en": "Working with 34 large and mid-sized companies"
     },
     "k-24": {
       "ko": "스타트업의 서비스와 대·중견기업의 유통·브랜드 자산을 연결해 신사업과 신상품 기회를 만들었습니다.",
@@ -1156,38 +1156,6 @@
       "ko": "2,033<small>억</small>",
       "en": "203.3<small>B KRW</small>"
     },
-    "k-p1": {
-      "ko": "아모레퍼시픽",
-      "en": "Amorepacific"
-    },
-    "k-p2": {
-      "ko": "CJ ENM",
-      "en": "CJ ENM"
-    },
-    "k-p3": {
-      "ko": "신세계",
-      "en": "Shinsegae"
-    },
-    "k-p4": {
-      "ko": "현대홈쇼핑",
-      "en": "Hyundai Home Shopping"
-    },
-    "k-p5": {
-      "ko": "이랜드",
-      "en": "E-Land"
-    },
-    "k-p6": {
-      "ko": "클리오",
-      "en": "CLIO"
-    },
-    "k-p7": {
-      "ko": "두산그룹",
-      "en": "Doosan Group"
-    },
-    "k-p8": {
-      "ko": "GS리테일",
-      "en": "GS Retail"
-    },
     "k-t1h": {
       "ko": "1기 출범",
       "en": "Cohort 1 launches"
@@ -1227,6 +1195,154 @@
     "k-t5p": {
       "ko": "프로그램은 8기로 이어지고, 바이널엑스가 연 K-Beauty Global Bridge 2026에서 스타일테크 세션이 진행됐습니다.",
       "en": "The program continues with cohort 8, and a STYLETECH session was held at K-Beauty Global Bridge 2026, hosted by VINYL X."
+    },
+    "k-p1": {
+      "ko": "롯데백화점",
+      "en": "Lotte Department Store"
+    },
+    "k-p2": {
+      "ko": "한섬",
+      "en": "Handsome"
+    },
+    "k-p3": {
+      "ko": "신세계",
+      "en": "Shinsegae"
+    },
+    "k-p4": {
+      "ko": "현대홈쇼핑",
+      "en": "Hyundai Home Shopping"
+    },
+    "k-p5": {
+      "ko": "GS리테일",
+      "en": "GS Retail"
+    },
+    "k-p6": {
+      "ko": "아모레퍼시픽",
+      "en": "Amorepacific"
+    },
+    "k-p7": {
+      "ko": "클리오",
+      "en": "CLIO Cosmetics"
+    },
+    "k-p8": {
+      "ko": "이랜드",
+      "en": "E-LAND"
+    },
+    "k-p9": {
+      "ko": "LF",
+      "en": "LF"
+    },
+    "k-p10": {
+      "ko": "F&F",
+      "en": "F&F"
+    },
+    "k-p11": {
+      "ko": "휠라",
+      "en": "FILA"
+    },
+    "k-p12": {
+      "ko": "K2",
+      "en": "K2"
+    },
+    "k-p13": {
+      "ko": "CJ ENM",
+      "en": "CJ ENM"
+    },
+    "k-p14": {
+      "ko": "무신사 파트너스",
+      "en": "Musinsa Partners"
+    },
+    "k-p15": {
+      "ko": "지그재그",
+      "en": "ZIGZAG"
+    },
+    "k-p16": {
+      "ko": "네이버",
+      "en": "NAVER"
+    },
+    "k-p17": {
+      "ko": "LINE",
+      "en": "LINE"
+    },
+    "k-p18": {
+      "ko": "SNOW",
+      "en": "SNOW"
+    },
+    "k-p19": {
+      "ko": "현대자동차그룹",
+      "en": "Hyundai Motor Group"
+    },
+    "k-p20": {
+      "ko": "한국타이어",
+      "en": "Hankook Tire"
+    },
+    "k-p21": {
+      "ko": "LG전자",
+      "en": "LG Electronics"
+    },
+    "k-p22": {
+      "ko": "LG디스플레이",
+      "en": "LG Display"
+    },
+    "k-p23": {
+      "ko": "KT",
+      "en": "KT"
+    },
+    "k-p24": {
+      "ko": "삼성증권",
+      "en": "Samsung Securities"
+    },
+    "k-p25": {
+      "ko": "삼성웰스토리",
+      "en": "Samsung Welstory"
+    },
+    "k-p26": {
+      "ko": "신한카드",
+      "en": "Shinhan Card"
+    },
+    "k-p27": {
+      "ko": "신한은행",
+      "en": "Shinhan Bank"
+    },
+    "k-p28": {
+      "ko": "NH농협",
+      "en": "NH NongHyup"
+    },
+    "k-p29": {
+      "ko": "현대해상",
+      "en": "Hyundai Marine & Fire"
+    },
+    "k-p30": {
+      "ko": "교보문고",
+      "en": "Kyobo Book Centre"
+    },
+    "k-p31": {
+      "ko": "메가스터디",
+      "en": "Megastudy"
+    },
+    "k-p32": {
+      "ko": "웅진씽크빅",
+      "en": "Woongjin Thinkbig"
+    },
+    "k-p33": {
+      "ko": "잇츠한불",
+      "en": "It's Hanbul"
+    },
+    "k-p34": {
+      "ko": "두산",
+      "en": "Doosan"
+    },
+    "k-pg1": {
+      "ko": "패션 · 뷰티 · 리빙 · 유통",
+      "en": "Fashion · Beauty · Living · Retail"
+    },
+    "k-pg2": {
+      "ko": "오픈이노베이션 협력 네트워크",
+      "en": "Open innovation network"
+    },
+    "k-pnote": {
+      "ko": "2024년 착수보고와 2025년 제안서의 오픈이노베이션 협력 대·중견기업 Pool 기준입니다.",
+      "en": "Based on the open innovation partner pool in the 2024 kickoff report and the 2025 proposal."
     }
   }
 }
