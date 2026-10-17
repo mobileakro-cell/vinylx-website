@@ -1817,9 +1817,9 @@ button:focus-visible {
   /* item-3: STYLETECH — 좌측 앵커, 넘침 */
   .gallery-grid .item-3 {
     display: block;
-    width: 55%;
+    width: 58%;
     top: 0%;
-    left: -4%;
+    left: -8%;
     right: auto;
     aspect-ratio: 3 / 4;
     border-radius: 6px;
@@ -1828,7 +1828,7 @@ button:focus-visible {
 
   /* item-1: UIUX Consulting — 우측 정사각 */
   .gallery-grid .item-1 {
-    width: 42%;
+    width: 48%;
     top: 6%;
     right: 1%;
     left: auto;
@@ -1840,7 +1840,7 @@ button:focus-visible {
 
   /* item-4: Brand & Commerce — 좌측 정사각 */
   .gallery-grid .item-4 {
-    width: 42%;
+    width: 48%;
     top: 23%;
     left: 1%;
     right: auto;
@@ -1851,9 +1851,9 @@ button:focus-visible {
   /* item-5: Lightstick — 우측 앵커, 넘침 */
   .gallery-grid .item-5 {
     display: block;
-    width: 55%;
+    width: 58%;
     top: 25%;
-    right: -4%;
+    right: -8%;
     left: auto;
     aspect-ratio: 3 / 4;
     border-radius: 6px;
@@ -1865,7 +1865,7 @@ button:focus-visible {
   /* item-10: DREAMPLUS — 좌측 세로형 */
   .gallery-grid .item-10 {
     display: block;
-    width: 48%;
+    width: 49%;
     top: 40%;
     left: 1%;
     right: auto;
@@ -1876,7 +1876,7 @@ button:focus-visible {
   /* item-2: Startup Accelerating — 우측 세로형 */
   .gallery-grid .item-2 {
     display: block;
-    width: 48%;
+    width: 49%;
     top: 46%;
     right: 1%;
     left: auto;
@@ -1889,7 +1889,7 @@ button:focus-visible {
   /* item-7: TURN BAG — 좌측 세로형 */
   .gallery-grid .item-7 {
     display: block;
-    width: 48%;
+    width: 49%;
     top: 58%;
     left: 1%;
     right: auto;
@@ -1897,14 +1897,14 @@ button:focus-visible {
     border-radius: 6px;
   }
 
-  /* item-6: LLOYD — 우측 정사각 */
+  /* item-6: LLOYD — 우측 세로형 (원본 비율, contain 축소 방지) */
   .gallery-grid .item-6 {
     display: block;
-    width: 42%;
+    width: 48%;
     top: 65%;
     right: 1%;
     left: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 960 / 1743;
     border-radius: 6px;
   }
 
@@ -1913,7 +1913,7 @@ button:focus-visible {
   /* item-9: 101PACKERS — 좌측 정사각 */
   .gallery-grid .item-9 {
     display: block;
-    width: 42%;
+    width: 48%;
     top: 76%;
     left: 1%;
     right: auto;
@@ -1921,14 +1921,14 @@ button:focus-visible {
     border-radius: 6px;
   }
 
-  /* item-8: DEVELON — 우측 세로형 */
+  /* item-8: DEVELON — 우측 세로형 (원본 비율, contain 축소 방지) */
   .gallery-grid .item-8 {
     display: block;
-    width: 48%;
-    top: 80%;
+    width: 49%;
+    top: 84%;
     right: 1%;
     left: auto;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1482 / 2560;
     border-radius: 6px;
   }
 
@@ -1936,8 +1936,8 @@ button:focus-visible {
   /* item-11: LG Display — 좌측 세로형 */
   .gallery-grid .item-11 {
     display: block;
-    width: 48%;
-    top: 90%;
+    width: 49%;
+    top: 88%;
     left: 1%;
     right: auto;
     aspect-ratio: 3 / 4;
