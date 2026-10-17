@@ -374,9 +374,7 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
 .hero-media.is-glitch .hero-video {
   filter: saturate(1.05) contrast(1.25) brightness(0.95);
 }
-.hero-section.is-glitch .hero-text .hero-line {
-  text-shadow: calc(var(--tx, 4px) * -1) 0 0 rgba(255, 0, 90, 0.85), var(--tx, 4px) 0 0 rgba(0, 220, 255, 0.85);
-}
+
 .hero-glitch {
   position: absolute;
   inset: 0;
