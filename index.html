@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/interaction.css?v=111">
+  <link rel="stylesheet" href="css/interaction.css?v=112">
   <link rel="stylesheet" href="css/pages.css?v=125">
 
   <meta name="naver-site-verification" content="89ab832f1d9f9a78ba75d374a35d211dd6026bb0">
@@ -76,7 +76,10 @@
     <section class="section hero-section" data-theme="dark">
       <div class="hero-media" aria-hidden="true">
         <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="videos/styletech-poster.jpg?v=5"><source src="videos/styletech-highlight.mp4?v=4" type="video/mp4"></video>
+        <canvas class="hero-glitch"></canvas>
         <div class="hero-shade"></div>
+        <div class="hero-scan"></div>
+        <div class="hero-grain"></div>
       </div>
       <div class="hero-text">
         <h1 class="sr-only">바이널엑스(VINYL X) — UI/UX · 서비스디자인 · AX 컨설팅 디자인 에이전시</h1>
@@ -571,11 +574,60 @@
   <script src="js/interaction.js?v=103"></script>
   <script>
     (function () {
-      var v = document.querySelector('.hero-video');
+      var media = document.querySelector('.hero-media');
+      var v = media && media.querySelector('.hero-video');
       if (!v) return;
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); return; }
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { v.removeAttribute('autoplay'); v.pause(); media.classList.add('is-still'); return; }
       var p = v.play(); if (p && p.catch) p.catch(function () {});
       document.addEventListener('visibilitychange', function () { document.hidden ? v.pause() : v.play().catch(function () {}); });
+
+      // Film grain tile
+      var g = document.createElement('canvas'); g.width = g.height = 180;
+      var gx = g.getContext('2d'), img = gx.createImageData(180, 180), d = img.data;
+      for (var i = 0; i < d.length; i += 4) { var n = Math.random() * 255 | 0; d[i] = d[i + 1] = d[i + 2] = n; d[i + 3] = 255; }
+      gx.putImageData(img, 0, 0);
+      media.querySelector('.hero-grain').style.backgroundImage = 'url(' + g.toDataURL() + ')';
+
+      // Occasional glitch bursts: displaced horizontal slices + RGB fringe
+      var c = media.querySelector('.hero-glitch'), ctx = c.getContext('2d');
+      function fit() { c.width = Math.round(media.clientWidth / 2); c.height = Math.round(media.clientHeight / 2); }
+      fit(); window.addEventListener('resize', fit);
+      function src() {
+        var vw = v.videoWidth, vh = v.videoHeight, W = c.width, H = c.height;
+        var s = Math.max(W / vw, H / vh) * 1.04, sw = W / s, sh = H / s;
+        return { x: (vw - sw) / 2, y: (vh - sh) / 2, w: sw, h: sh, k: s };
+      }
+      function frame() {
+        var W = c.width, H = c.height, r = src();
+        ctx.clearRect(0, 0, W, H);
+        var n = 2 + (Math.random() * 4 | 0);
+        for (var i = 0; i < n; i++) {
+          var y = Math.random() * H, bh = 3 + Math.random() * H * 0.09, dx = (Math.random() - 0.5) * W * 0.08;
+          var sy = r.y + y / r.k, sh = bh / r.k;
+          ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
+          ctx.drawImage(v, r.x, sy, r.w, sh, dx, y, W, bh);
+          ctx.globalCompositeOperation = 'lighter'; ctx.globalAlpha = 0.35;
+          ctx.drawImage(v, r.x, sy, r.w, sh, dx + 5, y, W, bh);
+          ctx.fillStyle = 'rgba(255,0,70,0.18)'; ctx.fillRect(dx + 5, y, W, bh);
+          ctx.drawImage(v, r.x, sy, r.w, sh, dx - 5, y, W, bh);
+          ctx.fillStyle = 'rgba(0,200,255,0.16)'; ctx.fillRect(dx - 5, y, W, bh);
+        }
+        ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
+        media.style.setProperty('--gx', ((Math.random() - 0.5) * 8).toFixed(1) + 'px');
+      }
+      function burst() {
+        if (document.hidden || v.paused || !v.videoWidth) return schedule();
+        var left = 3 + (Math.random() * 6 | 0);
+        media.classList.add('is-glitch');
+        (function step() {
+          frame();
+          if (--left > 0) return setTimeout(step, 45 + Math.random() * 60);
+          setTimeout(function () { ctx.clearRect(0, 0, c.width, c.height); media.classList.remove('is-glitch'); schedule(); }, 60);
+        })();
+      }
+      function schedule() { setTimeout(burst, 2600 + Math.random() * 4200); }
+      schedule();
     })();
   </script>
   <script>
