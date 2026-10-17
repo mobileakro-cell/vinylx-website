@@ -309,6 +309,410 @@
     "insight-e": {
       "ko": "E. 산업환경",
       "en": "E. Industrial Environment"
+    },
+    "v2-01": {
+      "ko": "완주산단에서 일하고 생활하는 근로자와 청년의 생활, 문화, 근무환경을 리빙랩 방식으로 들여다봤습니다. 설문, 인터뷰, 워크숍으로 현장의 문제를 함께 찾고, 실행할 수 있는 아이디어로 정리했습니다.",
+      "en": "We used a living lab to look closely at the daily life, culture and working conditions of workers and young people in the Wanju Industrial Complex. Through surveys, interviews and workshops we found the problems together on site and turned them into ideas that can be put into action."
+    },
+    "v2-02": {
+      "ko": "입주 기업",
+      "en": "Resident companies"
+    },
+    "v2-03": {
+      "ko": "완주산단 기업 및 근로자 현황",
+      "en": "Companies and workers in the Wanju Industrial Complex"
+    },
+    "v2-04": {
+      "ko": "입주기업 756개 · 근로자 27,456명 기준",
+      "en": "Based on 756 companies · 27,456 workers"
+    },
+    "v2-05": {
+      "ko": "기업 규모",
+      "en": "Company size"
+    },
+    "v2-06": {
+      "ko": "입주기업 대부분이 100인 미만 소규모 공장입니다",
+      "en": "Most resident companies are small factories with fewer than 100 employees"
+    },
+    "v2-07": {
+      "ko": "100인 미만",
+      "en": "Under 100"
+    },
+    "v2-08": {
+      "ko": "100–299인",
+      "en": "100–299"
+    },
+    "v2-09": {
+      "ko": "300인 이상",
+      "en": "300 or more"
+    },
+    "v2-10": {
+      "ko": "아이콘 면적이 기업 수 비율에 비례합니다",
+      "en": "Icon area is proportional to the share of companies"
+    },
+    "v2-11": {
+      "ko": "외국인 근로자",
+      "en": "Foreign workers"
+    },
+    "v2-12": {
+      "ko": "근로자 10명 중 3명 이상이 외국인",
+      "en": "More than 3 in 10 workers are foreign nationals"
+    },
+    "v2-13": {
+      "ko": "청년 근로자",
+      "en": "Young workers"
+    },
+    "v2-14": {
+      "ko": "20~30대 청년이 근로자의 절반에 가까움",
+      "en": "Workers in their 20s and 30s make up nearly half of the workforce"
+    },
+    "v2-15": {
+      "ko": "문화복지시설 미사용",
+      "en": "Do not use cultural and welfare facilities"
+    },
+    "v2-16": {
+      "ko": "근로자 10명 중 8명이 산단 문화복지시설을 쓰지 않음",
+      "en": "8 in 10 workers do not use the complex’s cultural and welfare facilities"
+    },
+    "v2-17": {
+      "ko": "구내식당 미보유 기업",
+      "en": "Companies without a cafeteria"
+    },
+    "v2-18": {
+      "ko": "기업 절반 이상이 구내식당이 없어 식사 환경이 열악",
+      "en": "More than half of companies have no cafeteria, leaving poor meal options"
+    },
+    "v2-19": {
+      "ko": "근로자 문제 해결",
+      "en": "Solve worker problems"
+    },
+    "v2-20": {
+      "ko": "안전 · 안정 · 유지",
+      "en": "Safety · Stability · Retention"
+    },
+    "v2-21": {
+      "ko": "실현 가능한 설계",
+      "en": "Feasible design"
+    },
+    "v2-22": {
+      "ko": "공간 · 서비스 · 콘텐츠 · 인프라",
+      "en": "Space · Service · Content · Infrastructure"
+    },
+    "v2-23": {
+      "ko": "지역적 연속성",
+      "en": "Regional continuity"
+    },
+    "v2-24": {
+      "ko": "커뮤니티 모델 + 지역 상생 모델",
+      "en": "Community model + regional co-prosperity model"
+    },
+    "v2-25": {
+      "ko": "자립적 운영",
+      "en": "Self-sustaining operation"
+    },
+    "v2-26": {
+      "ko": "거버넌스 체계 + 지속가능 모델",
+      "en": "Governance + sustainable model"
+    },
+    "v2-27": {
+      "ko": "근로 환경에 따라 삶의 질과 처우 격차가 커서 단일 정책으로는 대응하기 어렵습니다. 그래서 단계별 추진 방향을 세웠습니다.",
+      "en": "Quality of life and working conditions vary widely by workplace, so no single policy can address them. We set out a staged direction instead."
+    },
+    "v2-28": {
+      "ko": "설문, 인터뷰, 워크숍에서 모은 사용자 경험으로 산단의 핵심 문제와 니즈를 정의하고, 이해관계자와 함께 아이디어를 검증했습니다.",
+      "en": "Using experiences gathered from surveys, interviews and workshops, we defined the complex’s core problems and needs, then tested ideas together with stakeholders."
+    },
+    "v2-29": {
+      "ko": "고객여정지도 워크숍",
+      "en": "Customer journey map workshop"
+    },
+    "v2-30": {
+      "ko": "산단 지도 매핑",
+      "en": "Mapping the complex"
+    },
+    "v2-31": {
+      "ko": "워크시트",
+      "en": "Worksheets"
+    },
+    "v2-32": {
+      "ko": "어피니티 다이어그램",
+      "en": "Affinity diagram"
+    },
+    "v2-33": {
+      "ko": "이해관계자 간담회",
+      "en": "Stakeholder meeting"
+    },
+    "v2-34": {
+      "ko": "현황 분석과 인사이트",
+      "en": "Analysis and insights"
+    },
+    "v2-35": {
+      "ko": "니즈와 문제 분석으로 산단의 현황을 유형별로 나누고, 유형마다 대표 사용자와 핵심 문제를 정의했습니다.",
+      "en": "From needs and problem analysis we grouped the complex’s situation into types and defined a representative user and core problem for each."
+    },
+    "v2-36": {
+      "ko": "정주생활문화",
+      "en": "Settlement & living culture"
+    },
+    "v2-37": {
+      "ko": "주거와 산단이 초근접 배치된 정주생활복합형 산업단지",
+      "en": "An industrial complex where homes sit right next to factories"
+    },
+    "v2-38": {
+      "ko": "전북에서 유일하게 인구가 증가하는 도시입니다. 주거와 산단이 가까워 생기는 악취, 노후 시설, 부족한 교통 인프라로 세대 이탈이 우려됩니다.",
+      "en": "Wanju is the only growing city in Jeonbuk. Odors from nearby plants, aging facilities and weak transport infrastructure risk driving households away."
+    },
+    "v2-39": {
+      "ko": "→ 산단마실 · 인더-스테이 · 완주맛실",
+      "en": "→ Sandan Masil · In-the-Stay · Wanju Matsil"
+    },
+    "v2-40": {
+      "ko": "복지체계",
+      "en": "Welfare"
+    },
+    "v2-41": {
+      "ko": "기업 규모 격차로 생긴 근로 복지 불균형",
+      "en": "Welfare gaps caused by differences in company size"
+    },
+    "v2-42": {
+      "ko": "756개 기업 중 91.2%가 100인 미만입니다. 절반 이상이 구내식당이 없고, 외국인 근로자의 기숙사 환경도 열악합니다.",
+      "en": "91.2% of the 756 companies have fewer than 100 employees. More than half have no cafeteria, and dormitories for foreign workers are poor."
+    },
+    "v2-43": {
+      "ko": "→ 하모니클럽하우스 · 글로컬 페스타 · 완주 ON",
+      "en": "→ Harmony Clubhouse · Glocal Festa · Wanju ON"
+    },
+    "v2-44": {
+      "ko": "정보접근",
+      "en": "Access to information"
+    },
+    "v2-45": {
+      "ko": "청년 유입은 늘지만 생활정보 접근 체계는 미비",
+      "en": "More young people arrive, but there is no easy way to find local information"
+    },
+    "v2-46": {
+      "ko": "입주 초기 근로자와 가족이 지역 정보를 얻기 어렵고, 여가 공간과 프로그램 접근성도 낮습니다. 문화복지시설 미사용률은 79.9%입니다.",
+      "en": "New workers and their families struggle to find local information, and leisure spaces and programs are hard to reach. 79.9% do not use cultural and welfare facilities."
+    },
+    "v2-47": {
+      "ko": "→ 산단포켓 · 의문당 · 워크앤조이",
+      "en": "→ Sandan Pocket · Uimundang · Work & Joy"
+    },
+    "v2-48": {
+      "ko": "산업브랜드",
+      "en": "Industrial brand"
+    },
+    "v2-49": {
+      "ko": "수소 모빌리티 산단 브랜딩과 지역 교통 연계",
+      "en": "Hydrogen mobility branding linked to local transport"
+    },
+    "v2-50": {
+      "ko": "세계 최대 규모의 수소 모빌리티 산업단지입니다. 산업 브랜드 기반 서비스를 지역 생활문화권에 먼저 적용하고, AI 교통문화를 선도할 기회가 있습니다.",
+      "en": "This is one of the world’s largest hydrogen mobility industrial complexes. Services built on that industrial brand can be applied first to local life, with a chance to lead AI-enabled transport culture."
+    },
+    "v2-51": {
+      "ko": "→ 완주루프 · 셀프케어 가라지 · 안전로드 프로젝트",
+      "en": "→ Wanju Loop · Self-care Garage · Safe Road Project"
+    },
+    "v2-52": {
+      "ko": "12개 실행 아이디어",
+      "en": "12 actionable ideas"
+    },
+    "v2-53": {
+      "ko": "워크숍 결과를 반영해 실행할 수 있고 우선순위가 높은 개선 아이디어 12개를 도출했습니다.",
+      "en": "Drawing on the workshop results, we developed 12 high-priority improvement ideas that can be implemented."
+    },
+    "v2-54": {
+      "ko": "산단마실",
+      "en": "Sandan Masil"
+    },
+    "v2-55": {
+      "ko": "찾아가는 장날. 근로자 간 교류를 위한 이동형 플리마켓",
+      "en": "A pop-up market day that travels to workers and brings them together"
+    },
+    "v2-56": {
+      "ko": "인더-스테이",
+      "en": "In-the-Stay"
+    },
+    "v2-57": {
+      "ko": "출장자와 단기 근로자를 위한 주민운영형 게스트하우스 라운지",
+      "en": "A resident-run guesthouse and lounge for business travelers and short-term workers"
+    },
+    "v2-58": {
+      "ko": "완주맛실",
+      "en": "Wanju Matsil"
+    },
+    "v2-59": {
+      "ko": "HACCP 기반 공용키친과 로컬푸드 도시락 구독",
+      "en": "A HACCP shared kitchen with a local-food lunchbox subscription"
+    },
+    "v2-60": {
+      "ko": "하모니클럽하우스",
+      "en": "Harmony Clubhouse"
+    },
+    "v2-61": {
+      "ko": "외국인 근로자를 위한 운동·문화교류 공간",
+      "en": "A sports and cultural exchange space for foreign workers"
+    },
+    "v2-62": {
+      "ko": "글로컬 페스타",
+      "en": "Glocal Festa"
+    },
+    "v2-63": {
+      "ko": "국가별 문화행사와 공용키친 프로그램",
+      "en": "Country-themed cultural events and shared kitchen programs"
+    },
+    "v2-64": {
+      "ko": "완주 ON",
+      "en": "Wanju ON"
+    },
+    "v2-65": {
+      "ko": "이주 근로자의 의료·행정·생활 정착 지원 통합",
+      "en": "Integrated medical, administrative and settlement support for migrant workers"
+    },
+    "v2-66": {
+      "ko": "산단포켓",
+      "en": "Sandan Pocket"
+    },
+    "v2-67": {
+      "ko": "산업단지 생활문화 정보를 한곳에 모은 가이드 플랫폼",
+      "en": "A guide platform gathering local life and culture information in one place"
+    },
+    "v2-68": {
+      "ko": "의문당",
+      "en": "Uimundang"
+    },
+    "v2-69": {
+      "ko": "청년과 은퇴자를 잇는 세대연계형 커리어 멘토링",
+      "en": "Career mentoring that connects young workers with retirees"
+    },
+    "v2-70": {
+      "ko": "워크앤조이",
+      "en": "Work & Joy"
+    },
+    "v2-71": {
+      "ko": "기술을 나누는 재능기부형 직무·취미 동아리",
+      "en": "Skill-sharing clubs that mix job skills and hobbies"
+    },
+    "v2-72": {
+      "ko": "완주루프",
+      "en": "Wanju Loop"
+    },
+    "v2-73": {
+      "ko": "출퇴근 혼잡을 줄이고 문화거점을 잇는 수소 셔틀버스",
+      "en": "A hydrogen shuttle that eases commute traffic and links cultural hubs"
+    },
+    "v2-74": {
+      "ko": "셀프케어 가라지",
+      "en": "Self-care Garage"
+    },
+    "v2-75": {
+      "ko": "자차 근로자를 위한 공동 셀프 정비 센터",
+      "en": "A shared self-service car maintenance center for commuting workers"
+    },
+    "v2-76": {
+      "ko": "안전로드 프로젝트",
+      "en": "Safe Road Project"
+    },
+    "v2-77": {
+      "ko": "불법주정차와 보행 안전 문제를 푸는 교통 인프라 개선",
+      "en": "Traffic infrastructure improvements for illegal parking and pedestrian safety"
+    },
+    "v2-78": {
+      "ko": "아이디어가 현장에 놓였을 때",
+      "en": "Ideas placed in the real setting"
+    },
+    "v2-79": {
+      "ko": "우선순위 아이디어를 실제 산단 풍경 위에 시각화해 이해관계자와 함께 검토했습니다.",
+      "en": "We visualized priority ideas in real scenes from the complex and reviewed them with stakeholders."
+    },
+    "v2-80": {
+      "ko": "퇴근 후 문화거점으로 이어지는 노선",
+      "en": "A route from work to cultural hubs"
+    },
+    "v2-81": {
+      "ko": "24시간 라운지와 숙박",
+      "en": "24-hour lounge and lodging"
+    },
+    "v2-82": {
+      "ko": "언론 보도",
+      "en": "Press"
+    },
+    "v2-83": {
+      "ko": "전자신문 · 2026.03.20",
+      "en": "Electronic Times · 2026.03.20"
+    },
+    "v2-84": {
+      "ko": "노후 산단 탈바꿈… 청년 디자인 입혔다",
+      "en": "Aging industrial complexes transformed with youth-led design"
+    },
+    "v2-85": {
+      "ko": "한국디자인진흥원의 문화선도산단 리빙랩 결과모음집 발간 소식. 구미·완주·창원 산단에서 38개 과제가 나왔고, 완주산단은 12개 과제를 발굴했습니다.",
+      "en": "Coverage of KIDP’s living lab results book: 38 projects came out of the Gumi, Wanju and Changwon complexes, including 12 from Wanju."
+    },
+    "v2-86": {
+      "ko": "디자인DB 기고 · 2026.02.19",
+      "en": "DesignDB column · 2026.02.19"
+    },
+    "v2-87": {
+      "ko": "같은 산단, 다른 조건. 완주에서 찾은 디자인리빙랩의 가능성",
+      "en": "Same complex, different conditions: what a design living lab showed in Wanju"
+    },
+    "v2-88": {
+      "ko": "청년, 주민, 공무원, 디자이너가 함께 문제를 찾고 현장에서 가설을 검증하는 참여형 정책 실험으로서의 리빙랩을 소개합니다.",
+      "en": "An introduction to the living lab as a participatory policy experiment where young people, residents, officials and designers find problems together and test ideas on site."
+    },
+    "v2-89": {
+      "ko": "전문 읽기",
+      "en": "Read full article"
+    },
+    "v2-90": {
+      "ko": "주관",
+      "en": "Lead"
+    },
+    "v2-91": {
+      "ko": "바이널엑스",
+      "en": "VINYL X"
+    },
+    "v2-92": {
+      "ko": "발주",
+      "en": "Client"
+    },
+    "v2-93": {
+      "ko": "한국디자인진흥원",
+      "en": "Korea Institute of Design Promotion"
+    },
+    "v2-94": {
+      "ko": "지자체",
+      "en": "Local government"
+    },
+    "v2-95": {
+      "ko": "완주군",
+      "en": "Wanju County"
+    },
+    "v2-step-1": {
+      "ko": "산단 현황 공유<br>사용자 니즈 도출",
+      "en": "Share the complex’s status<br>Identify user needs"
+    },
+    "v2-step-2": {
+      "ko": "페르소나 정의<br>고객여정지도 작성",
+      "en": "Define personas<br>Map customer journeys"
+    },
+    "v2-step-3": {
+      "ko": "도출 아이디어 공유<br>의견 수렴 및 보완",
+      "en": "Share ideas<br>Gather feedback and refine"
+    },
+    "v2-step-4": {
+      "ko": "실행가능성 확보<br>이해관계자 참여",
+      "en": "Secure feasibility<br>Involve stakeholders"
+    },
+    "v2-step-5": {
+      "ko": "우선순위 아이디어<br>카노모델 검증",
+      "en": "Prioritize ideas<br>Validate with the Kano model"
+    },
+    "v2-step-6": {
+      "ko": "최종 아이디어 종합<br>보완점 논의",
+      "en": "Synthesize final ideas<br>Discuss improvements"
     }
   }
 }

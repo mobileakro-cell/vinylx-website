@@ -72,13 +72,6 @@
     .lb-fact-top b { font-size: clamp(32px, 3.4vw, 44px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .lb-fact-top b.hi { color: var(--lb-accent); }
     .lb-fact-note { margin: 6px 0 12px; font-size: 13px; line-height: 1.5; color: var(--lb-muted); }
-    .lb-stack { display: flex; height: 10px; gap: 2px; }
-    .lb-stack i, .lb-legend i { display: block; background: var(--lb-card); }
-    .lb-stack .s1, .lb-legend .s1 { background: var(--lb-text); }
-    .lb-stack .s2, .lb-legend .s2 { background: #8f877b; }
-    .lb-stack .s3, .lb-legend .s3 { background: #c4baab; }
-    .lb-stack .sa { background: var(--lb-accent); }
-    .lb-stack .s0 { background: var(--lb-card); }
     .lb-picto { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
     .lb-picto .pi { position: relative; display: block; color: var(--lb-card); }
     .lb-picto .pi svg { display: block; width: 100%; height: 100%; fill: currentColor; }
@@ -87,14 +80,9 @@
     .lb-picto.ppl .pi { width: 30px; height: 40px; aspect-ratio: 24 / 32; }
     .lb-picto.ppl .pi .part svg { width: 30px; }
     .lb-picto.ppl { gap: 6px 8px; }
-    .lb-picto .on, .lb-picto .c1 { color: var(--lb-text); }
+    .lb-picto .on { color: var(--lb-text); }
     .lb-picto .acc { color: var(--lb-accent); }
     .lb-picto .off { color: #d6cdc0; }
-    .lb-picto.co { display: grid; grid-template-columns: repeat(25, minmax(0, 1fr)); gap: 6px 4px; }
-    .lb-picto.co .pi { width: 100%; aspect-ratio: 1; }
-    .lb-picto .c2 { color: #8f877b; }
-    .lb-picto .c3 { color: var(--lb-accent); }
-    .lb-legend .s3 { background: var(--lb-accent) !important; }
     .lb-size { --u: clamp(3.4px, 0.9vw, 4.6px); display: flex; align-items: flex-end; gap: clamp(18px, 4vw, 56px); margin-top: 12px; padding-bottom: 0; border-bottom: 0; }
     .lb-size .sz { margin: 0; display: flex; flex-direction: column; justify-content: flex-end; min-width: 0; }
     .lb-size .sz-ico { width: calc(var(--w) * var(--u)); height: calc(var(--h) * var(--u)); border-bottom: 2px solid var(--lb-text); }
@@ -106,10 +94,6 @@
     .lb-size figcaption b { font-size: 15px; font-weight: 700; color: var(--lb-text); font-variant-numeric: tabular-nums; }
     .lb-size figcaption span { font-size: 12px; color: var(--lb-muted); }
     .lb-size-note { margin: 10px 0 0; font-size: 11px; color: var(--lb-muted); }
-    .lb-legend { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12px; color: var(--lb-muted); }
-    .lb-legend li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
-    .lb-legend li i { width: 8px; height: 8px; }
-    .lb-legend b { color: var(--lb-text); font-weight: 600; font-variant-numeric: tabular-nums; }
 
     /* Direction */
     .lb-dir { margin-top: 56px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); background: var(--lb-card); }
@@ -164,6 +148,7 @@
     .lb-concepts figcaption { display: flex; gap: 10px; align-items: baseline; padding: 10px 0 4px; font-size: 14px; }
     .lb-concepts figcaption b { font-size: 12px; color: var(--lb-muted); font-weight: 700; }
     .lb-concepts figcaption span { color: var(--lb-muted); font-size: 13px; }
+    .lb-concepts figcaption .nm { color: var(--lb-text); font-size: 14px; }
 
     /* Press + credits */
     .lb-press { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--lb-text); }
@@ -205,7 +190,6 @@
       .lb-facts-head { flex-direction: column; gap: 4px; }
       .lb-facts-head h3 { font-size: 18px; }
       .lb-size { --u: 3.1px; gap: 14px; }
-      .lb-picto.co { grid-template-columns: repeat(20, minmax(0, 1fr)); gap: 4px 3px; }
       .lb-picto.ppl { gap: 6px; }
       .lb-picto.ppl .pi, .lb-picto.ppl .pi .part svg { width: 24px; }
       .lb-picto.ppl .pi { height: 32px; }
@@ -303,13 +287,13 @@
         <div class="lb-head">
           <p class="lb-label">Overview</p>
           <h2 class="lb-h2" data-i18n="livinglab.hero-statement" data-i18n-html="true">청년이 성장하고 문화가 자라는<br>정주복합 산업단지의 새로운 기준</h2>
-          <p class="lb-lead">완주산단에서 일하고 생활하는 근로자와 청년의 생활, 문화, 근무환경을 리빙랩 방식으로 들여다봤습니다. 설문, 인터뷰, 워크숍으로 현장의 문제를 함께 찾고, 실행할 수 있는 아이디어로 정리했습니다.</p>
+          <p class="lb-lead" data-i18n="livinglab.v2-01">완주산단에서 일하고 생활하는 근로자와 청년의 생활, 문화, 근무환경을 리빙랩 방식으로 들여다봤습니다. 설문, 인터뷰, 워크숍으로 현장의 문제를 함께 찾고, 실행할 수 있는 아이디어로 정리했습니다.</p>
         </div>
         <div class="lb-stats">
           <div class="lb-stat"><b>6</b><span data-i18n="livinglab.stat-workshop">리빙랩 워크숍</span></div>
           <div class="lb-stat"><b>132</b><span data-i18n="livinglab.stat-survey">설문 참여자</span></div>
           <div class="lb-stat"><b>12</b><span data-i18n="livinglab.stat-ideas">도출 아이디어</span></div>
-          <div class="lb-stat"><b>756</b><span>입주 기업</span></div>
+          <div class="lb-stat"><b>756</b><span data-i18n="livinglab.v2-02">입주 기업</span></div>
         </div>
 
         <div class="lb-facts">
@@ -325,44 +309,44 @@
             <symbol id="ic-bowl-x" viewBox="0 0 24 24"><path d="M2 12h20a10 9 0 0 1-20 0zM5 22h14v1.5H5z" opacity=".35"/><path d="M3 3l18 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
           </svg>
           <div class="lb-facts-head">
-            <h3>완주산단 기업 및 근로자 현황</h3>
-            <p>입주기업 756개 · 근로자 27,456명 기준</p>
+            <h3 data-i18n="livinglab.v2-03">완주산단 기업 및 근로자 현황</h3>
+            <p data-i18n="livinglab.v2-04">입주기업 756개 · 근로자 27,456명 기준</p>
           </div>
           <div class="lb-fact wide">
-            <div class="lb-fact-top"><span>기업 규모</span><b>91.2%</b></div>
-            <p class="lb-fact-note">입주기업 대부분이 100인 미만 소규모 공장입니다</p>
-            <div class="lb-size" role="img" aria-label="면적 비례: 100인 미만 91.2%, 100–299인 6.5%, 300인 이상 2.3%"><figure class="sz c1"><div class="sz-ico" style="--w:64.00;--h:40.00"><svg viewBox="0 0 64 40" preserveAspectRatio="xMidYMax meet"><use href="#ic-b-factory"/></svg></div><figcaption><b>91.2%</b><span>100인 미만</span></figcaption></figure><figure class="sz c2"><div class="sz-ico" style="--w:11.52;--h:15.84"><svg viewBox="0 0 32 44" preserveAspectRatio="xMidYMax meet"><use href="#ic-b-office"/></svg></div><figcaption><b>6.5%</b><span>100–299인</span></figcaption></figure><figure class="sz c3"><div class="sz-ico" style="--w:4.87;--h:13.27"><svg viewBox="0 0 22 60" preserveAspectRatio="xMidYMax meet"><use href="#ic-b-tower"/></svg></div><figcaption><b>2.3%</b><span>300인 이상</span></figcaption></figure></div>
-            <p class="lb-size-note">아이콘 면적이 기업 수 비율에 비례합니다</p>
+            <div class="lb-fact-top"><span data-i18n="livinglab.v2-05">기업 규모</span><b>91.2%</b></div>
+            <p class="lb-fact-note" data-i18n="livinglab.v2-06">입주기업 대부분이 100인 미만 소규모 공장입니다</p>
+            <div class="lb-size" role="img" aria-label="면적 비례: 100인 미만 91.2%, 100–299인 6.5%, 300인 이상 2.3%"><figure class="sz c1"><div class="sz-ico" style="--w:64.00;--h:40.00"><svg viewBox="0 0 64 40" preserveAspectRatio="xMidYMax meet"><use href="#ic-b-factory"/></svg></div><figcaption><b>91.2%</b><span data-i18n="livinglab.v2-07">100인 미만</span></figcaption></figure><figure class="sz c2"><div class="sz-ico" style="--w:11.52;--h:15.84"><svg viewBox="0 0 32 44" preserveAspectRatio="xMidYMax meet"><use href="#ic-b-office"/></svg></div><figcaption><b>6.5%</b><span data-i18n="livinglab.v2-08">100–299인</span></figcaption></figure><figure class="sz c3"><div class="sz-ico" style="--w:4.87;--h:13.27"><svg viewBox="0 0 22 60" preserveAspectRatio="xMidYMax meet"><use href="#ic-b-tower"/></svg></div><figcaption><b>2.3%</b><span data-i18n="livinglab.v2-09">300인 이상</span></figcaption></figure></div>
+            <p class="lb-size-note" data-i18n="livinglab.v2-10">아이콘 면적이 기업 수 비율에 비례합니다</p>
           </div>
           <div class="lb-fact">
-            <div class="lb-fact-top"><span>외국인 근로자</span><b>32%</b></div>
-            <p class="lb-fact-note">근로자 10명 중 3명 이상이 외국인</p>
+            <div class="lb-fact-top"><span data-i18n="livinglab.v2-11">외국인 근로자</span><b>32%</b></div>
+            <p class="lb-fact-note" data-i18n="livinglab.v2-12">근로자 10명 중 3명 이상이 외국인</p>
             <div class="lb-picto ppl" role="img" aria-label="10명 중 3.2명"><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg><span class="part on" style="width:20%"><svg><use href="#ic-person"/></svg></span></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span></div>
           </div>
           <div class="lb-fact">
-            <div class="lb-fact-top"><span>청년 근로자</span><b>43%</b></div>
-            <p class="lb-fact-note">20~30대 청년이 근로자의 절반에 가까움</p>
+            <div class="lb-fact-top"><span data-i18n="livinglab.v2-13">청년 근로자</span><b>43%</b></div>
+            <p class="lb-fact-note" data-i18n="livinglab.v2-14">20~30대 청년이 근로자의 절반에 가까움</p>
             <div class="lb-picto ppl" role="img" aria-label="10명 중 4.3명"><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi on"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg><span class="part on" style="width:30%"><svg><use href="#ic-person"/></svg></span></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span></div>
           </div>
           <div class="lb-fact">
-            <div class="lb-fact-top"><span>문화복지시설 미사용</span><b class="hi">79.9%</b></div>
-            <p class="lb-fact-note">근로자 10명 중 8명이 산단 문화복지시설을 쓰지 않음</p>
+            <div class="lb-fact-top"><span data-i18n="livinglab.v2-15">문화복지시설 미사용</span><b class="hi">79.9%</b></div>
+            <p class="lb-fact-note" data-i18n="livinglab.v2-16">근로자 10명 중 8명이 산단 문화복지시설을 쓰지 않음</p>
             <div class="lb-picto ppl" role="img" aria-label="10명 중 8명 미사용"><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi acc"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg><span class="part acc" style="width:99%"><svg><use href="#ic-person"/></svg></span></span><span class="pi off"><svg><use href="#ic-person"/></svg></span><span class="pi off"><svg><use href="#ic-person"/></svg></span></div>
           </div>
           <div class="lb-fact">
-            <div class="lb-fact-top"><span>구내식당 미보유 기업</span><b class="hi">50%+</b></div>
-            <p class="lb-fact-note">기업 절반 이상이 구내식당이 없어 식사 환경이 열악</p>
+            <div class="lb-fact-top"><span data-i18n="livinglab.v2-17">구내식당 미보유 기업</span><b class="hi">50%+</b></div>
+            <p class="lb-fact-note" data-i18n="livinglab.v2-18">기업 절반 이상이 구내식당이 없어 식사 환경이 열악</p>
             <div class="lb-picto ppl" role="img" aria-label="10곳 중 5곳 이상 구내식당 없음"><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi acc"><svg><use href="#ic-bowl-x"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span><span class="pi on"><svg><use href="#ic-bowl"/></svg></span></div>
           </div>
         </div>
 
         <div class="lb-dir">
-          <div><small>STAGE 1</small><strong>근로자 문제 해결</strong><p>안전 · 안정 · 유지</p></div>
-          <div><small>STAGE 2</small><strong>실현 가능한 설계</strong><p>공간 · 서비스 · 콘텐츠 · 인프라</p></div>
-          <div><small>STAGE 3</small><strong>지역적 연속성</strong><p>커뮤니티 모델 + 지역 상생 모델</p></div>
-          <div><small>STAGE 4</small><strong>자립적 운영</strong><p>거버넌스 체계 + 지속가능 모델</p></div>
+          <div><small>STAGE 1</small><strong data-i18n="livinglab.v2-19">근로자 문제 해결</strong><p data-i18n="livinglab.v2-20">안전 · 안정 · 유지</p></div>
+          <div><small>STAGE 2</small><strong data-i18n="livinglab.v2-21">실현 가능한 설계</strong><p data-i18n="livinglab.v2-22">공간 · 서비스 · 콘텐츠 · 인프라</p></div>
+          <div><small>STAGE 3</small><strong data-i18n="livinglab.v2-23">지역적 연속성</strong><p data-i18n="livinglab.v2-24">커뮤니티 모델 + 지역 상생 모델</p></div>
+          <div><small>STAGE 4</small><strong data-i18n="livinglab.v2-25">자립적 운영</strong><p data-i18n="livinglab.v2-26">거버넌스 체계 + 지속가능 모델</p></div>
         </div>
-        <p class="lb-dir-note">근로 환경에 따라 삶의 질과 처우 격차가 커서 단일 정책으로는 대응하기 어렵습니다. 그래서 단계별 추진 방향을 세웠습니다.</p>
+        <p class="lb-dir-note" data-i18n="livinglab.v2-27">근로 환경에 따라 삶의 질과 처우 격차가 커서 단일 정책으로는 대응하기 어렵습니다. 그래서 단계별 추진 방향을 세웠습니다.</p>
       </div>
     </section>
 
@@ -372,23 +356,23 @@
         <div class="lb-head">
           <p class="lb-label">Process</p>
           <h2 class="lb-h2" data-i18n="livinglab.process-title">서비스디자인 프로세스</h2>
-          <p class="lb-lead">설문, 인터뷰, 워크숍에서 모은 사용자 경험으로 산단의 핵심 문제와 니즈를 정의하고, 이해관계자와 함께 아이디어를 검증했습니다.</p>
+          <p class="lb-lead" data-i18n="livinglab.v2-28">설문, 인터뷰, 워크숍에서 모은 사용자 경험으로 산단의 핵심 문제와 니즈를 정의하고, 이해관계자와 함께 아이디어를 검증했습니다.</p>
         </div>
         <div class="lb-phase"><span>DISCOVER · DEFINE</span><span>DEVELOP · DELIVER</span></div>
         <div class="lb-steps">
-          <div class="lb-step"><small>01</small><h4 data-i18n="livinglab.step-1">공감하기</h4><p>산단 현황 공유<br>사용자 니즈 도출</p></div>
-          <div class="lb-step"><small>02</small><h4 data-i18n="livinglab.step-2">핵심이슈</h4><p>페르소나 정의<br>고객여정지도 작성</p></div>
-          <div class="lb-step"><small>03</small><h4 data-i18n="livinglab.step-3">아이디어</h4><p>도출 아이디어 공유<br>의견 수렴 및 보완</p></div>
-          <div class="lb-step"><small>04</small><h4 data-i18n="livinglab.step-4">부트캠프</h4><p>실행가능성 확보<br>이해관계자 참여</p></div>
-          <div class="lb-step"><small>05</small><h4 data-i18n="livinglab.step-5">구체화</h4><p>우선순위 아이디어<br>카노모델 검증</p></div>
-          <div class="lb-step"><small>06</small><h4 data-i18n="livinglab.step-6">종합</h4><p>최종 아이디어 종합<br>보완점 논의</p></div>
+          <div class="lb-step"><small>01</small><h4 data-i18n="livinglab.step-1">공감하기</h4><p data-i18n="livinglab.v2-step-1" data-i18n-html="true">산단 현황 공유<br>사용자 니즈 도출</p></div>
+          <div class="lb-step"><small>02</small><h4 data-i18n="livinglab.step-2">핵심이슈</h4><p data-i18n="livinglab.v2-step-2" data-i18n-html="true">페르소나 정의<br>고객여정지도 작성</p></div>
+          <div class="lb-step"><small>03</small><h4 data-i18n="livinglab.step-3">아이디어</h4><p data-i18n="livinglab.v2-step-3" data-i18n-html="true">도출 아이디어 공유<br>의견 수렴 및 보완</p></div>
+          <div class="lb-step"><small>04</small><h4 data-i18n="livinglab.step-4">부트캠프</h4><p data-i18n="livinglab.v2-step-4" data-i18n-html="true">실행가능성 확보<br>이해관계자 참여</p></div>
+          <div class="lb-step"><small>05</small><h4 data-i18n="livinglab.step-5">구체화</h4><p data-i18n="livinglab.v2-step-5" data-i18n-html="true">우선순위 아이디어<br>카노모델 검증</p></div>
+          <div class="lb-step"><small>06</small><h4 data-i18n="livinglab.step-6">종합</h4><p data-i18n="livinglab.v2-step-6" data-i18n-html="true">최종 아이디어 종합<br>보완점 논의</p></div>
         </div>
         <div class="lb-photos">
-          <figure><img src="images/livinglab/bin0019.jpg" alt="고객여정지도 워크숍" loading="lazy"><figcaption>고객여정지도 워크숍</figcaption></figure>
-          <figure><img src="images/livinglab/bin000b.jpg" alt="산단 지도 위 문제 찾기" loading="lazy"><figcaption>산단 지도 매핑</figcaption></figure>
-          <figure><img src="images/livinglab/bin0011.jpg" alt="워크시트 작성" loading="lazy"><figcaption>워크시트</figcaption></figure>
-          <figure><img src="images/livinglab/bin0007.jpg" alt="어피니티 다이어그램" loading="lazy"><figcaption>어피니티 다이어그램</figcaption></figure>
-          <figure><img src="images/livinglab/bin0026.jpg" alt="이해관계자 간담회" loading="lazy"><figcaption>이해관계자 간담회</figcaption></figure>
+          <figure><img src="images/livinglab/bin0019.jpg" alt="고객여정지도 워크숍" loading="lazy"><figcaption data-i18n="livinglab.v2-29">고객여정지도 워크숍</figcaption></figure>
+          <figure><img src="images/livinglab/bin000b.jpg" alt="산단 지도 위 문제 찾기" loading="lazy"><figcaption data-i18n="livinglab.v2-30">산단 지도 매핑</figcaption></figure>
+          <figure><img src="images/livinglab/bin0011.jpg" alt="워크시트 작성" loading="lazy"><figcaption data-i18n="livinglab.v2-31">워크시트</figcaption></figure>
+          <figure><img src="images/livinglab/bin0007.jpg" alt="어피니티 다이어그램" loading="lazy"><figcaption data-i18n="livinglab.v2-32">어피니티 다이어그램</figcaption></figure>
+          <figure><img src="images/livinglab/bin0026.jpg" alt="이해관계자 간담회" loading="lazy"><figcaption data-i18n="livinglab.v2-33">이해관계자 간담회</figcaption></figure>
         </div>
       </div>
     </section>
@@ -398,14 +382,14 @@
       <div class="lb-wrap">
         <div class="lb-head">
           <p class="lb-label">Research &amp; Insights</p>
-          <h2 class="lb-h2">현황 분석과 인사이트</h2>
-          <p class="lb-lead">니즈와 문제 분석으로 산단의 현황을 유형별로 나누고, 유형마다 대표 사용자와 핵심 문제를 정의했습니다.</p>
+          <h2 class="lb-h2" data-i18n="livinglab.v2-34">현황 분석과 인사이트</h2>
+          <p class="lb-lead" data-i18n="livinglab.v2-35">니즈와 문제 분석으로 산단의 현황을 유형별로 나누고, 유형마다 대표 사용자와 핵심 문제를 정의했습니다.</p>
         </div>
         <div class="lb-ins">
-          <div class="lb-in"><span class="ltr">A</span><div><small>정주생활문화</small><h4>주거와 산단이 초근접 배치된 정주생활복합형 산업단지</h4><p>전북에서 유일하게 인구가 증가하는 도시입니다. 주거와 산단이 가까워 생기는 악취, 노후 시설, 부족한 교통 인프라로 세대 이탈이 우려됩니다.</p><p class="ideas">→ 산단마실 · 인더-스테이 · 완주맛실</p></div></div>
-          <div class="lb-in"><span class="ltr">B</span><div><small>복지체계</small><h4>기업 규모 격차로 생긴 근로 복지 불균형</h4><p>756개 기업 중 91.2%가 100인 미만입니다. 절반 이상이 구내식당이 없고, 외국인 근로자의 기숙사 환경도 열악합니다.</p><p class="ideas">→ 하모니클럽하우스 · 글로컬 페스타 · 완주 ON</p></div></div>
-          <div class="lb-in"><span class="ltr">C</span><div><small>정보접근</small><h4>청년 유입은 늘지만 생활정보 접근 체계는 미비</h4><p>입주 초기 근로자와 가족이 지역 정보를 얻기 어렵고, 여가 공간과 프로그램 접근성도 낮습니다. 문화복지시설 미사용률은 79.9%입니다.</p><p class="ideas">→ 산단포켓 · 의문당 · 워크앤조이</p></div></div>
-          <div class="lb-in"><span class="ltr">D</span><div><small>산업브랜드</small><h4>수소 모빌리티 산단 브랜딩과 지역 교통 연계</h4><p>세계 최대 규모의 수소 모빌리티 산업단지입니다. 산업 브랜드 기반 서비스를 지역 생활문화권에 먼저 적용하고, AI 교통문화를 선도할 기회가 있습니다.</p><p class="ideas">→ 완주루프 · 셀프케어 가라지 · 안전로드 프로젝트</p></div></div>
+          <div class="lb-in"><span class="ltr">A</span><div><small data-i18n="livinglab.v2-36">정주생활문화</small><h4 data-i18n="livinglab.v2-37">주거와 산단이 초근접 배치된 정주생활복합형 산업단지</h4><p data-i18n="livinglab.v2-38">전북에서 유일하게 인구가 증가하는 도시입니다. 주거와 산단이 가까워 생기는 악취, 노후 시설, 부족한 교통 인프라로 세대 이탈이 우려됩니다.</p><p class="ideas" data-i18n="livinglab.v2-39">→ 산단마실 · 인더-스테이 · 완주맛실</p></div></div>
+          <div class="lb-in"><span class="ltr">B</span><div><small data-i18n="livinglab.v2-40">복지체계</small><h4 data-i18n="livinglab.v2-41">기업 규모 격차로 생긴 근로 복지 불균형</h4><p data-i18n="livinglab.v2-42">756개 기업 중 91.2%가 100인 미만입니다. 절반 이상이 구내식당이 없고, 외국인 근로자의 기숙사 환경도 열악합니다.</p><p class="ideas" data-i18n="livinglab.v2-43">→ 하모니클럽하우스 · 글로컬 페스타 · 완주 ON</p></div></div>
+          <div class="lb-in"><span class="ltr">C</span><div><small data-i18n="livinglab.v2-44">정보접근</small><h4 data-i18n="livinglab.v2-45">청년 유입은 늘지만 생활정보 접근 체계는 미비</h4><p data-i18n="livinglab.v2-46">입주 초기 근로자와 가족이 지역 정보를 얻기 어렵고, 여가 공간과 프로그램 접근성도 낮습니다. 문화복지시설 미사용률은 79.9%입니다.</p><p class="ideas" data-i18n="livinglab.v2-47">→ 산단포켓 · 의문당 · 워크앤조이</p></div></div>
+          <div class="lb-in"><span class="ltr">D</span><div><small data-i18n="livinglab.v2-48">산업브랜드</small><h4 data-i18n="livinglab.v2-49">수소 모빌리티 산단 브랜딩과 지역 교통 연계</h4><p data-i18n="livinglab.v2-50">세계 최대 규모의 수소 모빌리티 산업단지입니다. 산업 브랜드 기반 서비스를 지역 생활문화권에 먼저 적용하고, AI 교통문화를 선도할 기회가 있습니다.</p><p class="ideas" data-i18n="livinglab.v2-51">→ 완주루프 · 셀프케어 가라지 · 안전로드 프로젝트</p></div></div>
         </div>
       </div>
     </section>
@@ -415,22 +399,22 @@
       <div class="lb-wrap">
         <div class="lb-head">
           <p class="lb-label">Ideas</p>
-          <h2 class="lb-h2">12개 실행 아이디어</h2>
-          <p class="lb-lead">워크숍 결과를 반영해 실행할 수 있고 우선순위가 높은 개선 아이디어 12개를 도출했습니다.</p>
+          <h2 class="lb-h2" data-i18n="livinglab.v2-52">12개 실행 아이디어</h2>
+          <p class="lb-lead" data-i18n="livinglab.v2-53">워크숍 결과를 반영해 실행할 수 있고 우선순위가 높은 개선 아이디어 12개를 도출했습니다.</p>
         </div>
         <div class="lb-ideas">
-          <div class="lb-idea"><span class="tag">A-1</span><div><h4>산단마실</h4><p>찾아가는 장날. 근로자 간 교류를 위한 이동형 플리마켓</p></div></div>
-          <div class="lb-idea pilot"><span class="tag">A-2</span><div><h4>인더-스테이</h4><p>출장자와 단기 근로자를 위한 주민운영형 게스트하우스 라운지</p></div></div>
-          <div class="lb-idea pilot"><span class="tag">A-3</span><div><h4>완주맛실</h4><p>HACCP 기반 공용키친과 로컬푸드 도시락 구독</p></div></div>
-          <div class="lb-idea"><span class="tag">B-1</span><div><h4>하모니클럽하우스</h4><p>외국인 근로자를 위한 운동·문화교류 공간</p></div></div>
-          <div class="lb-idea"><span class="tag">B-2</span><div><h4>글로컬 페스타</h4><p>국가별 문화행사와 공용키친 프로그램</p></div></div>
-          <div class="lb-idea"><span class="tag">B-3</span><div><h4>완주 ON</h4><p>이주 근로자의 의료·행정·생활 정착 지원 통합</p></div></div>
-          <div class="lb-idea"><span class="tag">C-1</span><div><h4>산단포켓</h4><p>산업단지 생활문화 정보를 한곳에 모은 가이드 플랫폼</p></div></div>
-          <div class="lb-idea"><span class="tag">C-2</span><div><h4>의문당</h4><p>청년과 은퇴자를 잇는 세대연계형 커리어 멘토링</p></div></div>
-          <div class="lb-idea"><span class="tag">C-3</span><div><h4>워크앤조이</h4><p>기술을 나누는 재능기부형 직무·취미 동아리</p></div></div>
-          <div class="lb-idea pilot"><span class="tag">D-1</span><div><h4>완주루프</h4><p>출퇴근 혼잡을 줄이고 문화거점을 잇는 수소 셔틀버스</p></div></div>
-          <div class="lb-idea pilot"><span class="tag">D-2</span><div><h4>셀프케어 가라지</h4><p>자차 근로자를 위한 공동 셀프 정비 센터</p></div></div>
-          <div class="lb-idea pilot"><span class="tag">E-1</span><div><h4>안전로드 프로젝트</h4><p>불법주정차와 보행 안전 문제를 푸는 교통 인프라 개선</p></div></div>
+          <div class="lb-idea"><span class="tag">A-1</span><div><h4 data-i18n="livinglab.v2-54">산단마실</h4><p data-i18n="livinglab.v2-55">찾아가는 장날. 근로자 간 교류를 위한 이동형 플리마켓</p></div></div>
+          <div class="lb-idea pilot"><span class="tag">A-2</span><div><h4 data-i18n="livinglab.v2-56">인더-스테이</h4><p data-i18n="livinglab.v2-57">출장자와 단기 근로자를 위한 주민운영형 게스트하우스 라운지</p></div></div>
+          <div class="lb-idea pilot"><span class="tag">A-3</span><div><h4 data-i18n="livinglab.v2-58">완주맛실</h4><p data-i18n="livinglab.v2-59">HACCP 기반 공용키친과 로컬푸드 도시락 구독</p></div></div>
+          <div class="lb-idea"><span class="tag">B-1</span><div><h4 data-i18n="livinglab.v2-60">하모니클럽하우스</h4><p data-i18n="livinglab.v2-61">외국인 근로자를 위한 운동·문화교류 공간</p></div></div>
+          <div class="lb-idea"><span class="tag">B-2</span><div><h4 data-i18n="livinglab.v2-62">글로컬 페스타</h4><p data-i18n="livinglab.v2-63">국가별 문화행사와 공용키친 프로그램</p></div></div>
+          <div class="lb-idea"><span class="tag">B-3</span><div><h4 data-i18n="livinglab.v2-64">완주 ON</h4><p data-i18n="livinglab.v2-65">이주 근로자의 의료·행정·생활 정착 지원 통합</p></div></div>
+          <div class="lb-idea"><span class="tag">C-1</span><div><h4 data-i18n="livinglab.v2-66">산단포켓</h4><p data-i18n="livinglab.v2-67">산업단지 생활문화 정보를 한곳에 모은 가이드 플랫폼</p></div></div>
+          <div class="lb-idea"><span class="tag">C-2</span><div><h4 data-i18n="livinglab.v2-68">의문당</h4><p data-i18n="livinglab.v2-69">청년과 은퇴자를 잇는 세대연계형 커리어 멘토링</p></div></div>
+          <div class="lb-idea"><span class="tag">C-3</span><div><h4 data-i18n="livinglab.v2-70">워크앤조이</h4><p data-i18n="livinglab.v2-71">기술을 나누는 재능기부형 직무·취미 동아리</p></div></div>
+          <div class="lb-idea pilot"><span class="tag">D-1</span><div><h4 data-i18n="livinglab.v2-72">완주루프</h4><p data-i18n="livinglab.v2-73">출퇴근 혼잡을 줄이고 문화거점을 잇는 수소 셔틀버스</p></div></div>
+          <div class="lb-idea pilot"><span class="tag">D-2</span><div><h4 data-i18n="livinglab.v2-74">셀프케어 가라지</h4><p data-i18n="livinglab.v2-75">자차 근로자를 위한 공동 셀프 정비 센터</p></div></div>
+          <div class="lb-idea pilot"><span class="tag">E-1</span><div><h4 data-i18n="livinglab.v2-76">안전로드 프로젝트</h4><p data-i18n="livinglab.v2-77">불법주정차와 보행 안전 문제를 푸는 교통 인프라 개선</p></div></div>
         </div>
       </div>
     </section>
@@ -440,15 +424,15 @@
       <div class="lb-wrap">
         <div class="lb-head">
           <p class="lb-label">Concept</p>
-          <h2 class="lb-h2">아이디어가 현장에 놓였을 때</h2>
-          <p class="lb-lead">우선순위 아이디어를 실제 산단 풍경 위에 시각화해 이해관계자와 함께 검토했습니다.</p>
+          <h2 class="lb-h2" data-i18n="livinglab.v2-78">아이디어가 현장에 놓였을 때</h2>
+          <p class="lb-lead" data-i18n="livinglab.v2-79">우선순위 아이디어를 실제 산단 풍경 위에 시각화해 이해관계자와 함께 검토했습니다.</p>
         </div>
         <div class="lb-concepts">
-          <figure><div class="img"><img src="images/livinglab/frame_210s.jpg" alt="완주루프 수소 셔틀버스 컨셉" loading="lazy"></div><figcaption><b>D-1</b>완주루프<span>퇴근 후 문화거점으로 이어지는 노선</span></figcaption></figure>
-          <figure><div class="img"><img src="images/livinglab/frame_270s.jpg" alt="인더-스테이 라운지 컨셉" loading="lazy"></div><figcaption><b>A-2</b>인더-스테이<span>24시간 라운지와 숙박</span></figcaption></figure>
-          <figure><div class="img"><img src="images/livinglab/frame_360s.jpg" alt="완주맛실 드라이브스루 컨셉" loading="lazy"></div><figcaption><b>A-3</b>완주맛실</figcaption></figure>
-          <figure><div class="img"><img src="images/livinglab/frame_330s.jpg" alt="셀프케어 가라지 컨셉" loading="lazy"></div><figcaption><b>D-2</b>셀프케어 가라지</figcaption></figure>
-          <figure><div class="img"><img src="images/livinglab/frame_390s.jpg" alt="안전로드 야간 가시성 강화 컨셉" loading="lazy"></div><figcaption><b>E-1</b>안전로드 프로젝트</figcaption></figure>
+          <figure><div class="img"><img src="images/livinglab/frame_210s.jpg" alt="완주루프 수소 셔틀버스 컨셉" loading="lazy"></div><figcaption><b>D-1</b><span class="nm" data-i18n="livinglab.v2-72">완주루프</span><span data-i18n="livinglab.v2-80">퇴근 후 문화거점으로 이어지는 노선</span></figcaption></figure>
+          <figure><div class="img"><img src="images/livinglab/frame_270s.jpg" alt="인더-스테이 라운지 컨셉" loading="lazy"></div><figcaption><b>A-2</b><span class="nm" data-i18n="livinglab.v2-56">인더-스테이</span><span data-i18n="livinglab.v2-81">24시간 라운지와 숙박</span></figcaption></figure>
+          <figure><div class="img"><img src="images/livinglab/frame_360s.jpg" alt="완주맛실 드라이브스루 컨셉" loading="lazy"></div><figcaption><b>A-3</b><span class="nm" data-i18n="livinglab.v2-58">완주맛실</span></figcaption></figure>
+          <figure><div class="img"><img src="images/livinglab/frame_330s.jpg" alt="셀프케어 가라지 컨셉" loading="lazy"></div><figcaption><b>D-2</b><span class="nm" data-i18n="livinglab.v2-74">셀프케어 가라지</span></figcaption></figure>
+          <figure><div class="img"><img src="images/livinglab/frame_390s.jpg" alt="안전로드 야간 가시성 강화 컨셉" loading="lazy"></div><figcaption><b>E-1</b><span class="nm" data-i18n="livinglab.v2-76">안전로드 프로젝트</span></figcaption></figure>
         </div>
       </div>
     </section>
@@ -458,32 +442,32 @@
       <div class="lb-wrap">
         <div class="lb-head">
           <p class="lb-label">Press</p>
-          <h2 class="lb-h2">언론 보도</h2>
+          <h2 class="lb-h2" data-i18n="livinglab.v2-82">언론 보도</h2>
         </div>
         <div class="lb-press">
           <article>
-            <span class="src">전자신문 · 2026.03.20</span>
-            <h4>노후 산단 탈바꿈… 청년 디자인 입혔다</h4>
-            <p>한국디자인진흥원의 문화선도산단 리빙랩 결과모음집 발간 소식. 구미·완주·창원 산단에서 38개 과제가 나왔고, 완주산단은 12개 과제를 발굴했습니다.</p>
+            <span class="src" data-i18n="livinglab.v2-83">전자신문 · 2026.03.20</span>
+            <h4 data-i18n="livinglab.v2-84">노후 산단 탈바꿈… 청년 디자인 입혔다</h4>
+            <p data-i18n="livinglab.v2-85">한국디자인진흥원의 문화선도산단 리빙랩 결과모음집 발간 소식. 구미·완주·창원 산단에서 38개 과제가 나왔고, 완주산단은 12개 과제를 발굴했습니다.</p>
           </article>
           <article>
-            <span class="src">디자인DB 기고 · 2026.02.19</span>
-            <h4>같은 산단, 다른 조건. 완주에서 찾은 디자인리빙랩의 가능성</h4>
-            <p>청년, 주민, 공무원, 디자이너가 함께 문제를 찾고 현장에서 가설을 검증하는 참여형 정책 실험으로서의 리빙랩을 소개합니다.</p>
-            <a href="https://www.designdb.com/?menuno=1278&amp;bbsno=3050&amp;siteno=15&amp;act=view" target="_blank" rel="noopener"><span>전문 읽기</span><span class="project-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+            <span class="src" data-i18n="livinglab.v2-86">디자인DB 기고 · 2026.02.19</span>
+            <h4 data-i18n="livinglab.v2-87">같은 산단, 다른 조건. 완주에서 찾은 디자인리빙랩의 가능성</h4>
+            <p data-i18n="livinglab.v2-88">청년, 주민, 공무원, 디자이너가 함께 문제를 찾고 현장에서 가설을 검증하는 참여형 정책 실험으로서의 리빙랩을 소개합니다.</p>
+            <a href="https://www.designdb.com/?menuno=1278&amp;bbsno=3050&amp;siteno=15&amp;act=view" target="_blank" rel="noopener"><span data-i18n="livinglab.v2-89">전문 읽기</span><span class="project-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
           </article>
         </div>
         <div class="lb-credits">
-          <div><span>주관</span><b>바이널엑스</b></div>
-          <div><span>발주</span><b>한국디자인진흥원</b></div>
-          <div><span>지자체</span><b>완주군</b></div>
+          <div><span data-i18n="livinglab.v2-90">주관</span><b data-i18n="livinglab.v2-91">바이널엑스</b></div>
+          <div><span data-i18n="livinglab.v2-92">발주</span><b data-i18n="livinglab.v2-93">한국디자인진흥원</b></div>
+          <div><span data-i18n="livinglab.v2-94">지자체</span><b data-i18n="livinglab.v2-95">완주군</b></div>
           <a href="portfolio.html" class="lb-back"><span>ALL PROJECTS</span><span class="project-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="js/i18n.js"></script>
+  <script src="js/i18n.js?v=3"></script>
   <script src="js/interaction.js?v=103"></script>
 </body>
 </html>
