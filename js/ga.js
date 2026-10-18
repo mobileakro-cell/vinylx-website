@@ -1,6 +1,6 @@
 /* GA4 — 측정 ID 를 아래에 넣으면 모든 페이지에서 수집된다. 비어 있으면 아무것도 하지 않는다. */
 (function () {
-  var GA_ID = "";
+  var GA_ID = "G-ZBGB7RLB2C";
   if (!GA_ID || location.hostname === "localhost") return;
   var s = document.createElement("script");
   s.async = true;
