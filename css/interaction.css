@@ -90,14 +90,16 @@ button {
   border-radius: 50%;
   pointer-events: none;
   z-index: var(--z-cursor);
-  transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, mix-blend-mode 0.3s ease;
+  margin: -4.5px 0 0 -4.5px;
+  will-change: transform;
+  transition: width 0.3s ease, height 0.3s ease, margin 0.3s ease, background 0.3s ease;
   mix-blend-mode: difference;
 }
 
 .cursor-dot.is-larger {
   width: 50px;
   height: 50px;
+  margin: -25px 0 0 -25px;
   background: #fff;
   mix-blend-mode: difference;
 }
@@ -105,6 +107,7 @@ button {
 .cursor-dot.is-title {
   width: 80px;
   height: 80px;
+  margin: -40px 0 0 -40px;
   background: #fff;
   mix-blend-mode: difference;
 }
@@ -112,6 +115,7 @@ button {
 .cursor-dot.cursor-smaller {
   width: 8px;
   height: 8px;
+  margin: -4px 0 0 -4px;
 }
 
 /* ============================================
@@ -352,7 +356,7 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   clip-path: inset(0);
 }
 
-/* Hero background video — cinematic, grain + occasional glitch */
+/* Hero background video — graded in the file; overlays are plain (no blend modes) so they stay on the compositor */
 .hero-media {
   position: absolute;
   inset: 0;
@@ -360,6 +364,7 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   overflow: hidden;
   background: #000;
   pointer-events: none;
+  contain: strict;
   --gx: 0px;
 }
 .hero-video {
@@ -368,24 +373,8 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.8) contrast(1.1) brightness(1);
-  transform: scale(1.04);
 }
-.hero-media.is-glitch .hero-video {
-  transform: scale(1.04) translateX(var(--gx));
-}
-.hero-band {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 40%;
-  height: 3%;
-  background-size: 180px 60px;
-  mix-blend-mode: overlay;
-  opacity: 0;
-}
-.hero-media.is-glitch .hero-band { opacity: 0.5; }
-
+.hero-media.is-glitch .hero-video { transform: translate3d(var(--gx), 0, 0); }
 .hero-shade {
   position: absolute;
   inset: 0;
@@ -397,32 +386,39 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
 .hero-scan {
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(180deg, rgba(0,0,0,0.22) 0, rgba(0,0,0,0.22) 1px, transparent 1px, transparent 3px);
-  opacity: 0.55;
+  background: repeating-linear-gradient(180deg, rgba(0,0,0,0.12) 0, rgba(0,0,0,0.12) 1px, transparent 1px, transparent 3px);
 }
-.hero-media.is-glitch .hero-scan { opacity: 0.75; }
-.hero-grain {
+.hero-grain,
+.hero-band {
   position: absolute;
-  inset: -50%;
-  background-size: 180px 180px;
-  opacity: 0.11;
-  mix-blend-mode: overlay;
-  animation: hero-grain 0.9s steps(6) infinite;
+  background: url(../images/grain.png) repeat;
+  background-size: 160px 160px;
 }
-.hero-media.is-glitch .hero-grain { opacity: 0.18; }
+.hero-grain {
+  inset: -80px;
+  opacity: 0.55;
+  will-change: transform;
+  animation: hero-grain 0.8s steps(4) infinite;
+}
+.hero-media.is-glitch .hero-grain { opacity: 0.85; }
 @keyframes hero-grain {
-  0% { transform: translate(0, 0); }
-  17% { transform: translate(-7%, 4%); }
-  33% { transform: translate(5%, -6%); }
-  50% { transform: translate(-3%, 8%); }
-  67% { transform: translate(8%, 2%); }
-  83% { transform: translate(-6%, -4%); }
-  100% { transform: translate(2%, 6%); }
+  0% { transform: translate3d(0, 0, 0); }
+  25% { transform: translate3d(-40px, 25px, 0); }
+  50% { transform: translate3d(30px, -35px, 0); }
+  75% { transform: translate3d(-20px, 45px, 0); }
+  100% { transform: translate3d(35px, 10px, 0); }
 }
+.hero-band {
+  left: 0;
+  right: 0;
+  top: 40%;
+  height: 3%;
+  opacity: 0;
+}
+.hero-media.is-glitch .hero-band { opacity: 1; }
 .hero-media.is-still .hero-grain { animation: none; }
 @media (max-width: 768px) {
-  .hero-video { filter: saturate(0.78) contrast(1.08) brightness(0.92); }
-  .hero-scan { opacity: 0.4; }
+  .hero-shade { background-color: rgba(0,0,0,0.28); }
 }
 
 .hero-text {

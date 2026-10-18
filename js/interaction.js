@@ -19,11 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function animateCursor() {
-      currentX += (cursorX - currentX) * 0.15;
-      currentY += (cursorY - currentY) * 0.15;
+      currentX += (cursorX - currentX) * 0.35;
+      currentY += (cursorY - currentY) * 0.35;
       if (cursor) {
-        cursor.style.left = currentX + 'px';
-        cursor.style.top = currentY + 'px';
+        cursor.style.transform = 'translate3d(' + currentX.toFixed(1) + 'px,' + currentY.toFixed(1) + 'px,0)';
       }
       requestAnimationFrame(animateCursor);
     }
