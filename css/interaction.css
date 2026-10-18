@@ -395,19 +395,10 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   background-size: 160px 160px;
 }
 .hero-grain {
-  inset: -80px;
+  inset: 0;
   opacity: 0.55;
-  will-change: transform;
-  animation: hero-grain 0.8s steps(4) infinite;
 }
 .hero-media.is-glitch .hero-grain { opacity: 0.85; }
-@keyframes hero-grain {
-  0% { transform: translate3d(0, 0, 0); }
-  25% { transform: translate3d(-40px, 25px, 0); }
-  50% { transform: translate3d(30px, -35px, 0); }
-  75% { transform: translate3d(-20px, 45px, 0); }
-  100% { transform: translate3d(35px, 10px, 0); }
-}
 .hero-band {
   left: 0;
   right: 0;
@@ -416,7 +407,6 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   opacity: 0;
 }
 .hero-media.is-glitch .hero-band { opacity: 1; }
-.hero-media.is-still .hero-grain { animation: none; }
 @media (max-width: 768px) {
   .hero-shade { background-color: rgba(0,0,0,0.28); }
 }
