@@ -6,7 +6,7 @@
 - 설립: 2012년
 - 대표: 곽승훈 — 스타트업 액셀러레이터·서비스 컨설턴트, 서비스디자인학회 이사, 디지털정부 UI·UX 혁신 자문위원, 前 삼성전자 중앙연구소 선임연구원
 - 위치: 서울특별시 성동구 왕십리로 115 서울숲 M타워
-- 연락처: mobileakro@gmail.com, 02-6200-6559
+- 연락처: INFO@VINYL-X.COM, 02-6200-6559
 
 
 ---
@@ -14,7 +14,7 @@
 # VINYL X 바이널엑스 | 디자인 에이전시 · UI/UX · 서비스디자인 · AX 컨설팅
 URL: https://vinyl-x.com/
 
-mobileakro@gmail.com
+INFO@VINYL-X.COM
 
 ## 바이널엑스(VINYL X) — AX 컨설팅 · UI/UX 컨설팅 · 서비스디자인 회사
 
@@ -216,7 +216,7 @@ Get in Touch
 ### Have an idea?Let's talk.
 
 Email
-mobileakro@gmail.com
+INFO@VINYL-X.COM
 
 Phone
 02.6200.6559
@@ -232,7 +232,7 @@ Address
 # 회사소개 | 서비스디자인·UI/UX·AX 컨설팅 회사 바이널엑스 | VINYL X
 URL: https://vinyl-x.com/about.html
 
-mobileakro@gmail.com
+INFO@VINYL-X.COM
 
 Blog
 Instagram
@@ -479,7 +479,7 @@ AX 컨설팅과 UI/UX 컨설팅은 어떻게 연결되나요?
 AX 컨설팅으로 정의한 AI 과제는 결국 사람이 쓰는 화면과 흐름으로 구현됩니다. 바이널엑스는 AI 에이전트의 승인·중단·복구 흐름 같은 AI 경험 설계를 UI/UX 컨설팅과 함께 제공합니다.
 
 CONTACT
-AX 컨설팅 프로젝트를 VINYL X와 논의하세요 — mobileakro@gmail.com
+AX 컨설팅 프로젝트를 VINYL X와 논의하세요 — INFO@VINYL-X.COM
 
 
 ---
@@ -591,7 +591,7 @@ AI 서비스의 UX도 설계하나요?
 UX 전략과 UI 디자인, 디자인 시스템을 중심으로 수행하고, 구축이 필요한 경우 개발 파트너와 함께 플랫폼 구축까지 진행합니다.
 
 CONTACT
-UI/UX 컨설팅 프로젝트를 VINYL X와 논의하세요 — mobileakro@gmail.com
+UI/UX 컨설팅 프로젝트를 VINYL X와 논의하세요 — INFO@VINYL-X.COM
 
 
 ---
@@ -731,7 +731,7 @@ UI/UX 컨설팅은 웹·앱 같은 디지털 접점의 사용자 경험을 중�
 네. 지자체·공공기관의 공공서비스디자인, 산업단지 디자인리빙랩, 디지털정부 서비스의 사용자 경험 개선을 수행합니다. 대표는 서비스디자인학회 이사, 디지털정부 UI·UX 혁신 자문위원으로 활동하고 있습니다.
 
 CONTACT
-서비스디자인 프로젝트를 VINYL X와 논의하세요 — mobileakro@gmail.com
+서비스디자인 프로젝트를 VINYL X와 논의하세요 — INFO@VINYL-X.COM
 
 
 ---
@@ -859,7 +859,7 @@ FAQ
 네. 완주에서는 리빙랩에서 나온 순환 셔틀 '완주루프'와 복합 숙박·라운지 '인더스테이'가 2026년 시범운영으로 이어졌습니다. 바이널엑스는 완주루프 시범운행의 서비스 경험을 평가했고, 인더스테이 라운지 공간을 소규모로 모의 구현했습니다.
 
 CONTACT
-산업단지 디자인리빙랩·공공디자인 프로젝트를 VINYL X와 논의하세요 — mobileakro@gmail.com
+산업단지 디자인리빙랩·공공디자인 프로젝트를 VINYL X와 논의하세요 — INFO@VINYL-X.COM
 
 
 ---
@@ -867,7 +867,7 @@ CONTACT
 # 포트폴리오 | UI/UX·서비스디자인 프로젝트 | VINYL X 바이널엑스
 URL: https://vinyl-x.com/portfolio.html
 
-mobileakro@gmail.com
+INFO@VINYL-X.COM
 
 Blog
 Instagram
@@ -906,7 +906,7 @@ MAKE MAGIC WITH US
 # 완주산단 디자인리빙랩 | VINYL X
 URL: https://vinyl-x.com/project-livinglab.html
 
-mobileakro@gmail.com
+INFO@VINYL-X.COM
 
 Blog
 Instagram
@@ -1191,7 +1191,7 @@ E-1
 # Field Log | 서비스디자인·리빙랩 현장 기록 | VINYL X 바이널엑스
 URL: https://vinyl-x.com/log.html
 
-mobileakro@gmail.com
+INFO@VINYL-X.COM
 
 Blog
 Instagram
