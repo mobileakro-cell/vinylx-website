@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/interaction.css?v=117">
+  <link rel="stylesheet" href="css/interaction.css?v=118">
   <link rel="stylesheet" href="css/pages.css?v=125">
 
   <meta name="naver-site-verification" content="89ab832f1d9f9a78ba75d374a35d211dd6026bb0">
@@ -102,7 +102,7 @@
         </div>
         <!-- Zone 2: 중상단 — key visuals -->
         <div class="gallery-item item-3" data-speed="0.12">
-          <img src="images/projects/styletech-thumb-2.jpg" alt="STYLETECH" loading="lazy">
+          <picture><source media="(max-width: 768px)" srcset="images/projects/styletech-thumb-m.jpg"><img src="images/projects/styletech-thumb-2.jpg" alt="STYLETECH" loading="lazy"></picture>
         </div>
         <div class="gallery-item item-4" data-speed="0.5">
           <img src="images/wp-uploads/main_bn03_250528.jpg" alt="Brand & Commerce" loading="lazy">
@@ -126,7 +126,7 @@
         </div>
         <!-- Zone 5: 하단 -->
         <div class="gallery-item item-10" data-speed="0.35">
-          <img src="images/wp-uploads/KakaoTalk_20250929_162921481.jpg" alt="DREAMPLUS UIUX MEMBERSHIP" loading="lazy">
+          <picture><source media="(max-width: 768px)" srcset="images/projects/dreamplus-thumb-m.jpg"><img src="images/wp-uploads/KakaoTalk_20250929_162921481-1920x1526.jpg" alt="DREAMPLUS UIUX MEMBERSHIP" loading="lazy"></picture>
         </div>
         <div class="gallery-item item-11" data-speed="0.15">
           <img src="images/projects/semiconductor-process.jpg" alt="(가칭) 반도체 공정 프로젝트" loading="lazy">
@@ -136,7 +136,6 @@
         </div>
         <a href="project-livinglab.html" class="gallery-item item-13" data-speed="0.3">
           <img src="images/livinglab/thumbnail-2026c.jpg" alt="완주산단 디자인리빙랩" loading="lazy">
-          <span class="gallery-item-label">DESIGN LIVING LAB</span>
         </a>
       </div>
       <!-- Hero text continues over gallery (dark text on light bg) -->
@@ -318,6 +317,12 @@
               </div>
               <span class="service-project-name">STYLETECH</span>
             </a>
+            <a href="https://dxm.or.kr/" class="service-project-card" target="_blank" rel="noopener">
+              <div class="service-project-img is-video">
+                <video src="videos/dxm-highlight.mp4?v=1" poster="videos/dxm-poster.jpg?v=1" muted loop playsinline preload="none" aria-label="DREAMPLUS UIUX MEMBERSHIP 하이라이트 영상"></video>
+              </div>
+              <span class="service-project-name">DREAMPLUS UIUX MEMBERSHIP ↗</span>
+            </a>
           </div>
         </div>
         <a href="services.html" class="service-detail-cta">
@@ -381,9 +386,9 @@
       <a href="portfolio.html" class="project-row">
         <div class="project-info">
           <span class="project-name">DREAMPLUS UIUX MEMBERSHIP</span>
-          <span class="project-cat">Open Innovation</span>
+          <span class="project-cat">Service Accelerating</span>
         </div>
-        <div class="project-year">2025</div>
+        <div class="project-year">2023–2024</div>
         <div class="project-arrow">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
@@ -571,7 +576,7 @@
   </div>
 
 
-  <script src="js/i18n.js?v=10"></script>
+  <script src="js/i18n.js?v=11"></script>
   <script src="js/interaction.js?v=104"></script>
   <script>
     (function () {
@@ -626,7 +631,7 @@
       let portfolioData = null;
       let savedScrollY = 0;
 
-      fetch('data/portfolio-db.json?v=9')
+      fetch('data/portfolio-db.json?v=10')
         .then(r => r.json())
         .then(d => { portfolioData = d.portfolio; })
         .catch(() => {});
@@ -749,5 +754,19 @@
     })();
   </script>
 
+  <script>
+    (function () {
+      var panel = document.getElementById('servicePanel');
+      if (!panel) return;
+      function sync() {
+        var open = panel.classList.contains('is-open');
+        panel.querySelectorAll('.service-project-img video').forEach(function (v) {
+          if (open && v.offsetParent !== null) { v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); }
+        });
+      }
+      new MutationObserver(function () { setTimeout(sync, 60); }).observe(panel, { attributes: true, attributeFilter: ['class'] });
+      panel.addEventListener('transitionend', sync);
+    })();
+  </script>
 </body>
 </html>

@@ -153,9 +153,11 @@
     .lb-concepts figcaption .nm { color: var(--lb-text); font-size: 14px; }
 
     /* Press + credits */
-    .lb-press { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid var(--lb-text); }
+    .lb-press { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--lb-text); }
     .lb-press article { padding: 24px 28px 26px 0; min-width: 0; }
-    .lb-press article + article { padding-left: 28px; border-left: 1px solid var(--lb-rule); }
+    .lb-press article:nth-child(3n+2), .lb-press article:nth-child(3n) { padding-left: 28px; border-left: 1px solid var(--lb-rule); }
+    .st-site { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding: 10px 16px; border: 1px solid rgba(255,255,255,.45); border-radius: 999px; color: #fff; text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: .14em; transition: background .25s, color .25s; }
+    .st-site:hover { background: #fff; color: #000; }
     .lb-press .src { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--lb-muted); }
     .lb-press h4 { margin: 8px 0 10px; font-size: 22px; font-weight: 700; line-height: 1.35; letter-spacing: -0.02em; }
     .lb-press p { margin: 0; font-size: 15px; line-height: 1.65; color: var(--lb-muted); }
@@ -212,7 +214,7 @@
       .lb-concepts { grid-template-columns: 1fr; }
       .lb-concepts figure:nth-child(n) { grid-column: auto; }
       .lb-press { grid-template-columns: 1fr; }
-      .lb-press article, .lb-press article + article { padding: 22px 0; border-left: none; }
+      .lb-press article, .lb-press article + article, .lb-press article:nth-child(n) { padding: 22px 0; border-left: none; }
       .lb-press article + article { border-top: 1px solid var(--lb-rule); }
       .lb-credits { grid-template-columns: 1fr 1fr; margin-top: 40px; }
       .lb-credits .lb-back { grid-column: 1 / -1; }
@@ -312,6 +314,7 @@
           <div><span>Role</span><span data-i18n="styletech.k-02">운영사 (컨소시엄)</span></div>
           <div><span>Field</span><span data-i18n="styletech.k-03">패션 · 뷰티 · 라이프스타일</span></div>
         </div>
+        <a class="st-site" href="https://www.styletech.kr/" target="_blank" rel="noopener"><span>STYLETECH.KR</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></a>
       </div>
     </section>
 
@@ -400,6 +403,12 @@
         </div>
         <div class="lb-press">
           <article>
+            <span class="src" data-i18n="styletech.k-site-src">공식 사이트</span>
+            <h4>STYLETECH.KR</h4>
+            <p data-i18n="styletech.k-site-d">한국디자인진흥원 스타일테크 유망기업 액셀러레이팅 프로그램 공식 사이트.</p>
+            <a href="https://www.styletech.kr/" target="_blank" rel="noopener"><span data-i18n="styletech.k-site-go">사이트 방문</span><span class="project-arrow" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          </article>
+          <article>
             <span class="src" data-i18n="styletech.k-47">바이라인네트워크 · 2026.01</span>
             <h4 data-i18n="styletech.k-48">2025 스타일테크 리포트</h4>
             <p data-i18n="styletech.k-49">스타일테크 액셀러레이팅 프로그램 1~7기 선정 유망기업과 성과를 정리한 리포트.</p>
@@ -422,7 +431,7 @@
     </section>
   </main>
 
-  <script src="js/i18n.js?v=10"></script>
+  <script src="js/i18n.js?v=11"></script>
   <script src="js/interaction.js?v=104"></script>
 </body>
 </html>

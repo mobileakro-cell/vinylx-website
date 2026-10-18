@@ -1343,6 +1343,18 @@
     "k-pnote": {
       "ko": "2024년 착수보고와 2025년 제안서의 오픈이노베이션 협력 대·중견기업 Pool 기준입니다.",
       "en": "Based on the open innovation partner pool in the 2024 kickoff report and the 2025 proposal."
+    },
+    "k-site-src": {
+      "ko": "공식 사이트",
+      "en": "Official site"
+    },
+    "k-site-d": {
+      "ko": "한국디자인진흥원 스타일테크 유망기업 액셀러레이팅 프로그램 공식 사이트.",
+      "en": "Official site of the KIDP STYLETECH accelerating program."
+    },
+    "k-site-go": {
+      "ko": "사이트 방문",
+      "en": "VISIT SITE"
     }
   }
 }

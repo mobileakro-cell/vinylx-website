@@ -1063,6 +1063,11 @@ body.no-scroll .scroll-indicator { opacity: 0 !important; pointer-events: none !
   transform: scale(1.05);
 }
 
+.gallery-item picture { display: contents; }
+.service-project-img.is-video { animation: none; background: #111; }
+.service-project-img video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.service-project-card:hover .service-project-img video { transform: scale(1.05); }
+
 .service-project-name {
   font-size: 13px;
   font-weight: 600;
@@ -1836,7 +1841,7 @@ button:focus-visible {
   }
 
   .gallery-section {
-    min-height: 250vh;
+    min-height: 290vh;
   }
 
   .projects-section {
@@ -1903,8 +1908,7 @@ button:focus-visible {
     width: auto;
   }
 
-  .gallery-grid .item-12,
-  .gallery-grid .item-13 {
+  .gallery-grid .item-12 {
     display: none;
   }
 
@@ -1935,9 +1939,9 @@ button:focus-visible {
   /* item-3: STYLETECH — 좌측 앵커, 넘침 */
   .gallery-grid .item-3 {
     display: block;
-    width: 58%;
-    top: 0%;
-    left: -8%;
+    width: 51%;
+    top: 0.0%;
+    left: 0;
     right: auto;
     aspect-ratio: 3 / 4;
     border-radius: 6px;
@@ -1947,7 +1951,7 @@ button:focus-visible {
   /* item-1: UIUX Consulting — 우측 정사각 */
   .gallery-grid .item-1 {
     width: 48%;
-    top: 6%;
+    top: 5.2%;
     right: 1%;
     left: auto;
     aspect-ratio: 1 / 1;
@@ -1959,7 +1963,7 @@ button:focus-visible {
   /* item-4: Brand & Commerce — 좌측 정사각 */
   .gallery-grid .item-4 {
     width: 48%;
-    top: 23%;
+    top: 19.8%;
     left: 1%;
     right: auto;
     aspect-ratio: 1 / 1;
@@ -1970,7 +1974,7 @@ button:focus-visible {
   .gallery-grid .item-5 {
     display: block;
     width: 58%;
-    top: 25%;
+    top: 21.6%;
     right: -8%;
     left: auto;
     aspect-ratio: 3 / 4;
@@ -1984,7 +1988,7 @@ button:focus-visible {
   .gallery-grid .item-10 {
     display: block;
     width: 49%;
-    top: 40%;
+    top: 34.5%;
     left: 1%;
     right: auto;
     aspect-ratio: 3 / 4;
@@ -1995,7 +1999,7 @@ button:focus-visible {
   .gallery-grid .item-2 {
     display: block;
     width: 49%;
-    top: 46%;
+    top: 39.7%;
     right: 1%;
     left: auto;
     aspect-ratio: 3 / 4;
@@ -2008,7 +2012,7 @@ button:focus-visible {
   .gallery-grid .item-7 {
     display: block;
     width: 49%;
-    top: 58%;
+    top: 50.0%;
     left: 1%;
     right: auto;
     aspect-ratio: 3 / 4;
@@ -2019,7 +2023,7 @@ button:focus-visible {
   .gallery-grid .item-6 {
     display: block;
     width: 48%;
-    top: 65%;
+    top: 56.0%;
     right: 1%;
     left: auto;
     aspect-ratio: 960 / 1743;
@@ -2032,7 +2036,7 @@ button:focus-visible {
   .gallery-grid .item-9 {
     display: block;
     width: 48%;
-    top: 76%;
+    top: 65.5%;
     left: 1%;
     right: auto;
     aspect-ratio: 1 / 1;
@@ -2043,7 +2047,7 @@ button:focus-visible {
   .gallery-grid .item-8 {
     display: block;
     width: 49%;
-    top: 84%;
+    top: 72.4%;
     right: 1%;
     left: auto;
     aspect-ratio: 1482 / 2560;
@@ -2055,10 +2059,21 @@ button:focus-visible {
   .gallery-grid .item-11 {
     display: block;
     width: 49%;
-    top: 88%;
+    top: 75.9%;
     left: 1%;
     right: auto;
     aspect-ratio: 3 / 4;
+    border-radius: 6px;
+  }
+
+  /* item-13: DESIGN LIVING LAB — 하단 마무리 */
+  .gallery-grid .item-13 {
+    display: block;
+    width: 62%;
+    top: 89%;
+    left: 19%;
+    right: auto;
+    aspect-ratio: 4 / 3;
     border-radius: 6px;
   }
 

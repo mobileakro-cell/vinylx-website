@@ -95,7 +95,7 @@
       "category": "Open Innovation",
       "category_id": 19,
       "client": "DREAMPLUS",
-      "year": "2025",
+      "year": "2023 ~ 2024",
       "tags": [
         "Open Innovation",
         "UX"
@@ -111,13 +111,14 @@
         "images/wp-uploads/untitled-1-04-3.jpg",
         "images/wp-uploads/untitled-1-05-3.jpg"
       ],
-      "description": "UIUX 멤버십 프로그램",
-      "description_en": "UIUX Membership Program",
-      "excerpt": "UIUX 멤버십 프로그램",
-      "excerpt_en": "UIUX Membership Program",
+      "description": "한화생명 드림플러스 UIUX 디자인 멤버십(DXM)을 설계·운영했습니다. UIUX 전공 대학생·대학원생 20명 내외를 선발해 1년간 UX·BM 심화교육, 현업 멘토링, 한화생명·LG전자 기업 실무 프로젝트, DX Insight 컨퍼런스와 포트폴리오 데이를 진행했습니다.",
+      "description_en": "We designed and ran the DREAMPLUS UIUX Membership (DXM) for Hanwha Life DREAMPLUS: about 20 selected UI/UX students in a year-long program of UX and BM courses, industry mentoring, corporate projects with Hanwha Life and LG Electronics, the DX Insight conference and a portfolio day.",
+      "excerpt": "한화생명 드림플러스 UIUX 디자인 멤버십(DXM)을 설계·운영했습니다. UIUX 전공 대학생·대학원생 20명 내외를 선발해 1년간 UX·BM 심화교육, 현업 멘토링, 한화생명·LG전자 기업 실무 프로젝트, DX Insight 컨퍼런스와 포트폴리오 데이를 진행했습니다.",
+      "excerpt_en": "We designed and ran the DREAMPLUS UIUX Membership (DXM) for Hanwha Life DREAMPLUS: about 20 selected UI/UX students in a year-long program of UX and BM courses, industry mentoring, corporate projects with Hanwha Life and LG Electronics, the DX Insight conference and a portfolio day.",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": ""
+      "link": "https://dxm.or.kr/",
+      "client_en": "Hanwha Life DREAMPLUS"
     },
     {
       "id": 3222,
@@ -554,7 +555,7 @@
       "excerpt_en": "Fashion & beauty startup accelerating · cohorts 1–7",
       "credit": "by VINYLX 바이널엑스",
       "credit_en": "by VINYLX",
-      "link": "http://styletech.kidp.or.kr/",
+      "link": "https://www.styletech.kr/",
       "description": "한국디자인진흥원 스타일테크 액셀러레이팅 프로그램을 2019년 1기부터 2025년 7기까지 컨소시엄 운영사로 운영하며 200여 개 패션·뷰티·리빙 스타트업을 육성했습니다.",
       "page": "project-styletech.html",
       "client_en": "Korea Institute of Design Promotion",
